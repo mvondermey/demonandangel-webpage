@@ -16,7 +16,7 @@ export default function KontaktPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">

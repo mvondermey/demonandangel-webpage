@@ -49,7 +49,7 @@ export default function TechnologiePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pb-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/images/hero-bg.jpg" 
