@@ -17,8 +17,8 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/demonandangel' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/demonandangel' },
+  { name: 'Facebook', icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61580188569455' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/demonandangellaser/' },
 ]
 
 export default function Footer() {

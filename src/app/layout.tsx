@@ -91,8 +91,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               '@id': 'https://demonandangel.com',
               name: 'Demon (And) Angel - Laser Haarentfernung Frankfurt',
               'sameAs': [
-                'https://www.facebook.com/demonandangel',
-                'https://www.instagram.com/demonandangel'
+                'https://www.facebook.com/profile.php?id=61580188569455',
+                'https://www.instagram.com/demonandangellaser/'
               ],
               'aggregateRating': {
                 '@type': 'AggregateRating',
