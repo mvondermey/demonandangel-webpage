@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/schmerzfreie-laser-haarentfernung',
     '/impressum',
     '/datenschutz',
+    '/agb',
   ]
 
   return routes.map((route) => ({
