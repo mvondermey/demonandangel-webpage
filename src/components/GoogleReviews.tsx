@@ -79,7 +79,7 @@ export default function GoogleReviews() {
           </div>
           
           <a 
-            href="https://www.google.com/maps/place/Demon+(And)+Angel" 
+            href="https://www.google.com/maps/place/Demon+(and)+Angel/@50.1083314,8.6446407,17z/data=!4m6!3m5!1s0x651664106c8fe48d:0x211887032f4b5da4!8m2!3d50.1083314!4d8.6472156!16s%2Fg%2F11vr0ccyr5" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
@@ -124,7 +124,7 @@ export default function GoogleReviews() {
         <div className="text-center mt-12">
           <p className="text-white/60 mb-4">Zufrieden mit unserer Behandlung?</p>
           <a 
-            href="https://www.google.com/maps/place/Demon+(And)+Angel" 
+            href="https://www.google.com/maps/place/Demon+(and)+Angel/@50.1083314,8.6446407,17z/data=!4m6!3m5!1s0x651664106c8fe48d:0x211887032f4b5da4!8m2!3d50.1083314!4d8.6472156!16s%2Fg%2F11vr0ccyr5" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-secondary inline-flex items-center gap-2"

@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/admin/', '/_next/'],
       },
     ],
-    sitemap: 'https://demonandangel.com/sitemap.xml',
+    sitemap: 'https://demonandangel.eu/sitemap.xml',
   }
 }

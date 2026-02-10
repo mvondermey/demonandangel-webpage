@@ -9,17 +9,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Preise für Laser Haarentfernung | Demon (And) Angel Frankfurt',
     description: 'Transparente Preise für professionelle dauerhafte Haarentfernung. Alle Körperzonen, faire Konditionen.',
-    url: 'https://demonandangel.com/preise',
+    url: 'https://demonandangel.eu/preise',
   },
 }
 
 const kategorien = [
   {
     name: 'Ganzkörper',
-    beschreibung: 'Aktionsangebote für mehrere Zonen.',
+    beschreibung: 'Aktionsangebot.',
     zonen: [
-      { zone: 'Ganzkörper (bis zu 6 Zonen) AKTION', preis: '249 €' },
-      { zone: 'Ganzkörper (bis zu 12 Zonen) AKTION', preis: '349 €' },
+      { zone: 'Ganzkörper AKTION', preis: '249 €' },
     ],
   },
   {
@@ -82,6 +81,11 @@ export default function PreisePage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
+            {/* Discount Banner */}
+            <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full">
+              <span className="text-white font-bold text-lg">🎉 25% RABATT auf Ihre erste Behandlung!</span>
+            </div>
+            
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="gradient-text">Unsere Preise</span>
             </h1>
@@ -173,8 +177,11 @@ export default function PreisePage() {
             über die optimale Behandlung für Ihre Bedürfnisse.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <Link href="/kontakt" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
+              Jetzt Termin buchen
+            </a>
+            <Link href="/kontakt" className="btn-secondary inline-flex items-center gap-2">
               Kontakt aufnehmen
             </Link>
           </div>

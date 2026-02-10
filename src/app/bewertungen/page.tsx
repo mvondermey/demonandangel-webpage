@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kundenbewertungen | Demon (And) Angel Frankfurt',
     description: 'Echte Kundenbewertungen zur dauerhaften Laser Haarentfernung.',
-    url: 'https://demonandangel.com/bewertungen',
+    url: 'https://demonandangel.eu/bewertungen',
   },
 }
 
@@ -110,7 +110,7 @@ export default function BewertungenPage() {
             </div>
             
             <a 
-              href="https://www.google.com/maps/place/Demon+(And)+Angel" 
+              href="https://www.google.com/maps/place/Demon+(and)+Angel/@50.1083314,8.6446407,17z/data=!4m6!3m5!1s0x651664106c8fe48d:0x211887032f4b5da4!8m2!3d50.1083314!4d8.6472156!16s%2Fg%2F11vr0ccyr5" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors text-lg"
@@ -168,7 +168,7 @@ export default function BewertungenPage() {
             Wir freuen uns über Ihre Bewertung auf Google! Ihre Meinung hilft anderen Kunden bei ihrer Entscheidung.
           </p>
           <a 
-            href="https://www.google.com/maps/place/Demon+(And)+Angel" 
+            href="https://www.google.com/maps/place/Demon+(and)+Angel/@50.1083314,8.6446407,17z/data=!4m6!3m5!1s0x651664106c8fe48d:0x211887032f4b5da4!8m2!3d50.1083314!4d8.6472156!16s%2Fg%2F11vr0ccyr5" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2"
@@ -189,7 +189,7 @@ export default function BewertungenPage() {
             Vereinbaren Sie jetzt Ihren kostenlosen Beratungstermin und erleben Sie professionelle Laser Haarentfernung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt Termin buchen
             </a>

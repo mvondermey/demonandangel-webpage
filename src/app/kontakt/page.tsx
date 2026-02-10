@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kontakt | Demon (And) Angel Frankfurt',
     description: 'Buchen Sie Ihren Termin für dauerhafte Laser Haarentfernung in Frankfurt.',
-    url: 'https://demonandangel.com/kontakt',
+    url: 'https://demonandangel.eu/kontakt',
   },
 }
 
@@ -37,7 +37,7 @@ export default function KontaktPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <a
-              href="https://wa.me/49015238228127"
+              href="https://wa.me/4915238228127"
               className="card group hover:scale-105 transition-transform duration-300 text-center"
             >
               <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
@@ -153,7 +153,7 @@ export default function KontaktPage() {
                   individuellen Behandlungsplan.
                 </p>
                 <a 
-                  href="https://wa.me/49015238228127" 
+                  href="https://wa.me/4915238228127" 
                   className="btn-primary inline-flex items-center gap-2"
                 >
                   <MessageCircle className="h-5 w-5" />

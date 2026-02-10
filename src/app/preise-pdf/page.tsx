@@ -140,7 +140,7 @@ export default function PreisePdfPage() {
               <Phone className="h-5 w-5" />
               015238228127
             </a>
-            <a href="https://wa.me/49015238228127" className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
+            <a href="https://wa.me/4915238228127" className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
               <Phone className="h-5 w-5" />
               WhatsApp
             </a>

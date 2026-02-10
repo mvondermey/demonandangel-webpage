@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: 'Dauerhafte Haarentfernung - Fühle dich wohl | Demon (And) Angel',
     description: 'Lust auf ein unbeschwertes Körpergefühl? Diskrete Ganzkörper-Behandlungen für Mann und Frau in Frankfurt.',
-    url: 'https://demonandangel.com/wohlfuehlen',
+    url: 'https://demonandangel.eu/wohlfuehlen',
     images: ['/images/logo-removebg-preview.png'],
   },
 }
@@ -41,7 +41,7 @@ export default function WohlfuehlenPage() {
             Versuche mal eine dauerhafte Haarentfernung mit Laser! Total schmerzfrei!
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt anrufen: 015238228127
             </a>
@@ -110,7 +110,7 @@ export default function WohlfuehlenPage() {
                 <span>Europa-Allee 43, 60327 Frankfurt am Main</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+                <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
                   <Phone className="h-5 w-5" />
                   Termin vereinbaren
                 </a>
@@ -139,7 +139,7 @@ export default function WohlfuehlenPage() {
               Rufen Sie uns an unter <span className="text-purple-400 font-bold">015238228127</span>. Wir freuen uns auf den Anruf.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+              <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 Jetzt anrufen
               </a>
@@ -172,7 +172,7 @@ export default function WohlfuehlenPage() {
             Wähle Deine Behandlungsperson und genieße die Freiheit von unerwünschten Haaren.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Kostenlos beraten lassen
             </a>

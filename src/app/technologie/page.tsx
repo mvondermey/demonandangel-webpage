@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: 'Diodenlaser 3-Wellenlängen-Technologie | Demon (And) Angel',
     description: 'Modernste 3-Wellenlängen-Diodenlaser Technologie für schmerzfreie und permanente Haarentfernung in Frankfurt.',
-    url: 'https://demonandangel.com/technologie',
+    url: 'https://demonandangel.eu/technologie',
     images: ['/images/logo-removebg-preview.png'],
   },
 }

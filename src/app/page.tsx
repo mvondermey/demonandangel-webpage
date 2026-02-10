@@ -52,11 +52,16 @@ export default function Home() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-angel-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-center">
-          <div className="animate-fade-in">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm mb-8">
-              <Sparkles className="h-4 w-4 text-purple-400" />
-              NiSV-zertifiziertes Fachpersonal • Medizinisches Niveau
-            </span>
+          <div className="animate-fade-in space-y-4">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full">
+              <span className="text-white font-bold text-lg">🎉 25% RABATT auf Ihre erste Behandlung!</span>
+            </div>
+            <div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm">
+                <Sparkles className="h-4 w-4 text-purple-400" />
+                NiSV-zertifiziertes Fachpersonal • Medizinisches Niveau
+              </span>
+            </div>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 animate-slide-up">
@@ -76,7 +81,7 @@ export default function Home() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt Termin buchen
             </a>
@@ -386,7 +391,7 @@ export default function Home() {
             Schmerzfrei, effektiv und für alle Hauttypen geeignet.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt anrufen: 015238228127
             </a>

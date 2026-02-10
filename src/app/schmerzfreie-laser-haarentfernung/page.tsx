@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Schmerzfreie Laser Haarentfernung Frankfurt | Demon (And) Angel',
     description: 'Völlig schmerzlose dauerhafte Haarentfernung. Moderne 3-Wellenlängen-Technologie mit integrierter Kühlung.',
-    url: 'https://demonandangel.com/schmerzfreie-laser-haarentfernung',
+    url: 'https://demonandangel.eu/schmerzfreie-laser-haarentfernung',
   },
 }
 
@@ -102,7 +102,7 @@ export default function SchmerzfreiPage() {
                 <span>Medizinische Kühlung</span>
               </div>
             </div>
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Schmerzfrei behandeln lassen
             </a>
@@ -328,7 +328,7 @@ export default function SchmerzfreiPage() {
             dauerhafte Haarentfernung sein kann.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Schmerzfrei beraten lassen
             </a>

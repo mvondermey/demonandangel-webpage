@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Laser Haarentfernung Gesicht Frankfurt | Demon (And) Angel',
     description: 'Schmerzfreie dauerhafte Haarentfernung im Gesicht. Oberlippe, Kinn, Koteletten - moderne 3-Wellenlängen-Technologie.',
-    url: 'https://demonandangel.com/laser-haarentfernung-gesicht',
+    url: 'https://demonandangel.eu/laser-haarentfernung-gesicht',
   },
 }
 
@@ -87,7 +87,7 @@ export default function GesichtPage() {
                 <span>95% Erfolgsrate</span>
               </div>
             </div>
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Gesicht behandeln lassen
             </a>
@@ -330,7 +330,7 @@ export default function GesichtPage() {
             über die dauerhafte Laser Haarentfernung im Gesicht.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Kostenlos beraten lassen
             </a>

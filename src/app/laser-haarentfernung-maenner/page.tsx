@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Laser Haarentfernung für Männer Frankfurt | Demon (And) Angel',
     description: 'Spezialisierte dauerhafte Haarentfernung für Männer. Rücken, Brust, Bart, Intimbereich - moderne 3-Wellenlängen-Technologie.',
-    url: 'https://demonandangel.com/laser-haarentfernung-maenner',
+    url: 'https://demonandangel.eu/laser-haarentfernung-maenner',
   },
 }
 
@@ -61,7 +61,7 @@ export default function MaennerPage() {
                 <span>Spezialisiert auf Männerhaut</span>
               </div>
             </div>
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Männer-Termin buchen
             </a>
@@ -232,7 +232,7 @@ export default function MaennerPage() {
             dauerhafter Haarentfernung für Männer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Männer-Termin buchen
             </a>

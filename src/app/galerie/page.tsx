@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Fotogalerie | Demon (And) Angel Frankfurt',
     description: 'Einblicke in unser Studio für dauerhafte Laser Haarentfernung.',
-    url: 'https://demonandangel.com/galerie',
+    url: 'https://demonandangel.eu/galerie',
   },
 }
 
@@ -78,7 +78,7 @@ export default function GaleriePage() {
                 Moderne Ausstattung, diskrete Behandlungsräume und ein freundliches Team erwarten Sie bei uns in Frankfurt.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+                <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
                   <Phone className="h-5 w-5" />
                   Termin vereinbaren
                 </a>
@@ -113,7 +113,7 @@ export default function GaleriePage() {
             Besuchen Sie uns in unserem Studio in Frankfurt und erleben Sie professionelle Laser Haarentfernung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt Termin buchen
             </a>

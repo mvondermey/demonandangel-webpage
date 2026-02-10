@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'FAQ - Häufig gestellte Fragen | Demon (And) Angel Frankfurt',
     description: 'Antworten auf alle Fragen zur dauerhaften Laser Haarentfernung in Frankfurt.',
-    url: 'https://demonandangel.com/faq',
+    url: 'https://demonandangel.eu/faq',
   },
 }
 
@@ -160,7 +160,7 @@ export default function FAQPage() {
             Sie haben Ihre Frage nicht gefunden? Kontaktieren Sie uns - wir helfen Ihnen gerne weiter!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary">
+            <a href="https://wa.me/4915238228127" className="btn-primary">
               WhatsApp schreiben
             </a>
             <Link href="/kontakt" className="btn-secondary">

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Laser Haarentfernung Intimbereich Frankfurt | Demon (And) Angel',
     description: 'Diskrete dauerhafte Haarentfernung im Intimbereich. Bikinizone, Brazilian, Hollywood - moderne 3-Wellenlängen-Technologie.',
-    url: 'https://demonandangel.com/laser-haarentfernung-intimbereich',
+    url: 'https://demonandangel.eu/laser-haarentfernung-intimbereich',
   },
 }
 
@@ -83,7 +83,7 @@ export default function IntimbereichPage() {
                 <span>Weibliche/männliche Behandler</span>
               </div>
             </div>
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Diskreten Termin buchen
             </a>
@@ -373,7 +373,7 @@ export default function IntimbereichPage() {
             wochenlang die Freiheit von unerwünschter Behaarung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/49015238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Diskret beraten lassen
             </a>
