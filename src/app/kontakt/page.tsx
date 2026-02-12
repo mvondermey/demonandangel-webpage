@@ -97,17 +97,18 @@ export default function KontaktPage() {
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Map Placeholder */}
-            <div className="card p-0 overflow-hidden">
+            {/* Map */}
+            <div className="card p-0 overflow-hidden h-[400px] lg:h-full lg:min-h-[500px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.8!2d8.6621!3d50.1109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bd0ea7f0000001%3A0x0!2sEuropa-Allee%2043%2C%2060327%20Frankfurt%20am%20Main!5e0!3m2!1sde!2sde!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.4!2d8.6446407!3d50.1083314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x651664106c8fe48d%3A0x211887032f4b5da4!2sDemon%20(and)%20Angel!5e0!3m2!1sde!2sde!4v1707728400000!5m2!1sde!2sde"
                 width="100%"
-                height="400"
-                style={{ border: 0 }}
+                height="100%"
+                style={{ border: 0, minHeight: '400px' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Standort Demon (And) Angel"
+                className="w-full h-full"
               />
             </div>
 
