@@ -89,7 +89,7 @@ export default function PreisePdfPage() {
           <h2 className="text-2xl font-bold mb-4">Preisliste</h2>
           <p className="text-gray-600 mb-2">Transparente und faire Preise für Ihre dauerhafte Laser Haarentfernung</p>
           <p className="text-gray-600">Alle Preise verstehen sich pro Behandlung inklusive Mehrwertsteuer</p>
-          <p className="text-gray-600">Für optimale Ergebnisse empfehlen wir 6-8 Behandlungen im Abstand von 4-8 Wochen</p>
+          <p className="text-gray-600">Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen</p>
           <p className="text-gray-600">Die erste Behandlung beinhaltet ein kostenloses Beratungsgespräch</p>
         </div>
 
@@ -123,7 +123,7 @@ export default function PreisePdfPage() {
           <h3 className="text-lg font-bold mb-4">Wichtige Hinweise</h3>
           <ul className="space-y-2 text-gray-600">
             <li>• Alle Preise verstehen sich pro Behandlung inklusive Mehrwertsteuer</li>
-            <li>• Für ein dauerhaftes Ergebnis sind in der Regel 6-8 Behandlungen erforderlich</li>
+            <li>• Für ein dauerhaftes Ergebnis sind in der Regel 4-6 Behandlungen erforderlich</li>
             <li>• Der Abstand zwischen den Behandlungen beträgt 4-8 Wochen</li>
             <li>• Die erste Behandlung beinhaltet ein kostenloses Beratungsgespräch</li>
             <li>• Wir akzeptieren Barzahlung, EC-Karte und alle gängigen Kreditkarten</li>

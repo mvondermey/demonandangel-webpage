@@ -13,18 +13,6 @@ export const metadata: Metadata = {
   },
 }
 
-const maennerZonen = [
-  { zone: 'Rücken', preis: '99€', dauer: '30 Min.', beschreibung: 'Oberer und unterer Rücken' },
-  { zone: 'Brust', preis: '99€', dauer: '30 Min.', beschreibung: 'Komplette Brustregion' },
-  { zone: 'Bauch', preis: '69€', dauer: '20 Min.', beschreibung: 'Bauchbereich und Sixpack' },
-  { zone: 'Brust + Bauch', preis: '149€', dauer: '45 Min.', beschreibung: 'Kombinationsbehandlung' },
-  { zone: 'Schultern', preis: '59€', dauer: '20 Min.', beschreibung: 'Schulter- und Nackenbereich' },
-  { zone: 'Achseln', preis: '39€', dauer: '15 Min.', beschreibung: 'Achselhöhlen' },
-  { zone: 'Arme komplett', preis: '119€', dauer: '35 Min.', beschreibung: 'Ober- und Unterarme' },
-  { zone: 'Beine komplett', preis: '199€', dauer: '60 Min.', beschreibung: 'Ober- und Unterschenkel' },
-  { zone: 'Intimbereich', preis: '99€', dauer: '30 Min.', beschreibung: 'Diskrete Behandlung' },
-  { zone: 'Bartkontur', preis: '79€', dauer: '25 Min.', beschreibung: 'Perfekte Bartlinie' },
-]
 
 const vorteile = [
   'Kein Rasieren mehr - dauerhaft glatt',
@@ -39,7 +27,7 @@ export default function MaennerPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -61,7 +49,7 @@ export default function MaennerPage() {
                 <span>Spezialisiert auf Männerhaut</span>
               </div>
             </div>
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Männer-Termin buchen
             </a>
@@ -69,30 +57,37 @@ export default function MaennerPage() {
         </div>
       </section>
 
-      {/* Männerzonen */}
+      {/* Warum Männer zu uns kommen */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Behandlungszonen für Männer</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
-              Spezialisierte Behandlung für typische Männerprobleme.
-            </p>
+            <h2 className="section-heading">Warum immer mehr Männer lasern</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {maennerZonen.map((item) => (
-              <div key={item.zone} className="card hover:scale-105 transition-transform">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-semibold text-white">{item.zone}</h3>
-                  <div className="text-2xl font-bold gradient-text">{item.preis}</div>
-                </div>
-                <p className="text-white/60 text-sm mb-2">{item.beschreibung}</p>
-                <div className="flex items-center gap-2 text-white/60 text-sm">
-                  <Users className="h-4 w-4" />
-                  <span>{item.dauer}</span>
-                </div>
-              </div>
-            ))}
+          <div className="card bg-gradient-to-br from-demon-600/10 to-angel-600/10">
+            <div className="space-y-6 text-lg text-white/80 leading-relaxed">
+              <p>
+                <strong className="text-white">Männerhaut ist anders.</strong> Dickere Haare, stärkerer Wuchs, empfindlichere Haut nach dem Rasieren. 
+                Genau dafür haben wir unsere Behandlung optimiert.
+              </p>
+              <p>
+                Ob <strong className="text-white">Rücken, Brust, Schultern oder Intimbereich</strong> – unsere 3-Wellenlängen-Technologie 
+                ist speziell für dickes, dunkles Männerhaar entwickelt. Das Ergebnis: schnellere Ergebnisse, weniger Behandlungen.
+              </p>
+              <p>
+                <strong className="text-white">Keine Rasur mehr. Keine eingewachsenen Haare.</strong> Stattdessen: glatte Haut, 
+                die Ihre Muskeln besser zur Geltung bringt – im Fitnessstudio, am Strand oder im Alltag.
+              </p>
+              <p>
+                Und ja: <strong className="text-white">Männliche Behandler verfügbar.</strong> Wir verstehen, dass Diskretion wichtig ist.
+              </p>
+            </div>
+            <div className="mt-8 text-center">
+              <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                Jetzt Beratung anfragen
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -132,10 +127,8 @@ export default function MaennerPage() {
             <div className="card bg-gradient-to-br from-demon-600/20 to-angel-600/20">
               <h3 className="text-2xl font-bold text-white mb-4">Athleten-Paket</h3>
               <p className="text-white/70 mb-4">Rücken + Brust + Bauch</p>
-              <div className="text-3xl font-bold gradient-text mb-4">299€</div>
-              <p className="text-white/60 text-sm mb-4">Statt 317€ - Sie sparen 18€</p>
               <ul className="space-y-2 text-white/70 text-sm">
-                <li>• 6-8 Behandlungen</li>
+                <li>• 4-6 Behandlungen</li>
                 <li>• Perfekt für Sportler</li>
                 <li>• Athletische Optik</li>
               </ul>
@@ -144,10 +137,8 @@ export default function MaennerPage() {
             <div className="card bg-gradient-to-br from-purple-600/20 to-demon-600/20">
               <h3 className="text-2xl font-bold text-white mb-4">Komplett-Paket</h3>
               <p className="text-white/70 mb-4">Rücken + Brust + Bauch + Achseln</p>
-              <div className="text-3xl font-bold gradient-text mb-4">349€</div>
-              <p className="text-white/60 text-sm mb-4">Statt 376€ - Sie sparen 27€</p>
               <ul className="space-y-2 text-white/70 text-sm">
-                <li>• 6-8 Behandlungen</li>
+                <li>• 4-6 Behandlungen</li>
                 <li>• Komplett haarfrei</li>
                 <li>• Maximale Ersparnis</li>
               </ul>
@@ -170,7 +161,7 @@ export default function MaennerPage() {
             {[
               { phase: 'Vor Behandlung', desc: 'Starke Behaarung, Hautirritationen' },
               { phase: 'Nach 3 Behandlungen', desc: '60% weniger Haare, glattere Haut' },
-              { phase: 'Nach 6-8 Behandlungen', desc: '95% weniger Haare, perfekt glatt' },
+              { phase: 'Nach 4-6 Behandlungen', desc: '95% weniger Haare, perfekt glatt' },
             ].map((item, index) => (
               <div key={index} className="text-center">
                 <div className="w-32 h-32 rounded-full bg-gradient-to-br from-purple-500/20 to-demon-500/20 flex items-center justify-center mx-auto mb-4">
@@ -203,7 +194,7 @@ export default function MaennerPage() {
               },
               {
                 q: 'Wie viele Behandlungen brauche ich als Mann?',
-                a: 'Für Männer empfehlen wir 6-8 Behandlungen im Abstand von 4-8 Wochen. Männerhaut reagiert oft etwas langsamer, aber die Ergebnisse sind dauerhaft.'
+                a: 'Für Männer empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen. Männerhaut reagiert oft etwas langsamer, aber die Ergebnisse sind dauerhaft.'
               },
               {
                 q: 'Kann ich während des Trainings behandelt werden?',
@@ -222,9 +213,9 @@ export default function MaennerPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="cta-heading">
             Bereit für den perfekten Körper?
           </h2>
           <p className="text-white/70 mb-8">
@@ -232,7 +223,7 @@ export default function MaennerPage() {
             dauerhafter Haarentfernung für Männer.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Männer-Termin buchen
             </a>

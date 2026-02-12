@@ -31,13 +31,18 @@ const behandlungen = [
     href: '/laser-haarentfernung-gesicht',
   },
   {
-    name: 'Körper',
-    description: 'Achseln, Arme, Beine, Rücken, Brust - großflächige Behandlungen.',
+    name: 'Für Frauen',
+    description: 'Beine, Achseln, Bikinizone - seidig glatte Haut für Sie.',
+    href: '/laser-haarentfernung-frauen',
+  },
+  {
+    name: 'Für Männer',
+    description: 'Rücken, Brust, Bauch, Bart - spezialisiert auf Männerhaut.',
     href: '/laser-haarentfernung-maenner',
   },
   {
     name: 'Intimbereich',
-    description: 'Bikinizone, Intim, Po-Falte & Gesäss - diskret und professionell.',
+    description: 'Bikinizone, Brazilian, Hollywood - diskret und professionell.',
     href: '/laser-haarentfernung-intimbereich',
   },
 ]
@@ -81,7 +86,7 @@ export default function Home() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt Termin buchen
             </a>
@@ -93,7 +98,7 @@ export default function Home() {
           {/* Stats */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '6', label: 'Behandlungen' },
+              { value: '4', label: 'Behandlungen' },
               { value: '100%', label: 'Schmerzfrei' },
               { value: '3', label: 'Wellenlängen' },
               { value: '5★', label: 'Bewertungen' },
@@ -184,7 +189,7 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {behandlungen.map((behandlung, index) => (
               <Link key={behandlung.name} href={behandlung.href} className="group">
                 <div className="card overflow-hidden p-0">
@@ -199,15 +204,22 @@ export default function Home() {
                     {index === 1 && (
                       <img 
                         src="/images/beautiful-female-legs.jpg" 
-                        alt="Körperbehandlung"
+                        alt="Frauen Behandlung"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     )}
                     {index === 2 && (
                       <img 
+                        src="/images/maenner-behandlung.jpg" 
+                        alt="Männer Behandlung"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    )}
+                    {index === 3 && (
+                      <img 
                         src="/images/2149134359.jpg" 
                         alt="Intimbereich Behandlung"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -239,7 +251,7 @@ export default function Home() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="card text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Warum sind mindestens 6-8 Behandlungen nötig?</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Warum sind mindestens 4 Behandlungen nötig?</h2>
             <p className="text-white/60 mb-6">
               Der Haarwuchs durchläuft drei Phasen. Erfahren Sie mehr über unsere Technologie.
             </p>
@@ -254,26 +266,37 @@ export default function Home() {
       {/* Trust Badges */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Warum Demon (And) Angel?</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Ihr Vertrauen ist unser höchstes Gut. Deshalb setzen wir auf höchste Qualitätsstandards.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            <div className="card">
+              <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
+              <h3 className="font-semibold text-white mb-2">Zufriedene Kunden</h3>
+              <p className="text-white/60 text-sm">Seit 2024 in Frankfurt</p>
+            </div>
             <div className="card">
               <Shield className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="font-semibold text-white mb-2">NiSV-Zertifiziert</h3>
-              <p className="text-white/60 text-sm">Geschultes Fachpersonal nach NiSV-Verordnung</p>
+              <p className="text-white/60 text-sm">Geschultes Fachpersonal nach gesetzlicher Verordnung</p>
             </div>
             <div className="card">
               <Star className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
-              <h3 className="font-semibold text-white mb-2">5-Sterne Bewertung</h3>
-              <p className="text-white/60 text-sm">Über 47 zufriedene Kunden</p>
+              <h3 className="font-semibold text-white mb-2">5,0 ★ Google</h3>
+              <p className="text-white/60 text-sm">100% zufriedene Kunden auf Google</p>
             </div>
             <div className="card">
               <Zap className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="font-semibold text-white mb-2">Medizinisches Niveau</h3>
-              <p className="text-white/60 text-sm">Hochwertige Medizingeräte</p>
+              <h3 className="font-semibold text-white mb-2">Physiker im Team</h3>
+              <p className="text-white/60 text-sm">Laser-Experte für optimale Einstellungen</p>
             </div>
             <div className="card">
               <Clock className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="font-semibold text-white mb-2">-10°C Kühlung</h3>
-              <p className="text-white/60 text-sm">Schmerzfreie Behandlung durch Hautkühlung</p>
+              <h3 className="font-semibold text-white mb-2">Kostenlose Beratung</h3>
+              <p className="text-white/60 text-sm">Unverbindliches Erstgespräch inkl. Hautanalyse</p>
             </div>
           </div>
         </div>
@@ -391,7 +414,7 @@ export default function Home() {
             Schmerzfrei, effektiv und für alle Hauttypen geeignet.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt anrufen: 015238228127
             </a>

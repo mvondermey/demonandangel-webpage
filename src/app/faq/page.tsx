@@ -27,7 +27,7 @@ const faqCategories = [
       },
       {
         question: 'Wie viele Behandlungen sind notwendig?',
-        answer: 'Für optimale Ergebnisse empfehlen wir 6-8 Behandlungen im Abstand von 4-8 Wochen. Die genaue Anzahl hängt von Haartyp, Hautfarbe und der zu behandelnden Zone ab.',
+        answer: 'Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen. Die genaue Anzahl hängt von Haartyp, Hautfarbe und der zu behandelnden Zone ab.',
       },
     ],
   },
@@ -101,7 +101,7 @@ export default function FAQPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -153,7 +153,7 @@ export default function FAQPage() {
       <section className="py-16 bg-white/5">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <MessageCircle className="h-16 w-16 mx-auto mb-6 text-purple-400" />
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="cta-heading">
             Noch Fragen?
           </h2>
           <p className="text-white/70 mb-8 max-w-2xl mx-auto">

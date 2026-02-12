@@ -49,7 +49,7 @@ export default function TechnologiePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/images/hero-bg.jpg" 
@@ -86,7 +86,7 @@ export default function TechnologiePage() {
               Die Alexandrit-Wellenlänge eignet sich besonders für helles und dünnes Haar, die Diodenlaser-Wellenlänge ist eine klassische Lösung für mittlere Haarstärken und die Yag-Wellenlänge bietet eine fokussierte Lösung für dunklere Hauttypen.
             </p>
             <p className="text-xl text-white/70">
-              Verabschieden Sie sich von lästigen Haaren an Armen, Beinen oder im Intimbereich und genießen Sie seidig glatte Haut nach nur 6 Anwendungen. Mit dem Diodenlaser 3 in 1 erreichen Sie ein ganzheitliches und dauerhaftes Ergebnis der Haarentfernung. Entdecken Sie die Vorteile unserer innovativen Technologie und lassen Sie sich von uns begeistern.
+              Verabschieden Sie sich von lästigen Haaren an Armen, Beinen oder im Intimbereich und genießen Sie seidig glatte Haut nach nur 4 Anwendungen. Mit dem Diodenlaser 3 in 1 erreichen Sie ein ganzheitliches und dauerhaftes Ergebnis der Haarentfernung. Entdecken Sie die Vorteile unserer innovativen Technologie und lassen Sie sich von uns begeistern.
             </p>
           </div>
         </div>
@@ -149,11 +149,11 @@ export default function TechnologiePage() {
         </div>
       </section>
 
-      {/* Haarwachstumsphasen - Warum 6 Behandlungen */}
+      {/* Haarwachstumsphasen - Warum 4 Behandlungen */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="section-heading">Warum sind 6-8 Behandlungen nötig?</h2>
+            <h2 className="section-heading">Warum sind 4 Behandlungen nötig?</h2>
             <p className="text-white/60 max-w-3xl mx-auto">
               Der Haarwuchs durchläuft drei Phasen. Der Laser kann nur Haare in der aktiven Wachstumsphase behandeln.
             </p>

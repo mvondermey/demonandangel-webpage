@@ -35,7 +35,7 @@ const reviews = [
     author: 'Anna S.',
     rating: 5,
     date: 'vor 2 Monaten',
-    text: 'Hatte anfangs Bedenken wegen der Schmerzen, aber die Kühlung macht es wirklich angenehm. Nach 6 Behandlungen bin ich begeistert!',
+    text: 'Hatte anfangs Bedenken wegen der Schmerzen, aber die Kühlung macht es wirklich angenehm. Nach 4 Behandlungen bin ich begeistert!',
     avatar: 'AS',
   },
   {

@@ -80,7 +80,7 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="https://wa.me/4915238228127" className="btn-primary text-sm flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary text-sm flex items-center gap-2">
               <Phone className="h-4 w-4" />
               Termin buchen
             </a>
@@ -121,7 +121,7 @@ export default function Header() {
             </nav>
             <div className="pt-6 border-t border-white/10 space-y-4">
               <a
-                href="https://wa.me/4915238228127"
+                href="tel:+4915238228127"
                 onClick={closeMenu}
                 className="btn-primary block text-center py-4"
               >

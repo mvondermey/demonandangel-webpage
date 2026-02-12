@@ -13,16 +13,6 @@ export const metadata: Metadata = {
   },
 }
 
-const gesichtZonen = [
-  { zone: 'Oberlippe', preis: '29€', dauer: '10 Min.', beschreibung: 'Feine Härchen über der Oberlippe' },
-  { zone: 'Kinn', preis: '29€', dauer: '10 Min.', beschreibung: 'Kinnbereich und Kieferlinie' },
-  { zone: 'Oberlippe + Kinn', preis: '49€', dauer: '15 Min.', beschreibung: 'Kombinationsbehandlung' },
-  { zone: 'Augenbrauen', preis: '39€', dauer: '15 Min.', beschreibung: 'Zwischen den Augenbrauen' },
-  { zone: 'Seitenbart', preis: '39€', dauer: '15 Min.', beschreibung: 'Haare an den Wangen' },
-  { zone: 'Koteletten', preis: '39€', dauer: '15 Min.', beschreibung: 'Kotelettenbereich' },
-  { zone: 'Hals', preis: '49€', dauer: '15 Min.', beschreibung: 'Hals und Kehlkopf' },
-  { zone: 'Gesicht komplett', preis: '79€', dauer: '25 Min.', beschreibung: 'Alle Gesichtszonen' },
-]
 
 const vorteile = [
   'Schmerzfreie Behandlung mit Kühlung',
@@ -48,7 +38,7 @@ const wissenschaftInfo = [
   },
   {
     title: 'Studienbestätigte Wirksamkeit',
-    content: 'Klinische Studien zeigen eine permanente Haarreduktion von 80-95% nach 6-8 Behandlungen.'
+    content: 'Klinische Studien zeigen eine permanente Haarreduktion von 80-95% nach 4-6 Behandlungen.'
   },
 ]
 
@@ -65,7 +55,7 @@ export default function GesichtPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -87,7 +77,7 @@ export default function GesichtPage() {
                 <span>95% Erfolgsrate</span>
               </div>
             </div>
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Gesicht behandeln lassen
             </a>
@@ -95,30 +85,38 @@ export default function GesichtPage() {
         </div>
       </section>
 
-      {/* Gesichtszonen */}
+      {/* Warum Gesichtslaser */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Gesichtszonen & Preise</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
-              Behandeln Sie einzelne Gesichtszonen oder wählen Sie das Komplettpaket für optimale Ergebnisse.
-            </p>
+            <h2 className="section-heading">Endlich frei von lästigen Gesichtshaaren</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {gesichtZonen.map((item) => (
-              <div key={item.zone} className="card hover:scale-105 transition-transform">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-semibold text-white">{item.zone}</h3>
-                  <div className="text-2xl font-bold gradient-text">{item.preis}</div>
-                </div>
-                <p className="text-white/60 text-sm mb-2">{item.beschreibung}</p>
-                <div className="flex items-center gap-2 text-white/60 text-sm">
-                  <Zap className="h-4 w-4" />
-                  <span>{item.dauer}</span>
-                </div>
-              </div>
-            ))}
+          <div className="card bg-gradient-to-br from-demon-600/10 to-angel-600/10">
+            <div className="space-y-6 text-lg text-white/80 leading-relaxed">
+              <p>
+                <strong className="text-white">Jeden Morgen zupfen, rasieren, bleichen?</strong> Das muss nicht sein. 
+                Unsere Laser-Behandlung befreit Sie dauerhaft von unerwünschten Gesichtshaaren.
+              </p>
+              <p>
+                Ob <strong className="text-white">Oberlippe, Kinn, Wangen oder Koteletten</strong> – unsere präzise 3-Wellenlängen-Technologie 
+                behandelt selbst feinste Härchen schonend und effektiv. Ohne Hautirritationen, ohne Narben.
+              </p>
+              <p>
+                <strong className="text-white">Das Gesicht ist Ihre Visitenkarte.</strong> Nach nur wenigen Behandlungen genießen Sie 
+                makellos glatte Haut – ohne täglichen Aufwand. Perfekt für ein selbstbewusstes Auftreten.
+              </p>
+              <p>
+                <strong className="text-white">Schnell, diskret und schmerzfrei.</strong> Eine Oberlippen-Behandlung dauert nur 10 Minuten – 
+                ideal in der Mittagspause.
+              </p>
+            </div>
+            <div className="mt-8 text-center">
+              <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                Jetzt Beratung anfragen
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -301,7 +299,7 @@ export default function GesichtPage() {
               },
               {
                 q: 'Wie viele Behandlungen brauche ich für das Gesicht?',
-                a: 'Für das Gesicht empfehlen wir 6-8 Behandlungen im Abstand von 4-8 Wochen für optimale Ergebnisse.'
+                a: 'Für das Gesicht empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen für optimale Ergebnisse.'
               },
               {
                 q: 'Funktioniert die Gesichtslaserung auch bei dunkler Haut?',
@@ -320,9 +318,9 @@ export default function GesichtPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="cta-heading">
             Bereit für ein haarfreies Gesicht?
           </h2>
           <p className="text-white/70 mb-8">
@@ -330,7 +328,7 @@ export default function GesichtPage() {
             über die dauerhafte Laser Haarentfernung im Gesicht.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Kostenlos beraten lassen
             </a>

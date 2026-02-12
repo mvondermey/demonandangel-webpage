@@ -13,12 +13,6 @@ export const metadata: Metadata = {
   },
 }
 
-const intimZonen = [
-  { zone: 'Bikinizone', preis: '49€', dauer: '15 Min.', beschreibung: 'Haare außerhalb der Slip-Linie' },
-  { zone: 'Brazilian', preis: '79€', dauer: '25 Min.', beschreibung: 'Haare vorne, kleiner Streifen übrig' },
-  { zone: 'Hollywood', preis: '99€', dauer: '30 Min.', beschreibung: 'Komplett haarfrei, keine Haare übrig' },
-  { zone: 'Intimbereich komplett', preis: '99€', dauer: '30 Min.', beschreibung: 'Alle Intimbereiche' },
-]
 
 const vorteile = [
   'Diskrete Behandlung in privater Atmosphäre',
@@ -44,7 +38,7 @@ const medizinInfo = [
   },
   {
     title: 'Langzeitergebnisse',
-    content: 'Klinische Studien zeigen eine dauerhafte Haarreduktion von 80-95% nach durchschnittlich 6-8 Behandlungen im Intimbereich.'
+    content: 'Klinische Studien zeigen eine dauerhafte Haarreduktion von 80-95% nach durchschnittlich 4-6 Behandlungen im Intimbereich.'
   },
 ]
 
@@ -61,7 +55,7 @@ export default function IntimbereichPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -83,7 +77,7 @@ export default function IntimbereichPage() {
                 <span>Weibliche/männliche Behandler</span>
               </div>
             </div>
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Diskreten Termin buchen
             </a>
@@ -91,30 +85,38 @@ export default function IntimbereichPage() {
         </div>
       </section>
 
-      {/* Intimbereiche */}
+      {/* Warum Intimbereich lasern */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="section-heading">Intimbereiche & Preise</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
-              Wählen Sie die passende Behandlung für Ihre Bedürfnisse.
-            </p>
+            <h2 className="section-heading">Schluss mit Rasieren, Waxen und Zupfen</h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            {intimZonen.map((item) => (
-              <div key={item.zone} className="card hover:scale-105 transition-transform">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-semibold text-white">{item.zone}</h3>
-                  <div className="text-2xl font-bold gradient-text">{item.preis}</div>
-                </div>
-                <p className="text-white/60 text-sm mb-2">{item.beschreibung}</p>
-                <div className="flex items-center gap-2 text-white/60 text-sm">
-                  <Shield className="h-4 w-4" />
-                  <span>{item.dauer}</span>
-                </div>
-              </div>
-            ))}
+          <div className="card bg-gradient-to-br from-demon-600/10 to-angel-600/10">
+            <div className="space-y-6 text-lg text-white/80 leading-relaxed">
+              <p>
+                <strong className="text-white">Der Intimbereich ist empfindlich.</strong> Rasieren führt zu Stoppeln und Hautirritationen. 
+                Waxing ist schmerzhaft. Und beides muss ständig wiederholt werden.
+              </p>
+              <p>
+                Unsere <strong className="text-white">Laser-Behandlung ist anders:</strong> Sanft, schmerzfrei und dauerhaft. 
+                Ob Bikinizone, Brazilian oder Hollywood – nach 4-6 Behandlungen genießen Sie glatte Haut ohne täglichen Aufwand.
+              </p>
+              <p>
+                <strong className="text-white">100% diskret.</strong> Privater Behandlungsraum, keine Wartezeiten, 
+                und Sie können zwischen weiblicher oder männlicher Behandlungsperson wählen.
+              </p>
+              <p>
+                <strong className="text-white">Keine eingewachsenen Haare mehr.</strong> Keine Rasierpickel. 
+                Stattdessen: Ein sauberes, frisches Gefühl – jeden Tag, ohne Aufwand.
+              </p>
+            </div>
+            <div className="mt-8 text-center">
+              <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                Diskret anfragen
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -204,28 +206,28 @@ export default function IntimbereichPage() {
                   <td className="p-4 text-green-400">Permanent (95%)</td>
                   <td className="p-4 text-green-400">Minimal</td>
                   <td className="p-4 text-green-400">Keine</td>
-                  <td className="p-4 text-green-400">€300-500 (Erstjahr)</td>
+                  <td className="p-4 text-green-400">Günstigste Langzeitlösung</td>
                 </tr>
                 <tr className="border-b border-white/10">
                   <td className="p-4 text-white/80">Waxing</td>
                   <td className="p-4 text-yellow-400">2-4 Wochen</td>
                   <td className="p-4 text-red-400">Hoch</td>
                   <td className="p-4 text-yellow-400">Mittel</td>
-                  <td className="p-4 text-yellow-400">€600-800</td>
+                  <td className="p-4 text-yellow-400">Hoch (monatlich)</td>
                 </tr>
                 <tr className="border-b border-white/10">
                   <td className="p-4 text-white/80">Rasieren</td>
                   <td className="p-4 text-red-400">1-3 Tage</td>
                   <td className="p-4 text-green-400">Minimal</td>
                   <td className="p-4 text-red-400">Hoch</td>
-                  <td className="p-4 text-yellow-400">€100-200</td>
+                  <td className="p-4 text-yellow-400">Mittel (regelmäßig)</td>
                 </tr>
                 <tr>
                   <td className="p-4 text-white/80">Epilieren</td>
                   <td className="p-4 text-yellow-400">2-4 Wochen</td>
                   <td className="p-4 text-red-400">Sehr hoch</td>
                   <td className="p-4 text-yellow-400">Mittel</td>
-                  <td className="p-4 text-green-400">€50-100</td>
+                  <td className="p-4 text-green-400">Niedrig (zu Hause)</td>
                 </tr>
               </tbody>
             </table>
@@ -344,7 +346,7 @@ export default function IntimbereichPage() {
               },
               {
                 q: 'Wie viele Behandlungen brauche ich für den Intimbereich?',
-                a: 'Für den Intimbereich empfehlen wir 6-8 Behandlungen im Abstand von 4-8 Wochen für optimale Ergebnisse.'
+                a: 'Für den Intimbereich empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen für optimale Ergebnisse.'
               },
               {
                 q: 'Ist die Behandlung diskret?',
@@ -363,9 +365,9 @@ export default function IntimbereichPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="cta-heading">
             Bereit für dauerhafte Freiheit?
           </h2>
           <p className="text-white/70 mb-8">
@@ -373,7 +375,7 @@ export default function IntimbereichPage() {
             wochenlang die Freiheit von unerwünschter Behaarung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Diskret beraten lassen
             </a>

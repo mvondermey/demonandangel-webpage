@@ -2,6 +2,12 @@ import Link from 'next/link'
 import { Zap, Mail, MapPin, Phone, Facebook, Instagram, Clock } from 'lucide-react'
 
 const footerLinks = {
+  behandlungen: [
+    { name: 'Für Frauen', href: '/laser-haarentfernung-frauen' },
+    { name: 'Für Männer', href: '/laser-haarentfernung-maenner' },
+    { name: 'Gesicht', href: '/laser-haarentfernung-gesicht' },
+    { name: 'Intimbereich', href: '/laser-haarentfernung-intimbereich' },
+  ],
   information: [
     { name: 'Preise', href: '/preise' },
     { name: 'Technologie', href: '/technologie' },
@@ -25,7 +31,7 @@ export default function Footer() {
   return (
     <footer className="bg-black/90 border-t border-white/10">
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
@@ -51,7 +57,21 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links */}
+          {/* Behandlungen */}
+          <div>
+            <h3 className="text-sm font-semibold text-white mb-4">Behandlungen</h3>
+            <ul className="space-y-3">
+              {footerLinks.behandlungen.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-sm">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Information */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-4">Information</h3>
             <ul className="space-y-3">
@@ -65,6 +85,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Rechtliches */}
           <div>
             <h3 className="text-sm font-semibold text-white mb-4">Rechtliches</h3>
             <ul className="space-y-3">

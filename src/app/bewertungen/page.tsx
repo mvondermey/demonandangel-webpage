@@ -46,7 +46,7 @@ const reviews = [
     author: 'Anna S.',
     rating: 5,
     date: 'vor 2 Monaten',
-    text: 'Hatte anfangs Bedenken wegen der Schmerzen, aber die Kühlung macht es wirklich angenehm. Nach 6 Behandlungen bin ich begeistert!',
+    text: 'Hatte anfangs Bedenken wegen der Schmerzen, aber die Kühlung macht es wirklich angenehm. Nach 4 Behandlungen bin ich begeistert!',
     behandlung: 'Beine',
   },
   {
@@ -79,7 +79,7 @@ export default function BewertungenPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -161,7 +161,7 @@ export default function BewertungenPage() {
       {/* Write Review CTA */}
       <section className="py-16 bg-white/5">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="cta-heading">
             Zufrieden mit unserer Behandlung?
           </h2>
           <p className="text-white/70 mb-8">
@@ -180,16 +180,16 @@ export default function BewertungenPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="cta-heading">
             Werden Sie unser nächster zufriedener Kunde
           </h2>
           <p className="text-white/70 mb-8">
             Vereinbaren Sie jetzt Ihren kostenlosen Beratungstermin und erleben Sie professionelle Laser Haarentfernung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt Termin buchen
             </a>

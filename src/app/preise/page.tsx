@@ -76,7 +76,7 @@ export default function PreisePage() {
   return (
     <>
       {/* Hero */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -95,7 +95,7 @@ export default function PreisePage() {
             </p>
             <div className="flex items-center gap-4 text-white/60">
               <Info className="h-5 w-5 text-purple-400" />
-              <span>Für optimale Ergebnisse empfehlen wir 6-8 Behandlungen im Abstand von 4-8 Wochen.</span>
+              <span>Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen.</span>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function PreisePage() {
           <div className="space-y-4">
             {[
               'Alle Preise verstehen sich pro Behandlung inklusive Mehrwertsteuer.',
-              'Für ein dauerhaftes Ergebnis sind in der Regel 6-8 Behandlungen erforderlich.',
+              'Für ein dauerhaftes Ergebnis sind in der Regel 4-6 Behandlungen erforderlich.',
               'Der Abstand zwischen den Behandlungen beträgt 4-8 Wochen.',
               'Die erste Behandlung beinhaltet ein kostenloses Beratungsgespräch.',
               'Wir akzeptieren Barzahlung, EC-Karte und alle gängigen Kreditkarten.',
@@ -167,9 +167,9 @@ export default function PreisePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="cta-heading">
             Bereit für Ihre erste Behandlung?
           </h2>
           <p className="text-white/70 mb-8">
@@ -177,7 +177,7 @@ export default function PreisePage() {
             über die optimale Behandlung für Ihre Bedürfnisse.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <a href="https://wa.me/4915238228127" className="btn-primary inline-flex items-center gap-2">
+            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt Termin buchen
             </a>

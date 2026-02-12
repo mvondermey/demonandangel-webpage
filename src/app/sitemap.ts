@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/laser-haarentfernung-gesicht',
     '/laser-haarentfernung-intimbereich',
     '/laser-haarentfernung-maenner',
+    '/laser-haarentfernung-frauen',
     '/schmerzfreie-laser-haarentfernung',
     '/impressum',
     '/datenschutz',
