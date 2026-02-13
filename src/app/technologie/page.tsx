@@ -40,7 +40,7 @@ const technologieVorteile = [
   },
   {
     icon: Sparkles,
-    title: 'weiße, graue, rote und feine Haare können behandelt werden',
+    title: 'helle, graue, rote und feine Haare können behandelt werden',
     description: 'Alle Haarfarben und -typen können erfolgreich behandelt werden.',
   },
 ]

@@ -40,38 +40,22 @@ export default function Header() {
   return (
     <>
       <header className="fixed w-full z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-1 lg:px-8 lg:py-2">
           {/* Logo */}
-          <div className="flex lg:flex-1">
-            <Link href="/" className="p-1.5 flex items-center gap-3">
-              <img src="/images/logo-removebg-preview.png" alt="Demon (And) Angel Logo" className="h-16 sm:h-20 lg:h-24 w-auto" />
-              <span className="text-xl sm:text-2xl lg:text-3xl font-bold gradient-text">Demon (And) Angel</span>
+          <div className="flex lg:flex-1 flex-shrink-0">
+            <Link href="/" className="flex items-center gap-2 lg:gap-3">
+              <img src="/images/logo-removebg-preview.png" alt="Demon (And) Angel Logo" className="h-12 sm:h-16 lg:h-24 w-auto" />
+              <span className="text-lg sm:text-xl lg:text-3xl font-bold gradient-text">Demon (And) Angel</span>
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            type="button"
-            onClick={toggleMenu}
-            className="lg:hidden relative z-[10001] p-3 text-white"
-            aria-label="Toggle menu"
-          >
-            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-
           {/* Desktop navigation */}
-          <div className="hidden lg:flex lg:gap-x-8">
+          <div className="hidden lg:flex lg:gap-x-8 flex-1 justify-center">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-white/80 hover:text-white transition-colors"
+                className="text-base font-medium text-white/80 hover:text-white transition-colors"
               >
                 {item.name}
               </Link>
@@ -80,8 +64,8 @@ export default function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="tel:+4915238228127" className="btn-primary text-sm flex items-center gap-2">
-              <Phone className="h-4 w-4" />
+            <a href="tel:+4915238228127" className="btn-primary text-base flex items-center gap-2">
+              <Phone className="h-5 w-5" />
               Termin buchen
             </a>
           </div>
@@ -113,7 +97,7 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={closeMenu}
-                  className="block py-4 px-5 text-lg font-medium text-white hover:bg-white/10 rounded-xl transition-all hover:translate-x-1"
+                  className="block py-4 px-5 text-xl font-medium text-white hover:bg-white/10 rounded-xl transition-all hover:translate-x-1"
                 >
                   {item.name}
                 </Link>
@@ -123,9 +107,9 @@ export default function Header() {
               <a
                 href="tel:+4915238228127"
                 onClick={closeMenu}
-                className="btn-primary block text-center py-4"
+                className="btn-primary block text-center py-5 text-lg"
               >
-                <Phone className="h-5 w-5 inline mr-2" />
+                <Phone className="h-6 w-6 inline mr-2" />
                 Termin buchen
               </a>
             </div>

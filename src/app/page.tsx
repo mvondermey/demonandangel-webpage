@@ -20,7 +20,7 @@ const vorteile = [
   {
     icon: CheckCircle,
     title: 'Alle Haarfarben',
-    description: 'Weiße, graue, rote und feine Haare können behandelt werden.',
+    description: 'Helle, graue, rote und feine Haare können behandelt werden.',
   },
 ]
 

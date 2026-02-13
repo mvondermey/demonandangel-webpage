@@ -204,7 +204,7 @@ export default function FrauenPage() {
               },
               {
                 q: 'Funktioniert es auch bei hellen Haaren?',
-                a: 'Unsere 3-Wellenlängen-Technologie kann auch hellere Haare behandeln. Bei sehr hellen oder weißen Haaren beraten wir Sie gerne persönlich.'
+                a: 'Unsere 3-Wellenlängen-Technologie kann auch hellere Haare behandeln. Bei sehr hellen Haaren beraten wir Sie gerne persönlich.'
               },
             ].map((faq, index) => (
               <details key={index} className="card group">

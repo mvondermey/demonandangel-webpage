@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     description: 'Professionelle dauerhafte Haarentfernung mit modernster 3-Wellenlängen-Diodenlaser Technologie in Frankfurt. Schmerzfrei & für alle Hauttypen.',
     images: [
       {
-        url: '/images/logo-removebg-preview.png',
-        width: 1200,
-        height: 630,
+        url: '/images/logo.jpg',
+        width: 512,
+        height: 512,
         alt: 'Demon (And) Angel - Dauerhafte Laser Haarentfernung Frankfurt',
       },
     ],
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dauerhafte Laser Haarentfernung Frankfurt | Demon (And) Angel',
     description: 'Professionelle dauerhafte Haarentfernung mit 3-Wellenlängen-Diodenlaser in Frankfurt. Schmerzfrei & effektiv.',
-    images: ['/images/logo-removebg-preview.png'],
+    images: ['/images/logo.jpg'],
   },
   robots: {
     index: true,
@@ -102,7 +102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'bestRating': '5',
                 'worstRating': '1'
               },
-              image: 'https://demonandangel.eu/logo.png',
+              image: 'https://demonandangel.eu/images/logo.jpg',
               url: 'https://demonandangel.eu',
               telephone: '+49 152 38228127',
               email: 'info@demonandangel.com',
@@ -178,7 +178,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <Header />
-        <main className="pt-56 lg:pt-64">{children}</main>
+        <main className="pt-48 lg:pt-56">{children}</main>
         <Footer />
         <StickyWhatsApp />
       </body>

@@ -126,7 +126,7 @@ export default function AGBPage() {
               Faktoren ab, wie Haarfarbe, Haarstruktur, Hauttyp und hormonellen Einflüssen.
             </p>
             <p className="text-white/70 mt-4">
-              (2) Für optimale Ergebnisse werden in der Regel 4-6 Behandlungen im Abstand von 4-8 Wochen empfohlen.
+              (2) Für optimale Ergebnisse werden in der Regel 6-8 Behandlungen im Abstand von 4-8 Wochen empfohlen.
             </p>
             <p className="text-white/70 mt-4">
               (3) Eine Garantie für vollständige und dauerhafte Haarentfernung kann nicht gegeben werden.
