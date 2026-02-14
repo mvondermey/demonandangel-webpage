@@ -12,7 +12,7 @@ export default function StickyWhatsApp() {
       aria-label="WhatsApp Kontakt"
     >
       <MessageCircle className="h-6 w-6" />
-      <span className="hidden sm:inline font-semibold">💬 Sofort Antwort</span>
+      <span className="hidden sm:inline font-semibold">Termin buchen</span>
     </a>
   )
 }

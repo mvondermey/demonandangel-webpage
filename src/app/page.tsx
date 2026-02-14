@@ -52,24 +52,16 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden">
         {/* Rotating Photo Gallery Background */}
         <HeroGallery />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-center">
-          <div className="animate-fade-in space-y-4">
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full animate-pulse">
-              <a href="https://wa.me/4915238228127" className="flex items-center gap-2 text-white font-bold text-lg hover:text-green-100 transition-colors">
-                <MessageCircle className="h-5 w-5" />
-                💬 WhatsApp - Sofort Antwort!
-              </a>
-            </div>
-            <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm">
-                <Sparkles className="h-4 w-4 text-purple-400" />
-                NiSV-zertifiziertes Fachpersonal • Medizinisches Niveau
-              </span>
-            </div>
+          <div className="animate-fade-in">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm">
+              <Sparkles className="h-4 w-4 text-purple-400" />
+              NiSV-zertifiziertes Fachpersonal • Medizinisches Niveau
+            </span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 animate-slide-up">
@@ -95,7 +87,7 @@ export default function Home() {
             </a>
             <a href="https://wa.me/4915238228127" className="btn-secondary inline-flex items-center gap-2 bg-green-600 hover:bg-green-700">
               <MessageCircle className="h-5 w-5" />
-              💬 WhatsApp schreiben
+              WhatsApp schreiben
             </a>
             <Link href="/preise" className="btn-secondary">
               Preise ansehen
