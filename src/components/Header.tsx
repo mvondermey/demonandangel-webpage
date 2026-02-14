@@ -45,9 +45,25 @@ export default function Header() {
           <div className="flex lg:flex-1 flex-shrink-0">
             <Link href="/" className="flex items-center gap-2 lg:gap-3">
               <img src="/images/logo-removebg-preview.png" alt="Demon (And) Angel Logo" className="h-12 sm:h-16 lg:h-24 w-auto" />
-              <span className="text-lg sm:text-xl lg:text-3xl font-bold gradient-text">Demon (And) Angel</span>
+              <span className="text-xl sm:text-2xl lg:text-3xl font-bold gradient-text">Demon (And) Angel</span>
             </Link>
           </div>
+
+          {/* Mobile menu button */}
+          <button
+            type="button"
+            onClick={toggleMenu}
+            className="lg:hidden relative z-[10001] p-2 text-white flex-shrink-0"
+            aria-label="Toggle menu"
+          >
+            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              {isOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
 
           {/* Desktop navigation */}
           <div className="hidden lg:flex lg:gap-x-8 flex-1 justify-center">

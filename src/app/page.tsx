@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { ArrowRight, Star, Shield, Clock, Zap, CheckCircle, Phone, MapPin, Sparkles } from 'lucide-react'
+import { ArrowRight, Star, Shield, Clock, Zap, CheckCircle, Phone, MapPin, Sparkles, MessageCircle } from 'lucide-react'
+import HeroGallery from '@/components/HeroGallery'
 
 const vorteile = [
   {
@@ -52,14 +53,16 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-demon-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-angel-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        {/* Rotating Photo Gallery Background */}
+        <HeroGallery />
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-center">
           <div className="animate-fade-in space-y-4">
-            <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full">
-              <span className="text-white font-bold text-lg">🎉 25% RABATT auf Ihre erste Behandlung!</span>
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full animate-pulse">
+              <a href="https://wa.me/4915238228127" className="flex items-center gap-2 text-white font-bold text-lg hover:text-green-100 transition-colors">
+                <MessageCircle className="h-5 w-5" />
+                💬 WhatsApp - Sofort Antwort!
+              </a>
             </div>
             <div>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white/80 text-sm">
@@ -89,6 +92,10 @@ export default function Home() {
             <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
               <Phone className="h-5 w-5" />
               Jetzt Termin buchen
+            </a>
+            <a href="https://wa.me/4915238228127" className="btn-secondary inline-flex items-center gap-2 bg-green-600 hover:bg-green-700">
+              <MessageCircle className="h-5 w-5" />
+              💬 WhatsApp schreiben
             </a>
             <Link href="/preise" className="btn-secondary">
               Preise ansehen

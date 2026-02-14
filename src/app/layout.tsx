@@ -178,7 +178,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <Header />
-        <main className="pt-48 lg:pt-56">{children}</main>
+        <main className="pt-32 lg:pt-56">{children}</main>
         <Footer />
         <StickyWhatsApp />
       </body>

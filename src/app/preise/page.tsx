@@ -81,11 +81,7 @@ export default function PreisePage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            {/* Discount Banner */}
-            <div className="inline-block mb-6 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full">
-              <span className="text-white font-bold text-lg">🎉 25% RABATT auf Ihre erste Behandlung!</span>
-            </div>
-            
+                        
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="gradient-text">Unsere Preise</span>
             </h1>
