@@ -44,7 +44,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex lg:flex-1 flex-shrink-0">
             <Link href="/" className="flex items-center gap-2 lg:gap-3">
-              <img src="/images/logo-removebg-preview.png" alt="Demon (And) Angel Logo" className="h-12 sm:h-16 lg:h-24 w-auto" />
+              <img src="/images/logo-removebg-preview.png" alt="Demon (And) Angel - Laser Haarentfernung Frankfurt Logo" className="h-12 sm:h-16 lg:h-24 w-auto" loading="eager" />
               <span className="text-xl sm:text-2xl lg:text-3xl font-bold gradient-text">Demon (And) Angel</span>
             </Link>
           </div>

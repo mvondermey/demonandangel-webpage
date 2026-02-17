@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: '%s | Demon (And) Angel Frankfurt'
   },
   description: 'Professionelle dauerhafte Haarentfernung mit 3-Wellenlängen-Diodenlaser in Frankfurt. Schmerzfrei, effektiv & für alle Hauttypen. Jetzt Termin buchen! ☎ 015238228127',
-  keywords: ['dauerhafte haarentfernung frankfurt', 'laser haarentfernung frankfurt', 'diodenlaser haarentfernung', 'haarentfernung permanent frankfurt', 'alexandrit laser frankfurt', 'haarentfernung frauen frankfurt', 'haarentfernung männer frankfurt', 'intimbereich laser frankfurt', 'beine lasern frankfurt', 'achseln lasern frankfurt', 'schmerzfreie haarentfernung', 'NiSV zertifiziert', '3 wellenlängen laser', 'bikinizone lasern', 'brazilian laser frankfurt', 'hollywood laser frankfurt'],
+  keywords: ['dauerhafte haarentfernung frankfurt', 'laser haarentfernung frankfurt', 'diodenlaser haarentfernung', 'haarentfernung permanent frankfurt', 'alexandrit laser frankfurt', 'haarentfernung frauen frankfurt', 'haarentfernung männer frankfurt', 'intimbereich laser frankfurt', 'beine lasern frankfurt', 'achseln lasern frankfurt', 'schmerzfreie haarentfernung', 'NiSV zertifiziert', '3 wellenlängen laser', 'bikinizone lasern'],
   authors: [{ name: 'Demon (And) Angel' }],
   creator: 'Demon (And) Angel',
   publisher: 'Demon (And) Angel',

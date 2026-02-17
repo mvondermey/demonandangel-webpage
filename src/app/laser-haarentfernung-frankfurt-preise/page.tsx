@@ -71,6 +71,128 @@ export default function PreiseSeite() {
         </div>
       </section>
 
+      {/* Detaillierte Preisübersicht */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Preise nach Körperzonen</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Detaillierte Übersicht unserer Laser Haarentfernung Preise in Frankfurt
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="card">
+              <h3 className="text-xl font-bold text-white mb-4">Für Frauen</h3>
+              <div className="space-y-3 text-white/80">
+                <div className="flex justify-between">
+                  <span>Oberlippe</span>
+                  <span className="text-purple-400 font-bold">30€</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Kinn</span>
+                  <span className="text-purple-400 font-bold">35€</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Achseln</span>
+                  <span className="text-purple-400 font-bold">60€</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Bikinizone</span>
+                  <span className="text-purple-400 font-bold">80€</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Beine (komplett)</span>
+                  <span className="text-purple-400 font-bold">150€</span>
+                </div>
+              </div>
+            </div>
+            
+            <div className="card">
+              <h3 className="text-xl font-bold text-white mb-4">Für Männer</h3>
+              <div className="space-y-3 text-white/80">
+                <div className="flex justify-between">
+                  <span>Hals</span>
+                  <span className="text-purple-400 font-bold">40€</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Bart</span>
+                  <span className="text-purple-400 font-bold">90€</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Brust</span>
+                  <span className="text-purple-400 font-bold">80€</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Rücken</span>
+                  <span className="text-purple-400 font-bold">120€</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Bauch</span>
+                  <span className="text-purple-400 font-bold">70€</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Preisvergleich */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Laser Haarentfernung vs. Alternativen</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Warum sich Laser Haarentfernung langfristig lohnt
+            </p>
+          </div>
+          
+          <div className="card bg-gradient-to-br from-demon-600/10 to-angel-600/10">
+            <div className="overflow-x-auto">
+              <table className="w-full text-white/80">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-3">Methode</th>
+                    <th className="text-center py-3">Kosten pro Jahr</th>
+                    <th className="text-center py-3">Dauerhaftigkeit</th>
+                    <th className="text-center py-3">Schmerzhaft</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">Rasieren</td>
+                    <td className="text-center py-3">120€</td>
+                    <td className="text-center py-3">❌ Nein</td>
+                    <td className="text-center py-3">⚠️ Leicht</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">Wachsen</td>
+                    <td className="text-center py-3">480€</td>
+                    <td className="text-center py-3">❌ Nein</td>
+                    <td className="text-center py-3">✅ Stark</td>
+                  </tr>
+                  <tr className="border-b border-white/10">
+                    <td className="py-3">Creme</td>
+                    <td className="text-center py-3">180€</td>
+                    <td className="text-center py-3">❌ Nein</td>
+                    <td className="text-center py-3">⚠️ Leicht</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 font-bold text-white">Laser</td>
+                    <td className="text-center py-3 font-bold text-green-400">240€</td>
+                    <td className="text-center py-3">✅ Ja</td>
+                    <td className="text-center py-3">❌ Nein</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-white/60 mt-4">
+              *Berechnung über 5 Jahre bei 4 Behandlungen im ersten Jahr
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Warum unsere Preise fair sind */}
       <section className="py-16 bg-white/5">
         <div className="max-w-4xl mx-auto px-6">
@@ -92,6 +214,54 @@ export default function PreiseSeite() {
                 <span className="text-white/80">{punkt}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Zusatzleistungen */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Im Preis enthalten</h2>
+          </div>
+          
+          <div className="card bg-gradient-to-br from-demon-600/10 to-angel-600/10">
+            <div className="grid md:grid-cols-2 gap-6 text-white/80">
+              <div>
+                <h3 className="text-lg font-bold text-white mb-3">Vor der Behandlung</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span>Kostenlose Erstberatung</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span>Hauttyp-Analyse</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span>Individueller Behandlungsplan</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white mb-3">Nach der Behandlung</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span>Kühle Aftercare-Produkte</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span>Follow-up Beratung</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span>Garantie auf Ergebnis</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>

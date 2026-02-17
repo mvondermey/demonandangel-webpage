@@ -10,6 +10,9 @@ const footerLinks = {
   ],
   information: [
     { name: 'Preise', href: '/preise' },
+    { name: 'Frankfurt Preise', href: '/laser-haarentfernung-frankfurt-preise' },
+    { name: 'Sitzungen', href: '/wie-viele-sitzungen-laser-haarentfernung' },
+    { name: 'Gebräunte Haut', href: '/laser-haarentfernung-bei-gebraeunter-haut' },
     { name: 'Technologie', href: '/technologie' },
     { name: 'Galerie', href: '/galerie' },
     { name: 'Bewertungen', href: '/bewertungen' },
@@ -35,7 +38,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <img src="/images/logo-removebg-preview.png" alt="Demon (And) Angel Logo" className="h-12 w-auto" />
+              <img src="/images/logo-removebg-preview.png" alt="Demon (And) Angel - Laser Haarentfernung Frankfurt Logo" className="h-12 w-auto" loading="lazy" />
               <span className="text-2xl font-bold gradient-text">Demon (And) Angel</span>
             </Link>
             <p className="text-white/60 mb-6 max-w-sm">

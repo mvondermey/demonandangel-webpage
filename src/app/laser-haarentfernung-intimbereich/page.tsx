@@ -3,12 +3,12 @@ import Link from 'next/link'
 import { CheckCircle, Shield, Phone, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Laser Haarentfernung Intimbereich Frankfurt | Bikinizone & Brazilian',
-  description: 'Professionelle Laser Haarentfernung im Intimbereich in Frankfurt. Bikinizone, Brazilian, Hollywood - schmerzfrei & diskret. Jetzt Termin buchen!',
-  keywords: ['laser haarentfernung intimbereich frankfurt', 'bikinizone lasern frankfurt', 'brazilian laser frankfurt', 'hollywood laser haarentfernung', 'intim lasern frankfurt'],
+  title: 'Laser Haarentfernung Intimbereich Frankfurt | Bikinizone',
+  description: 'Professionelle Laser Haarentfernung im Intimbereich in Frankfurt. Bikinizone & Intimbereich - schmerzfrei & diskret. Jetzt Termin buchen!',
+  keywords: ['laser haarentfernung intimbereich frankfurt', 'bikinizone lasern frankfurt', 'intimbereich laser frankfurt', 'intim lasern frankfurt'],
   openGraph: {
     title: 'Laser Haarentfernung Intimbereich Frankfurt | Demon (And) Angel',
-    description: 'Diskrete dauerhafte Haarentfernung im Intimbereich. Bikinizone, Brazilian, Hollywood - moderne 3-Wellenlängen-Technologie.',
+    description: 'Diskrete dauerhafte Haarentfernung im Intimbereich. Bikinizone & Intimbereich - moderne 3-Wellenlängen-Technologie.',
     url: 'https://demonandangel.eu/laser-haarentfernung-intimbereich',
   },
 }
@@ -65,7 +65,7 @@ export default function IntimbereichPage() {
             </h1>
             <p className="text-xl text-white/70 mb-8">
               Diskrete und schmerzfreie dauerhafte Haarentfernung im Intimbereich. 
-              Bikinizone, Brazilian & Hollywood in Frankfurt.
+              Bikinizone & Intimbereich in Frankfurt.
             </p>
             <div className="flex items-center gap-6 text-white/60 mb-8">
               <div className="flex items-center gap-2">
@@ -100,7 +100,7 @@ export default function IntimbereichPage() {
               </p>
               <p>
                 Unsere <strong className="text-white">Laser-Behandlung ist anders:</strong> Sanft, schmerzfrei und dauerhaft. 
-                Ob Bikinizone, Brazilian oder Hollywood – nach 4-6 Behandlungen genießen Sie glatte Haut ohne täglichen Aufwand.
+                Ob Bikinizone oder Intimbereich – nach 4-6 Behandlungen genießen Sie glatte Haut ohne täglichen Aufwand.
               </p>
               <p>
                 <strong className="text-white">100% diskret.</strong> Privater Behandlungsraum, keine Wartezeiten, 

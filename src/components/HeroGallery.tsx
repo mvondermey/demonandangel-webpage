@@ -36,8 +36,9 @@ export default function HeroGallery() {
         >
           <img
             src={image}
-            alt={`Laser Haarentfernung ${index + 1}`}
+            alt={`Laser Haarentfernung Frankfurt ${index + 1} - Professionelle Behandlung`}
             className="w-full h-full object-cover object-top md:object-center"
+            loading="eager"
           />
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-black/60" />

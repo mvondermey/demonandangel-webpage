@@ -2,6 +2,62 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronDown, Search, MessageCircle } from 'lucide-react'
 
+// FAQ Schema for SEO
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Wie funktioniert die Laser Haarentfernung?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Der Laserstrahl wird vom Melanin (Farbstoff) im Haar absorbiert und in Wärme umgewandelt. Diese Wärme zerstört die Haarwurzel, ohne das umliegende Gewebe zu beschädigen. Dadurch wird das Haarwachstum dauerhaft gestoppt.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Ist die Behandlung schmerzhaft?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Unsere moderne 3-Wellenlängen-Technologie mit integrierter Kühlung macht die Behandlung nahezu schmerzfrei. Die meisten Kunden beschreiben das Gefühl als leichtes Kribbeln oder Wärme.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie viele Behandlungen sind notwendig?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen. Die genaue Anzahl hängt von Haartyp, Hautfarbe und der zu behandelnden Zone ab.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie bereite ich mich auf die Behandlung vor?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Rasieren Sie die zu behandelnde Zone 1-2 Tage vor dem Termin. Vermeiden Sie Sonnenbäder und Selbstbräuner 2 Wochen vorher. Wachsen, Epilieren oder Zupfen sollten 4 Wochen vor der Behandlung vermieden werden.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Kann ich mich behandeln lassen, wenn ich gebräunt bin?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ja! Unser 3-Wellenlängen-Diodenlaser ist auch für gebräunte Haut geeignet. Bei sehr frischer oder intensiver Bräune empfehlen wir jedoch, 1-2 Wochen zu warten.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Gibt es ein kostenloses Beratungsgespräch?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ja! Das persönliche Beratungsgespräch ist kostenlos und als Teil Ihrer ersten Behandlung enthalten. Wir analysieren Ihren Hauttyp, besprechen Ihre Ziele und erstellen einen maßgeschneiderten Behandlungsplan für optimale Ergebnisse.'
+      }
+    }
+  ]
+}
+
 export const metadata: Metadata = {
   title: 'FAQ - Häufig gestellte Fragen zur Laser Haarentfernung Frankfurt',
   description: 'Antworten auf häufig gestellte Fragen zur Laser Haarentfernung bei Demon (And) Angel in Frankfurt. Alles über Behandlung, Kosten, Ablauf und NiSV-Zertifizierung.',
@@ -100,6 +156,11 @@ const faqCategories = [
 export default function FAQPage() {
   return (
     <>
+      {/* FAQ Schema Script */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Hero */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />

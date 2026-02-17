@@ -49,7 +49,7 @@ const behandlungen = [
   },
   {
     name: 'Intimbereich',
-    description: 'Bikinizone, Brazilian, Hollywood - diskret und professionell.',
+    description: 'Bikinizone & Intimbereich - diskret und professionell.',
     href: '/laser-haarentfernung-intimbereich',
   },
 ]
@@ -150,8 +150,9 @@ export default function Home() {
             <div className="relative">
               <img 
                 src="/images/laser-epilation.jpg" 
-                alt="3-Wellenlängen-Diodenlaser Technologie"
+                alt="3-Wellenlängen-Diodenlaser Technologie bei Demon (And) Angel Frankfurt"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+                loading="lazy"
               />
             </div>
           </div>
@@ -202,29 +203,33 @@ export default function Home() {
                     {index === 0 && (
                       <img 
                         src="/images/young-beautiful-woman.jpg" 
-                        alt="Gesichtsbehandlung"
+                        alt="Laser Haarentfernung Gesicht - Schmerzfreie Behandlung in Frankfurt"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     )}
                     {index === 1 && (
                       <img 
                         src="/images/beautiful-female-legs.jpg" 
-                        alt="Frauen Behandlung"
+                        alt="Laser Haarentfernung Beine für Frauen - Dauerhafte Haarentfernung Frankfurt"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     )}
                     {index === 2 && (
                       <img 
                         src="/images/maenner-behandlung.jpg" 
-                        alt="Männer Behandlung"
+                        alt="Laser Haarentfernung Männer Brust und Rücken - Professionelle Behandlung"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     )}
                     {index === 3 && (
                       <img 
                         src="/images/2149134359.jpg" 
-                        alt="Intimbereich Behandlung"
+                        alt="Laser Haarentfernung Intimbereich Bikinizone - Diskrete Behandlung in Frankfurt"
                         className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -321,22 +326,25 @@ export default function Home() {
             <div className="relative aspect-video overflow-hidden rounded-xl">
               <img 
                 src="/images/young-beautiful-woman.jpg" 
-                alt="Gesichtsbehandlung"
+                alt="Zufriedene Kundin nach Laser Haarentfernung Gesicht - Demon (And) Angel Frankfurt"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
             <div className="relative aspect-video overflow-hidden rounded-xl">
               <img 
                 src="/images/beautiful-female-legs.jpg" 
-                alt="Körperbehandlung"
+                alt="Laser Haarentfernung Beine - Perfekt glatte Haut nach Behandlung"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
             <div className="relative aspect-video overflow-hidden rounded-xl">
               <img 
                 src="/images/laser-epilation.jpg" 
-                alt="Laser Technologie"
+                alt="Moderster 3-Wellenlängen-Diodenlaser - Hochauflösende Technologie"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
               />
             </div>
           </div>
@@ -404,8 +412,9 @@ export default function Home() {
         <div className="absolute inset-0">
           <img 
             src="/images/hero-bg.jpg" 
-            alt="Laser Haarentfernung Hintergrund"
+            alt="Laser Haarentfernung Studio Frankfurt - Moderne Behandlungsräume"
             className="w-full h-full object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-demon-900/80 via-purple-900/60 to-angel-900/80" />
         </div>
