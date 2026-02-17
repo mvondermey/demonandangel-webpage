@@ -1,6 +1,12 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Star, Shield, Clock, Zap, CheckCircle, Phone, MapPin, Sparkles, MessageCircle } from 'lucide-react'
 import HeroGallery from '@/components/HeroGallery'
+
+export const metadata: Metadata = {
+  title: 'Laser Haarentfernung Frankfurt | Demon (And) Angel',
+  description: 'Laser Haarentfernung Frankfurt für Frauen & Männer. Moderne 3-Wellenlängen-Diodenlaser – schmerzfrei, effektiv & für alle Hauttypen. Jetzt Termin buchen!',
+}
 
 const vorteile = [
   {
@@ -67,7 +73,7 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 animate-slide-up">
             <span className="gradient-text">Dauerhafte</span>
             <br />
-            <span className="text-white">Laser Haarentfernung</span>
+            <span className="text-white">Laser Haarentfernung Frankfurt</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto mb-8 animate-slide-up">

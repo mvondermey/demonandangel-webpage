@@ -52,6 +52,9 @@ export default function FrauenPage() {
               <Phone className="h-5 w-5" />
               Frauen-Termin buchen
             </a>
+            <div className="mt-6 text-sm text-white/60">
+              Siehe auch: <Link href="/laser-haarentfernung-maenner" className="underline hover:text-white transition-colors">Männer</Link> · <Link href="/preise" className="underline hover:text-white transition-colors">Preise</Link> · <Link href="/kontakt" className="underline hover:text-white transition-colors">Kontakt</Link>
+            </div>
           </div>
         </div>
       </section>
