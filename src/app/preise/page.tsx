@@ -79,8 +79,8 @@ export default function PreisePage() {
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+          <div className="max-w-3xl mx-auto">
                         
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="gradient-text">Unsere Preise</span>
@@ -89,7 +89,7 @@ export default function PreisePage() {
               Transparente und faire Preise für Ihre dauerhafte Laser Haarentfernung in einer angenehmen und diskreten Atmosphäre. 
               Alle Preise verstehen sich pro Behandlung.
             </p>
-            <div className="flex items-center gap-4 text-white/60">
+            <div className="flex items-center justify-center gap-4 text-white/60">
               <Info className="h-5 w-5 text-purple-400" />
               <span>Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen.</span>
             </div>

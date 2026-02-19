@@ -9,6 +9,7 @@ const footerLinks = {
     { name: 'Intimbereich', href: '/laser-haarentfernung-intimbereich' },
   ],
   information: [
+    { name: 'Warum Demon (And) Angel)', href: '/why-demonandangel' },
     { name: 'Preise', href: '/preise' },
     { name: 'Frankfurt Preise', href: '/laser-haarentfernung-frankfurt-preise' },
     { name: 'Sitzungen', href: '/wie-viele-sitzungen-laser-haarentfernung' },

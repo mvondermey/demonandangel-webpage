@@ -152,6 +152,67 @@ export default function WohlfuehlenPage() {
         </div>
       </section>
 
+      {/* Unsere Philosophie */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Unsere Philosophie: Demon & Angel</h2>
+            <p className="text-white/60">
+              Die perfekte Balance für deine Haut
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="text-center">
+              <img 
+                src="/images/demon-side.png" 
+                alt="Demon - Die Kraft der Laser Technologie"
+                className="w-full h-48 object-cover rounded-xl mb-4 shadow-xl"
+                loading="lazy"
+              />
+              <h3 className="text-xl font-bold text-demon-400 mb-2">Demon</h3>
+              <p className="text-white/80 text-sm">
+                Starke Laser-Technologie, die unerwünschte Haare an der Wurzel bekämpft
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <img 
+                src="/images/angel-side.png" 
+                alt="Angel - Die Sanftheit der Behandlung"
+                className="w-full h-48 object-cover rounded-xl mb-4 shadow-xl"
+                loading="lazy"
+              />
+              <h3 className="text-xl font-bold text-angel-400 mb-2">Angel</h3>
+              <p className="text-white/80 text-sm">
+                Sanfte, schmerzfreie Behandlung für perfekte Glätte und Hautpflege
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <div className="inline-flex items-center gap-4 bg-white/5 backdrop-blur-lg rounded-full px-6 py-3 border border-white/10">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-demon-400" />
+                <span className="text-white/60 text-sm">Stärke</span>
+              </div>
+              <div className="w-px h-3 bg-white/20" />
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-purple-400" />
+                <span className="text-white/60 text-sm">+</span>
+              </div>
+              <div className="w-px h-3 bg-white/20" />
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-angel-400" />
+                <span className="text-white/60 text-sm">Sanftheit</span>
+              </div>
+              <div className="w-px h-3 bg-white/20" />
+              <span className="text-white/60 text-sm">= Perfekte Ergebnisse</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="pb-16 relative overflow-hidden">
         <div className="absolute inset-0">

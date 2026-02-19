@@ -159,6 +159,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Brand Story Link */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="bg-gradient-to-r from-demon-500/20 via-purple-500/20 to-angel-500/20 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-3 h-3 rounded-full bg-demon-400" />
+              <div className="w-3 h-3 rounded-full bg-purple-400" />
+              <div className="w-3 h-3 rounded-full bg-angel-400" />
+            </div>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Warum Demon (And) Angel)?
+            </h3>
+            <p className="text-white/70 mb-6 max-w-2xl mx-auto">
+              Entdecken Sie die Geschichte hinter unserem Namen und die Philosophie, 
+              die uns zur perfekten Balance aus Kraft und Sanftheit macht.
+            </p>
+            <Link 
+              href="/why-demonandangel" 
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              Unsere Geschichte entdecken
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Vorteile Section */}
       <section className="py-24 relative">
         <div className="max-w-7xl mx-auto px-6">
