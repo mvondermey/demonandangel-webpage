@@ -192,7 +192,7 @@ export default function WhyDemonAngelPage() {
                 />
               </div>
               <p className="text-white/80 italic">
-                "Unerbittliche Kraft, die Haare an der Wurzel zielt"
+                "Sanfte Pflege, die Ihre Haut nährt"
               </p>
             </div>
             
@@ -222,7 +222,7 @@ export default function WhyDemonAngelPage() {
                 />
               </div>
               <p className="text-white/80 italic">
-                "Sanfte Pflege, die Ihre Haut nährt"
+                "Unerbittliche Kraft, die Haare an der Wurzel zielt"
               </p>
             </div>
           </div>
