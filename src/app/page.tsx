@@ -284,6 +284,151 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Detaillierte Behandlungsbereiche */}
+      <section className="py-24 bg-white/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="section-heading">Alle Behandlungsbereiche im Überblick</h2>
+            <p className="text-white/60 max-w-3xl mx-auto">
+              Wir behandeln nahezu alle Körperregionen mit unserem modernsten 3-Wellenlängen-Diodenlaser. 
+              Ob Gesicht, Körper oder Intimbereich – für jede Zone haben wir die optimale Lösung.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="card">
+              <h3 className="text-xl font-semibold text-white mb-4">Gesicht & Hals</h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• Oberlippe – ab 29€</li>
+                <li>• Kinn – ab 30€</li>
+                <li>• Wangen – ab 34€</li>
+                <li>• Hals – ab 37€</li>
+                <li>• Gesicht komplett – 99€</li>
+                <li>• Seitenbart (Männer)</li>
+              </ul>
+            </div>
+
+            <div className="card">
+              <h3 className="text-xl font-semibold text-white mb-4">Körper & Extremitäten</h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• Achseln – ab 59€</li>
+                <li>• Arme (Ober/Unter) – ab 69€</li>
+                <li>• Beine (Ober/Unter) – ab 89€</li>
+                <li>• Rücken (Männer) – ab 89€</li>
+                <li>• Brust (Männer) – ab 89€</li>
+                <li>• Ganzkörper – 199€ (statt 350€)</li>
+              </ul>
+            </div>
+
+            <div className="card">
+              <h3 className="text-xl font-semibold text-white mb-4">Intimbereich</h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• Bikinizone klassisch – ab 69€</li>
+                <li>• Brazilian (Damen) – ab 79€</li>
+                <li>• Hollywood komplett – ab 89€</li>
+                <li>• Intimbereich Männer – ab 79€</li>
+                <li>• Diskret & professionell</li>
+                <li>• Wahlweise weibliche/männliche Behandler</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <p className="text-white/60 mb-4">
+              Alle Preise pro Behandlung. Bei Buchung mehrerer Sitzungen erhalten Sie attraktive Paketpreise.
+            </p>
+            <Link href="/preise" className="btn-primary inline-flex items-center gap-2">
+              <ArrowRight className="h-5 w-5" />
+              Vollständige Preisliste ansehen
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Der Behandlungsablauf */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="section-heading">So läuft Ihre Behandlung ab</h2>
+            <p className="text-white/60 max-w-3xl mx-auto">
+              Von der ersten Beratung bis zum langfristigen Ergebnis – wir begleiten Sie Schritt für Schritt 
+              auf dem Weg zu dauerhaft haarfreier Haut.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-demon-500 to-angel-500 flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-white mb-3">Kostenlose Erstberatung & Hautanalyse</h3>
+                <p className="text-white/70 leading-relaxed mb-3">
+                  In einem unverbindlichen Gespräch analysieren wir Ihren Haut- und Haartyp, besprechen Ihre 
+                  Wünsche und Ziele. Wir erklären Ihnen den Ablauf, die erwarteten Ergebnisse und beantworten 
+                  alle Ihre Fragen.
+                </p>
+                <p className="text-white/70 leading-relaxed">
+                  Bei Bedarf führen wir eine kleine Testbehandlung durch, damit Sie das Gefühl kennenlernen 
+                  und sich von der Verträglichkeit überzeugen können.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-demon-500 to-angel-500 flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-white mb-3">Vorbereitung auf die Behandlung</h3>
+                <p className="text-white/70 leading-relaxed mb-3">
+                  1-2 Tage vor dem Termin rasieren Sie die zu behandelnde Zone. Vermeiden Sie 2 Wochen vorher 
+                  Sonnenbäder, Solarium und Selbstbräuner. 
+                </p>
+                <p className="text-white/70 leading-relaxed">
+                  Am Behandlungstag kommen Sie bitte ohne Make-up, Cremes oder Deodorants in den zu behandelnden 
+                  Bereichen. Die Haut sollte sauber und trocken sein.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-demon-500 to-angel-500 flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-white mb-3">Die Behandlungsserie (6-8 Sitzungen)</h3>
+                <p className="text-white/70 leading-relaxed mb-3">
+                  Die Behandlung dauert je nach Körperregion 10-60 Minuten. Wir reinigen die Haut, kalibrieren 
+                  den Laser für Ihre Hauttypen und führen die Behandlung schmerzfrei durch.
+                </p>
+                <p className="text-white/70 leading-relaxed">
+                  Die Sitzungen finden im Abstand von 4-8 Wochen statt (Gesicht: 4 Wochen, Körper: 6-8 Wochen). 
+                  Dieser Rhythmus ermöglicht es, alle Haare in ihrer Wachstumsphase zu erfassen.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-demon-500 to-angel-500 flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl font-bold text-white">4</span>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold text-white mb-3">Langfristige Ergebnisse & Nachsorge</h3>
+                <p className="text-white/70 leading-relaxed mb-3">
+                  Nach Abschluss der Behandlungsserie können Sie mit bis zu 95% dauerhafter Haarreduktion 
+                  rechnen. Die verbleibenden Haare sind deutlich feiner und heller.
+                </p>
+                <p className="text-white/70 leading-relaxed">
+                  Bei hormonellen Veränderungen oder besonders hartnäckigen Haaren empfehlen wir nach 
+                  12-24 Monaten eine Auffrischungsbehandlung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Haarwachstumsphasen - Teaser */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -334,6 +479,227 @@ export default function Home() {
               <Clock className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="font-semibold text-white mb-2">Kostenlose Beratung</h3>
               <p className="text-white/60 text-sm">Unverbindliches Erstgespräch inkl. Hautanalyse</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Häufig gestellte Fragen - Homepage FAQ */}
+      <section className="py-24 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Häufig gestellte Fragen</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Antworten auf die wichtigsten Fragen zur Laser-Haarentfernung in Frankfurt
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="card">
+              <h3 className="text-lg font-semibold text-white mb-3">Ist die Laser-Haarentfernung wirklich schmerzfrei?</h3>
+              <p className="text-white/70 leading-relaxed">
+                Ja! Unsere moderne 3-Wellenlängen-Technologie mit integrierter Saphir-Kontaktkühlung macht die Behandlung 
+                nahezu schmerzfrei. Die meisten Kunden beschreiben das Gefühl als leichtes Kribbeln oder angenehme Wärme. 
+                Eine Betäubung ist nicht notwendig.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold text-white mb-3">Wie viele Behandlungen benötige ich?</h3>
+              <p className="text-white/70 leading-relaxed">
+                Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen. 
+                Die genaue Anzahl hängt von Ihrem Haartyp, Ihrer Hautfarbe und der zu behandelnden Zone ab. 
+                Haare wachsen in Zyklen, daher müssen mehrere Sitzungen durchgeführt werden, um alle Haare 
+                in ihrer aktiven Wachstumsphase zu erreichen.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold text-white mb-3">Funktioniert die Behandlung auch bei dunkler Haut?</h3>
+              <p className="text-white/70 leading-relaxed">
+                Absolut! Unser 3-Wellenlängen-Diodenlaser mit 755nm, 808nm und 1064nm Wellenlängen ist für alle 
+                Hauttypen (I-VI) geeignet. Die 1064nm Nd:YAG-Wellenlänge wurde speziell für dunklere Hauttypen 
+                entwickelt und arbeitet besonders sicher und effektiv.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold text-white mb-3">Wie lange dauert eine Behandlung?</h3>
+              <p className="text-white/70 leading-relaxed">
+                Die Behandlungsdauer variiert je nach Körperregion: Kleine Bereiche wie Oberlippe oder Kinn 
+                dauern etwa 10-15 Minuten, während größere Flächen wie Beine oder Rücken 30-60 Minuten 
+                in Anspruch nehmen können. Eine Ganzkörperbehandlung umfasst ca. 90 Minuten.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold text-white mb-3">Ist das Ergebnis wirklich dauerhaft?</h3>
+              <p className="text-white/70 leading-relaxed">
+                Ja, nach Abschluss der empfohlenen Behandlungsserie können Sie mit bis zu 95% dauerhafter 
+                Haarreduktion rechnen. Die verbleibenden Haare sind deutlich feiner und heller. Bei hormonellen 
+                Veränderungen können gelegentlich einzelne Haare nachwachsen, die mit wenigen 
+                Auffrischungsbehandlungen dauerhaft entfernt werden können.
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-lg font-semibold text-white mb-3">Was kostet eine Laser-Haarentfernung in Frankfurt?</h3>
+              <p className="text-white/70 leading-relaxed">
+                Die Kosten hängen von der Körperregion ab. Kleine Bereiche wie die Oberlippe beginnen bei 29€, 
+                während größere Flächen wie der Rücken oder die Beine ab 89€ kosten. Unser beliebtes 
+                Ganzkörper-Paket ist aktuell für nur 199€ (statt 350€) erhältlich. 
+                <Link href="/preise" className="text-purple-400 hover:text-purple-300 ml-1">Hier geht es zur vollständigen Preisliste.</Link>
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/faq" className="btn-secondary inline-flex items-center gap-2">
+              Alle FAQs ansehen
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Kundenstimmen */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Das sagen unsere Kunden</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Echte Bewertungen von zufriedenen Kunden aus Frankfurt und Umgebung
+            </p>
+            <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="flex">
+                {[1,2,3,4,5].map((i) => (
+                  <Star key={i} className="h-6 w-6 text-yellow-400 fill-yellow-400" />
+                ))}
+              </div>
+              <span className="text-white/80 font-semibold">5.0 auf Google</span>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="card">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((i) => (
+                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                ))}
+              </div>
+              <p className="text-white/80 mb-4 italic">
+                "Beste Entscheidung! Nach 5 Behandlungen bin ich fast komplett haarfrei. 
+                Das Team ist super professionell und die Behandlung war viel angenehmer als erwartet."
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-demon-500 to-angel-500 flex items-center justify-center">
+                  <span className="text-white font-semibold">M</span>
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Maria S.</div>
+                  <div className="text-white/60 text-sm">Beine & Achseln</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((i) => (
+                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                ))}
+              </div>
+              <p className="text-white/80 mb-4 italic">
+                "Als Mann war ich erst skeptisch, aber die Rückenbehandlung hat mein Leben verändert. 
+                Endlich keine lästigen Haare mehr. Sehr zu empfehlen!"
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-demon-500 to-angel-500 flex items-center justify-center">
+                  <span className="text-white font-semibold">T</span>
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Thomas K.</div>
+                  <div className="text-white/60 text-sm">Rücken</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((i) => (
+                  <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                ))}
+              </div>
+              <p className="text-white/80 mb-4 italic">
+                "Ich habe schon viele Studios ausprobiert, aber hier stimmt einfach alles: 
+                moderne Technik, faire Preise und ein tolles Ergebnis. Absolut empfehlenswert!"
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-demon-500 to-angel-500 flex items-center justify-center">
+                  <span className="text-white font-semibold">S</span>
+                </div>
+                <div>
+                  <div className="text-white font-semibold">Sandra M.</div>
+                  <div className="text-white/60 text-sm">Bikinizone</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/bewertungen" className="btn-secondary inline-flex items-center gap-2">
+              Alle Bewertungen lesen
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Lokale Verfügbarkeit */}
+      <section className="py-24 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Wir sind für Sie da</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Zentral gelegen im Herzen von Frankfurt mit exzellenter Verkehrsanbindung
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="card">
+              <h3 className="text-xl font-semibold text-white mb-4">Standort Frankfurt</h3>
+              <p className="text-white/70 mb-4">
+                <strong className="text-white">Demon (And) Angel</strong><br />
+                Europa-Allee 43<br />
+                60327 Frankfurt am Main<br />
+                Europaviertel
+              </p>
+              <p className="text-white/60 text-sm">
+                Direkt neben dem Skyline Plaza, nur 5 Minuten Fußweg von der Messe
+              </p>
+            </div>
+
+            <div className="card">
+              <h3 className="text-xl font-semibold text-white mb-4">Öffentliche Verkehrsmittel</h3>
+              <ul className="space-y-2 text-white/70">
+                <li><strong>S-Bahn:</strong> Frankfurt Messe (5 Min. Fußweg)</li>
+                <li><strong>U-Bahn:</strong> Festhalle/Messe (3 Min. Fußweg)</li>
+                <li><strong>Hauptbahnhof:</strong> 10 Min. mit S-Bahn</li>
+                <li><strong>Parken:</strong> Skyline Plaza Parkhaus</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="card text-center">
+            <h3 className="text-lg font-semibold text-white mb-4">Wir behandeln Kunden aus der gesamten Region</h3>
+            <p className="text-white/70 mb-4">
+              Neben Frankfurt begrüßen wir regelmäßig Kunden aus:
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {['Offenbach', 'Mainz', 'Wiesbaden', 'Darmstadt', 'Bad Homburg', 'Hanau', 'Aschaffenburg', 'Gießen'].map((city) => (
+                <span key={city} className="bg-white/10 px-3 py-1 rounded-full text-white/70 text-sm">
+                  {city}
+                </span>
+              ))}
             </div>
           </div>
         </div>
