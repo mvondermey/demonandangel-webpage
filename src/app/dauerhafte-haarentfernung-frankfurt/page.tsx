@@ -279,6 +279,30 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
         </div>
       </section>
 
+      {/* Trust Badges Bar */}
+      <section className="py-6 bg-white/5 border-y border-white/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            <div className="flex items-center gap-2">
+              <Shield className="h-6 w-6 text-green-400" />
+              <span className="text-white/80 font-semibold">NiSV Zertifiziert</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-6 w-6 text-blue-400" />
+              <span className="text-white/80 font-semibold">CE-Konform</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Shield className="h-6 w-6 text-purple-400" />
+              <span className="text-white/80 font-semibold">Datenschutz-Konform</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star className="h-6 w-6 text-yellow-400" />
+              <span className="text-white/80 font-semibold">Google 5.0 Sterne</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Was ist dauerhafte Haarentfernung */}
       <section className="py-20 bg-white/5">
         <div className="max-w-4xl mx-auto px-6">
@@ -416,6 +440,30 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
                 Direkt nach der Behandlung kann die Haut leicht gerötet sein – dies klingt normalerweise 
                 innerhalb weniger Stunden ab. Vermeiden Sie 24-48 Stunden heiße Duschen, Sauna und direkte Sonneneinstrahlung.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof Numbers */}
+      <section className="py-16 bg-gradient-to-r from-demon-500/10 via-purple-500/10 to-angel-500/10">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">1,000+</div>
+              <div className="text-white/70">Erfolgreiche Behandlungen</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
+              <div className="text-white/70">Zufriedene Kunden</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">5+</div>
+              <div className="text-white/70">Jahre Erfahrung</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">98%</div>
+              <div className="text-white/70">Kundenzufriedenheit</div>
             </div>
           </div>
         </div>
@@ -1009,6 +1057,96 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Weiterführende Artikel & Interne Links */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Weiterführende Informationen</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4">Spezialisierte Behandlungen</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/laser-haarentfernung-frauen" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
+                    Laser-Haarentfernung für Frauen
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/laser-haarentfernung-maenner" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
+                    Laser-Haarentfernung für Männer
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/laser-haarentfernung-gesicht" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
+                    Gesichtsbehandlungen
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/laser-haarentfernung-intimbereich" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
+                    Intimbereich
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4">Hilfreiche Artikel</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/wie-viele-sitzungen-laser-haarentfernung" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
+                    Wie viele Sitzungen sind nötig?
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/laser-haarentfernung-bei-gebraeunter-haut" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
+                    Behandlung bei gebräunter Haut
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/technologie" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
+                    Unsere Laser-Technologie im Detail
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/preise" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
+                    <ArrowRight className="h-4 w-4" />
+                    Vollständige Preisübersicht
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Urgency Banner */}
+          <div className="bg-gradient-to-r from-demon-500/20 to-angel-500/20 rounded-2xl p-6 border border-demon-500/30 text-center">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Clock className="h-6 w-6 text-demon-400" />
+              <span className="text-demon-400 font-bold">Begrenzte Verfügbarkeit</span>
+            </div>
+            <p className="text-white/80 mb-4">
+              Nur noch <strong className="text-white">3 Termine</strong> diese Woche verfügbar. 
+              Sichern Sie sich jetzt Ihren kostenlosen Beratungstermin!
+            </p>
+            <a 
+              href="https://wa.me/4915238228127" 
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              <MessageCircle className="h-5 w-5" />
+              Jetzt Termin buchen
+            </a>
           </div>
         </div>
       </section>
