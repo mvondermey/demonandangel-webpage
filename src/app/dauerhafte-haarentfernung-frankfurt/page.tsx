@@ -1,0 +1,643 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { Phone, CheckCircle, Shield, Clock, Zap, Star, ArrowRight, AlertCircle, Calendar, Euro, Sparkles } from 'lucide-react'
+
+// Comprehensive FAQ Schema for SEO
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Wie funktioniert dauerhafte Haarentfernung mit Laser?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Der Laserstrahl wird vom Melanin (Farbstoff) im Haar absorbiert und in Wärme umgewandelt. Diese Wärme zerstört die Haarwurzel gezielt, ohne das umliegende Gewebe zu beschädigen. Durch die Verödung der Haarwurzel wird das Haarwachstum dauerhaft gestoppt.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie viele Behandlungen sind für eine dauerhafte Haarentfernung nötig?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen. Die genaue Anzahl hängt von Haartyp, Hautfarbe, Körperregion und individuellen Faktoren ab. Haare wachsen in Zyklen, daher müssen mehrere Sitzungen durchgeführt werden, um alle Haare in ihrer aktiven Wachstumsphase zu erreichen.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Ist die Laser-Haarentfernung schmerzhaft?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Unsere moderne 3-Wellenlängen-Technologie mit integrierter Kontaktkühlung macht die Behandlung nahezu schmerzfrei. Die meisten Kunden beschreiben das Gefühl als leichtes Kribbeln oder angenehme Wärme. Eine Betäubung ist nicht notwendig.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Welche Körperstellen können behandelt werden?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Fast alle Körperregionen können behandelt werden: Gesicht (Oberlippe, Kinn, Wangen), Achseln, Arme, Beine, Rücken, Brust, Bauch, Bikinizone und Intimbereich. Unser 3-Wellenlängen-Diodenlaser ist für alle Hauttypen (I-VI) geeignet.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Was kostet eine dauerhafte Haarentfernung in Frankfurt?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Die Kosten hängen von der zu behandelnden Körperregion ab. Bei Demon (And) Angel beginnen die Preise bei 29€ für kleine Zonen wie die Oberlippe. Ganzkörperbehandlungen sind ab 249€ im Aktionsangebot erhältlich. Alle Preise verstehen sich pro Behandlung.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Kann ich mich auch mit gebräunter Haut behandeln lassen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Ja! Unser 3-Wellenlängen-Diodenlaser mit 755nm, 808nm und 1064nm Wellenlängen ist auch für gebräunte Haut geeignet. Bei sehr frischer oder intensiver Bräune empfehlen wir jedoch, 1-2 Wochen zu warten, um optimale Ergebnisse zu erzielen.'
+      }
+    }
+  ]
+}
+
+// Service Schema for Local SEO
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Dauerhafte Haarentfernung mit Laser',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Demon (And) Angel - Laser Haarentfernung Frankfurt',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Europa-Allee 43',
+      addressLocality: 'Frankfurt am Main',
+      postalCode: '60327',
+      addressCountry: 'DE'
+    },
+    telephone: '+49 152 38228127',
+    priceRange: '€€'
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Frankfurt am Main'
+  },
+  description: 'Professionelle dauerhafte Haarentfernung mit modernster 3-Wellenlängen-Diodenlaser Technologie in Frankfurt. Schmerzfrei, sicher und effektiv für alle Hauttypen.',
+  offers: {
+    '@type': 'Offer',
+    priceSpecification: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'EUR',
+      price: '29',
+      minPrice: '29',
+      maxPrice: '249'
+    }
+  }
+}
+
+export const metadata: Metadata = {
+  title: 'Dauerhafte Haarentfernung Frankfurt | Laser Haarentfernung | Demon (And) Angel',
+  description: 'Dauerhafte Haarentfernung in Frankfurt mit modernster 3-Wellenlängen-Diodenlaser Technologie. Schmerzfrei, sicher & für alle Hauttypen. NiSV-zertifiziert. Jetzt Termin buchen!',
+  keywords: [
+    'dauerhafte haarentfernung frankfurt',
+    'laser haarentfernung frankfurt',
+    'haarentfernung laser frankfurt',
+    'dauerhafte enthaarung frankfurt',
+    'diodenlaser haarentfernung',
+    'schmerzfreie haarentfernung',
+    'haarentfernung frauen frankfurt',
+    'haarentfernung männer frankfurt',
+    'laser epilation frankfurt',
+    'permanente haarentfernung'
+  ],
+  openGraph: {
+    title: 'Dauerhafte Haarentfernung Frankfurt | Demon (And) Angel',
+    description: 'Professionelle dauerhafte Laser-Haarentfernung in Frankfurt. Modernste 3-Wellenlängen-Technologie, schmerzfrei und für alle Hauttypen geeignet.',
+    url: 'https://demonandangel.eu/dauerhafte-haarentfernung-frankfurt',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://demonandangel.eu/dauerhafte-haarentfernung-frankfurt',
+  },
+}
+
+const behandlungsZonen = [
+  { zone: 'Gesicht komplett', preis: '99 €', aktion: true },
+  { zone: 'Oberlippe', preis: '29 €' },
+  { zone: 'Achseln', preis: '59 €' },
+  { zone: 'Bikinizone', preis: '69 €' },
+  { zone: 'Beine komplett', preis: '178 €' },
+  { zone: 'Ganzkörper', preis: '249 €', aktion: true },
+]
+
+const haarzyklusPhasen = [
+  {
+    name: 'Anagen (Wachstumsphase)',
+    beschreibung: 'In dieser aktiven Phase ist das Haar mit der Haarwurzel verbunden und enthält am meisten Melanin. Dies ist die optimale Phase für die Laserbehandlung, da die Energie direkt zur Wurzel geleitet wird.',
+    prozent: '20-30%',
+    optimal: true,
+  },
+  {
+    name: 'Katagen (Übergangsphase)',
+    beschreibung: 'Das Haar löst sich von der Wurzel und die Zellteilung stoppt. In dieser Phase ist die Behandlung weniger effektiv.',
+    prozent: '3-4%',
+    optimal: false,
+  },
+  {
+    name: 'Telogen (Ruhephase)',
+    beschreibung: 'Das Haar ruht und fällt schließlich aus. Ein neues Haar beginnt zu wachsen. Haare in dieser Phase können nicht effektiv behandelt werden.',
+    prozent: '70-80%',
+    optimal: false,
+  },
+]
+
+export default function DauerhafteHaarentfernungFrankfurtPage() {
+  return (
+    <>
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
+      {/* Hero Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/40 via-purple-900/30 to-angel-900/40" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-500/20 rounded-full blur-3xl" />
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg rounded-full px-4 py-2 mb-6">
+            <Shield className="h-4 w-4 text-green-400" />
+            <span className="text-white/80 text-sm">NiSV-zertifiziert • Medizinisch geprüft</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <span className="gradient-text">Dauerhafte Haarentfernung in Frankfurt</span>
+          </h1>
+          
+          <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            Professionelle Laser-Haarentfernung mit modernster 3-Wellenlängen-Diodenlaser Technologie. 
+            Schmerzfrei, sicher und effektiv – für Damen und Herren, alle Hauttypen.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a 
+              href="https://wa.me/4915238228127" 
+              className="btn-primary inline-flex items-center justify-center gap-2"
+            >
+              <Phone className="h-5 w-5" />
+              Kostenlose Beratung
+            </a>
+            <Link 
+              href="/preise" 
+              className="btn-secondary inline-flex items-center justify-center gap-2"
+            >
+              <Euro className="h-5 w-5" />
+              Preise ansehen
+            </Link>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
+              <div className="text-2xl font-bold text-white">5.0 ★</div>
+              <div className="text-white/60 text-sm">Google Bewertung</div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
+              <div className="text-2xl font-bold text-white">1000+</div>
+              <div className="text-white/60 text-sm">Behandlungen</div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
+              <div className="text-2xl font-bold text-white">NiSV</div>
+              <div className="text-white/60 text-sm">Zertifiziert</div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
+              <div className="text-2xl font-bold text-white">100%</div>
+              <div className="text-white/60 text-sm">Schmerzfrei</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Was ist dauerhafte Haarentfernung */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Was ist dauerhafte Haarentfernung mit Laser?</span>
+          </h2>
+          
+          <div className="prose prose-lg prose-invert max-w-none">
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Die <strong>dauerhafte Haarentfernung mit Laser</strong> ist die effektivste und sicherste Methode, 
+              um unerwünschte Körperbehaarung langfristig zu beseitigen. Bei diesem Verfahren wird gebündeltes 
+              Licht (Laserstrahl) gezielt auf die Haarwurzel gerichtet.
+            </p>
+            
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Das <strong>Melanin</strong> (der natürliche Farbstoff im Haar) absorbiert die Lichtenergie und 
+              wandelt sie in Wärme um. Diese kontrollierte Wärmeentwicklung verödet die Haarwurzel, ohne das 
+              umliegende Gewebe zu beschädigen. Das Ergebnis: Das Haar kann nicht mehr nachwachsen.
+            </p>
+
+            <div className="bg-gradient-to-r from-demon-500/20 to-angel-500/20 rounded-2xl p-6 border border-white/10 my-8">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Zap className="h-6 w-6 text-purple-400" />
+                Warum ist Laser besser als andere Methoden?
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                  <span><strong>Dauerhaft:</strong> Im Gegensatz zu Rasieren, Wachsen oder Epilieren werden die Haarwurzeln dauerhaft zerstört</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                  <span><strong>Schmerzfrei:</strong> Moderne Kühltechnologie macht die Behandlung angenehm</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                  <span><strong>Präzise:</strong> Nur das Haar wird behandelt, die Haut bleibt unversehrt</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                  <span><strong>Kosteneffizient:</strong> Langfristig günstiger als jahrelanges Rasieren oder Wachsen</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Unsere Technologie */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Unsere Laser-Technologie</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Modernste 3-Wellenlängen-Diodenlaser Technologie für optimale Ergebnisse bei allen Haut- und Haartypen
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-6">3-Wellenlängen-Diodenlaser</h3>
+              
+              <div className="space-y-6">
+                <div className="border-l-4 border-demon-500 pl-4">
+                  <h4 className="font-bold text-demon-400">755nm Alexandrit-Wellenlänge</h4>
+                  <p className="text-white/70">Optimal für helle und feine Haare. Höchste Melanin-Absorption für effektive Behandlung.</p>
+                </div>
+                
+                <div className="border-l-4 border-purple-500 pl-4">
+                  <h4 className="font-bold text-purple-400">808nm Dioden-Wellenlänge</h4>
+                  <p className="text-white/70">Der Goldstandard für alle Hauttypen. Tiefe Penetration für dauerhafte Ergebnisse.</p>
+                </div>
+                
+                <div className="border-l-4 border-angel-500 pl-4">
+                  <h4 className="font-bold text-angel-400">1064nm Nd:YAG-Wellenlänge</h4>
+                  <p className="text-white/70">Sicher für dunkle und gebräunte Haut. Tiefste Eindringtiefe für hartnäckige Haare.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-6">Technische Spezifikationen</h3>
+              
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Wellenlängen</span>
+                  <span className="text-white font-semibold">755nm, 808nm, 1064nm</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Hauttypen</span>
+                  <span className="text-white font-semibold">I - VI (alle Typen)</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Kühlung</span>
+                  <span className="text-white font-semibold">Integrierte Kontaktkühlung</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Spotgröße</span>
+                  <span className="text-white font-semibold">Variabel (klein bis groß)</span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-white/70">Zertifizierung</span>
+                  <span className="text-white font-semibold">CE-zertifiziert, NiSV-konform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Vorteile Grid */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-gradient-to-br from-demon-500/20 to-transparent rounded-xl p-6 border border-demon-500/30">
+              <Zap className="h-10 w-10 text-demon-400 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Völlig Schmerzfrei</h4>
+              <p className="text-white/70">Integrierte Kühlung für maximalen Komfort während der gesamten Behandlung.</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-500/20 to-transparent rounded-xl p-6 border border-purple-500/30">
+              <Shield className="h-10 w-10 text-purple-400 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Keine Verbrennungsgefahr</h4>
+              <p className="text-white/70">Sicher auch bei gebräunter Haut durch intelligente Wellenlängen-Kombination.</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-angel-500/20 to-transparent rounded-xl p-6 border border-angel-500/30">
+              <Clock className="h-10 w-10 text-angel-400 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Schnelle Behandlung</h4>
+              <p className="text-white/70">Große Behandlungsflächen in kurzer Zeit durch effiziente Technologie.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Haarwachstumszyklus */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Warum sind mehrere Behandlungen nötig?</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Der natürliche Haarwachstumszyklus erklärt, warum 4-6 Sitzungen für optimale Ergebnisse empfohlen werden
+            </p>
+          </div>
+
+          <div className="prose prose-lg prose-invert max-w-none mb-12">
+            <p className="text-white/80 text-lg leading-relaxed">
+              Haare wachsen nicht alle gleichzeitig. Jedes Haar durchläuft einen eigenen Zyklus aus drei Phasen. 
+              Die Laserbehandlung ist nur in der <strong>aktiven Wachstumsphase (Anagen)</strong> effektiv, 
+              da das Haar in dieser Phase mit der Wurzel verbunden ist und das meiste Melanin enthält.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {haarzyklusPhasen.map((phase) => (
+              <div 
+                key={phase.name}
+                className={`rounded-xl p-6 border ${
+                  phase.optimal 
+                    ? 'bg-green-500/10 border-green-500/30' 
+                    : 'bg-white/5 border-white/10'
+                }`}
+              >
+                <div className="flex flex-col md:flex-row md:items-center gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-xl font-bold text-white">{phase.name}</h3>
+                      {phase.optimal && (
+                        <span className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">
+                          Optimal für Laser
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-white/70">{phase.beschreibung}</p>
+                  </div>
+                  <div className="text-center md:text-right">
+                    <div className="text-2xl font-bold text-white">{phase.prozent}</div>
+                    <div className="text-white/50 text-sm">der Haare</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 bg-purple-500/10 rounded-xl p-6 border border-purple-500/30">
+            <div className="flex items-start gap-4">
+              <Calendar className="h-8 w-8 text-purple-400 flex-shrink-0" />
+              <div>
+                <h4 className="text-lg font-bold text-white mb-2">Empfohlener Behandlungsplan</h4>
+                <p className="text-white/70">
+                  <strong>4-6 Behandlungen</strong> im Abstand von <strong>4-8 Wochen</strong> sind optimal. 
+                  Bei Gesichtshaaren empfehlen wir kürzere Abstände (4 Wochen), bei Körperhaaren längere (6-8 Wochen). 
+                  So erreichen wir alle Haare in ihrer aktiven Wachstumsphase.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Behandlungszonen & Preise */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Behandlungszonen & Preise</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Transparente Preise für alle Körperregionen. Alle Preise pro Behandlung.
+            </p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden mb-8">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-white/5">
+                  <th className="text-left py-4 px-6 text-white/80 font-semibold">Zone</th>
+                  <th className="text-right py-4 px-6 text-white/80 font-semibold">Preis</th>
+                </tr>
+              </thead>
+              <tbody>
+                {behandlungsZonen.map((item, index) => (
+                  <tr key={item.zone} className={index % 2 === 0 ? 'bg-white/[0.02]' : ''}>
+                    <td className="py-4 px-6 text-white">
+                      {item.zone}
+                      {item.aktion && (
+                        <span className="ml-2 bg-demon-500/20 text-demon-400 text-xs px-2 py-1 rounded-full">
+                          AKTION
+                        </span>
+                      )}
+                    </td>
+                    <td className="py-4 px-6 text-right">
+                      <span className="text-xl font-bold gradient-text">{item.preis}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="text-center">
+            <Link 
+              href="/preise" 
+              className="btn-secondary inline-flex items-center gap-2"
+            >
+              Vollständige Preisliste ansehen
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Nebenwirkungen & Sicherheit */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Sicherheit & mögliche Nebenwirkungen</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Transparente Information über Risiken und unsere Sicherheitsmaßnahmen
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Shield className="h-6 w-6 text-green-400" />
+                Unsere Sicherheitsmaßnahmen
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span>NiSV-zertifiziertes Fachpersonal</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span>Individuelle Hautanalyse vor jeder Behandlung</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span>CE-zertifizierte Lasergeräte neuester Generation</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span>Integrierte Kontaktkühlung zum Hautschutz</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <CheckCircle className="h-5 w-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span>Anpassung der Parameter an Ihren Hauttyp</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <AlertCircle className="h-6 w-6 text-yellow-400" />
+                Mögliche Nebenwirkungen
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-white/80">
+                  <span className="text-yellow-400 mt-0.5">•</span>
+                  <span><strong>Leichte Rötung:</strong> Normal, verschwindet innerhalb weniger Stunden</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <span className="text-yellow-400 mt-0.5">•</span>
+                  <span><strong>Wärmegefühl:</strong> Vorübergehend, ähnlich einem leichten Sonnenbrand</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <span className="text-yellow-400 mt-0.5">•</span>
+                  <span><strong>Leichte Schwellung:</strong> Selten, klingt schnell ab</span>
+                </li>
+                <li className="flex items-start gap-3 text-white/80">
+                  <span className="text-yellow-400 mt-0.5">•</span>
+                  <span><strong>Pigmentveränderungen:</strong> Sehr selten, meist temporär</span>
+                </li>
+              </ul>
+              <p className="text-white/60 text-sm mt-4">
+                Bei sachgemäßer Anwendung durch geschultes Fachpersonal sind ernsthafte Nebenwirkungen äußerst selten.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Häufig gestellte Fragen</span>
+            </h2>
+            <p className="text-white/60 max-w-2xl mx-auto">
+              Antworten auf die wichtigsten Fragen zur dauerhaften Haarentfernung
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqSchema.mainEntity.map((faq, index) => (
+              <div 
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 overflow-hidden"
+              >
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">{faq.name}</h3>
+                  <p className="text-white/70">{faq.acceptedAnswer.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link 
+              href="/faq" 
+              className="text-purple-400 hover:text-purple-300 inline-flex items-center gap-2"
+            >
+              Alle FAQs ansehen
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-demon-900/40 via-purple-900/30 to-angel-900/40">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <span className="gradient-text">Bereit für dauerhaft glatte Haut?</span>
+          </h2>
+          <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
+            Vereinbaren Sie jetzt Ihre kostenlose Beratung und erfahren Sie, wie wir Ihnen zu 
+            dauerhaft haarfreier Haut verhelfen können.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a 
+              href="https://wa.me/4915238228127" 
+              className="btn-primary inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
+            >
+              <Phone className="h-6 w-6" />
+              WhatsApp: 0152 38228127
+            </a>
+            <Link 
+              href="/kontakt" 
+              className="btn-secondary inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
+            >
+              Kontaktformular
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+
+          <div className="flex items-center justify-center gap-6 text-white/60">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-400" />
+              <span>Kostenlose Beratung</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-400" />
+              <span>Keine versteckten Kosten</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Info */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">Besuchen Sie uns in Frankfurt</h3>
+          <p className="text-white/70 mb-6">
+            Demon (And) Angel • Europa-Allee 43 • 60327 Frankfurt am Main
+          </p>
+          <p className="text-white/60">
+            Zentral gelegen im Europaviertel, nur wenige Minuten vom Hauptbahnhof entfernt. 
+            Öffentliche Parkplätze und gute ÖPNV-Anbindung vorhanden.
+          </p>
+        </div>
+      </section>
+    </>
+  )
+}
