@@ -117,8 +117,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Technologie Section */}
+      {/* Professionelle Laser-Haarentfernung Einführung */}
       <section className="py-24 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Professionelle Laser-Haarentfernung in Frankfurt</h2>
+          </div>
+          
+          <div className="prose prose-lg prose-invert max-w-none">
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Niemand muss heute mehr Haare an Stellen dulden, die sie oder er lieber haarlos sehen möchte. 
+              Für alle, die sich dauerhaft unerwünschter Haare entledigen wollen, bietet Demon (And) Angel 
+              in Frankfurt ein hochmodernes, Laser-basiertes Haarentfernungsprogramm, welches von erfahrenen 
+              Experten betreut wird und hervorragende Ergebnisse liefert.
+            </p>
+            
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Kontinuierliche Optimierungen der eingesetzten Technologien und Verfahren haben dazu geführt, 
+              dass die Haarentfernung mit Laser heute nicht nur die effektivste Methode ist, Haare dauerhaft 
+              zu entfernen, sondern auch eine der sichersten und schonendsten. Mit keiner anderen Methode 
+              lassen sich auf möglichst schonende Weise so gute und anhaltende Ergebnisse erzielen.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Der Laserstrahl, bei dem es sich um gebündeltes Licht handelt, wirkt gezielt auf die Haarwurzel 
+              ein, ohne umliegendes Gewebe zu beschädigen. Das ist möglich, weil Melanin, der Farbstoff der 
+              Haare, in hohem Maße Licht absorbiert, wodurch Wärme entsteht. Bei der Bestrahlung mit unserem 
+              Speziallaser entsteht in der Haarwurzel für einen kurzen Moment eine kontrollierte Hitze, 
+              die die Haarwurzel verödet.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed">
+              Behandelt werden können fast alle Körperregionen: vom Gesicht über die Arme und die Beine 
+              bis zu den Achselhöhlen oder der Bikinizone. Moderne Lasergeräte lassen sich zudem optimal 
+              auf unterschiedliche Haut- und Haartypen einstellen, um die perfekte Balance zwischen 
+              Intensität und Effektivität zu gewährleisten. Wer nach einer schonenden, dauerhaften 
+              Haarentfernung in Frankfurt sucht, ist bei den Spezialisten von Demon (And) Angel in den besten Händen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Technologie Section */}
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="section-heading">3-Wellenlängen-Diodenlaser Technologie</h2>
@@ -429,16 +470,154 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Haarwachstumsphasen - Teaser */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="card text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Warum sind mindestens 4 Behandlungen nötig?</h2>
-            <p className="text-white/60 mb-6">
-              Der Haarwuchs durchläuft drei Phasen. Erfahren Sie mehr über unsere Technologie.
+      {/* Warum mehrere Behandlungen nötig sind */}
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Warum sind mehrere Behandlungen nötig?</h2>
+          </div>
+          
+          <div className="prose prose-lg prose-invert max-w-none mb-12">
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Die gründliche, auf dauerhafte Ergebnisse ausgerichtete Vorgehensweise der bei uns praktizierten 
+              Laser-Haarentfernung führt dazu, dass meist mehrere Sitzungen eingeplant werden sollten. Der Grund 
+              liegt vor allem in den unterschiedlichen Wachstumsphasen der Haare sowie weiteren individuellen 
+              Dispositionen, denn die Anzahl der Haare, deren Durchmesser und Wachstum sind bei jeder Person unterschiedlich.
             </p>
+
+            <h3 className="text-xl font-semibold text-white mb-4">Die Behandlungsdauer hängt von folgenden Faktoren ab:</h3>
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                <span className="text-purple-400 font-semibold">1. Hauttyp</span>
+                <p className="text-white/60 text-sm mt-1">Helle Haut reagiert anders als dunkle Haut</p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                <span className="text-purple-400 font-semibold">2. Haartyp</span>
+                <p className="text-white/60 text-sm mt-1">Dicke, dunkle Haare vs. feine, helle Haare</p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                <span className="text-purple-400 font-semibold">3. Haarwachstumsphase</span>
+                <p className="text-white/60 text-sm mt-1">Nur aktive Haare können behandelt werden</p>
+              </div>
+              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
+                <span className="text-purple-400 font-semibold">4. Körperregion</span>
+                <p className="text-white/60 text-sm mt-1">Verschiedene Zonen haben unterschiedliche Zyklen</p>
+              </div>
+            </div>
+
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Eine bestimmte Körperstelle benötigt meist mehrere Behandlungen, da die sichtbaren Haare nur einen 
+              Teil der vorhandenen Behaarung darstellen. Haare entstehen und wachsen in Zyklen. Alle Körperhaare 
+              befinden sich an unterschiedlichen Zeitpunkten ihres Haarzyklus. Das hat zur Folge, dass manche 
+              Haare noch in der Haut "schlummern", während eine bestimmte Stelle behandelt wird.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Die Behandlungssitzungen orientieren sich an den natürlichen Wachstumszyklen der Haare, um optimale 
+              Ergebnisse zu erzielen. Da Gesichtshaare schneller wachsen, ist der durchschnittliche Abstand 
+              zwischen der Haarentfernung im Gesicht mit anfangs 4 Wochen kürzer als der der Haarentfernung 
+              an anderen Stellen des Körpers mit anfangs rund 6 Wochen. Mit zunehmender Behandlungsdauer 
+              verlängern sich die Abstände zwischen den einzelnen Sitzungen um ein bis zwei Wochen.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed">
+              Die Geduld zahlt sich jedoch aus, denn der Vorteil liegt auf der Hand: Wurden die Haarwurzeln 
+              einmal verödet, produzieren sie in der Regel keine neuen Haare. Der Weg zur permanent haarfreien 
+              Haut wird so geebnet.
+            </p>
+          </div>
+
+          <div className="text-center">
             <Link href="/technologie" className="btn-secondary inline-flex items-center gap-2">
-              Mehr erfahren
+              Mehr über unsere Technologie erfahren
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Für immer haarfrei? */}
+      <section className="py-24 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Laser-Haarentfernung: Für immer haarfrei?</h2>
+          </div>
+          
+          <div className="prose prose-lg prose-invert max-w-none mb-12">
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Haare weglasern ist die derzeit beste Methode, unerwünschte Haare dauerhaft zu entfernen. 
+              Nach Abschluss der empfohlenen Behandlungsserie können Sie mit bis zu 95% dauerhafter 
+              Haarreduktion rechnen. Die verbleibenden Haare sind deutlich feiner und heller.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Allerdings kann es auch bei diesem fortschrittlichen Verfahren vorkommen, dass einzelne 
+              Haarwurzeln sich soweit regenerieren können, dass sie wieder, meist kleine, Haare nachbilden. 
+              Dies kann auch erst nach einigen Jahren in Gang gesetzt werden. Auch hormonelle Schwankungen 
+              des Körpers können dafür sorgen, dass es zu einem erneuten Wachstum von Haaren kommt.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed">
+              Sollte dies der Fall sein, kann mit einer Nachbehandlung Abhilfe geschaffen werden. 
+              Diese Auffrischungsbehandlungen sind in der Regel deutlich kürzer und günstiger als 
+              die ursprüngliche Behandlungsserie.
+            </p>
+          </div>
+
+          <div className="card">
+            <h3 className="text-xl font-semibold text-white mb-4">Ist bei der Haarentfernung mit Nebenwirkungen zu rechnen?</h3>
+            <p className="text-white/70 leading-relaxed mb-4">
+              Haare lasern ist, wenn es von Experten mit geeigneten Geräten durchgeführt wird, eine der 
+              sichersten Methoden, um dauerhaft Haare zu entfernen. Die Behandlung ist nicht schmerzhaft, 
+              der einwirkende Laserstrahl ist mit dem leicht unangenehmen Gefühl eines kurzen Stichs zu vergleichen. 
+              Eine Betäubung ist nicht notwendig.
+            </p>
+            <p className="text-white/70 leading-relaxed mb-4">
+              Nach der Laserbehandlung kann es zu Rötungen der betroffenen Hautpartie kommen, die allerdings 
+              schnell wieder verschwinden. In seltenen Fällen kann es zu einer allergischen Reaktion kommen, 
+              die in der Regel ebenfalls schnell abklingt.
+            </p>
+            <p className="text-white/70 leading-relaxed">
+              Dank unseres erfahrenen Teams, das ausschließlich moderne Lasertechnologie zur schonenden 
+              Entfernung von Haaren verwendet, ist die Behandlung bei Demon (And) Angel Frankfurt sicher 
+              und zuverlässig. Es ist ratsam, nur bei erfahrenem und geschultem Fachpersonal Haare lasern 
+              zu lassen, da es bei unsachgemäßer Anwendung durchaus zu Nachteilen kommen kann.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Kosten der Haarentfernung */}
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">Haarentfernung mit Laser: Die Kosten</h2>
+          </div>
+          
+          <div className="prose prose-lg prose-invert max-w-none mb-12">
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Die Kosten für die dauerhafte Haarentfernung in Frankfurt hängen von der zu behandelnden 
+              Körperregion und den nötigen Sitzungen ab. Jede Behandlung bei Demon (And) Angel umfasst 
+              die Betreuung durch Spezialisten, die vor der Laser-Haarentfernung eine individuelle 
+              Analyse der Haut vornehmen. Zum Einsatz kommen ausschließlich Lasergeräte der neuesten Generation.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Wir bieten transparente und faire Preise ohne versteckte Kosten. Kleine Bereiche wie die 
+              Oberlippe beginnen bei nur 29€ pro Behandlung. Größere Flächen wie Beine oder Rücken 
+              sind ab 89€ erhältlich. Unser beliebtes Ganzkörper-Paket ist aktuell im Aktionsangebot 
+              für nur 199€ (statt 350€) verfügbar.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed">
+              Die Vereinbarung mehrerer Termine führt zu einem vergünstigten Preis. Sprechen Sie uns 
+              auf unsere attraktiven Paketangebote an und sparen Sie bei der Buchung mehrerer Sitzungen.
+            </p>
+          </div>
+
+          <div className="text-center">
+            <Link href="/preise" className="btn-primary inline-flex items-center gap-2">
+              Vollständige Preisliste ansehen
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
