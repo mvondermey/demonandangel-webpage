@@ -1,6 +1,40 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, CheckCircle, Shield, Clock, Zap, Star, ArrowRight, AlertCircle, Calendar, Euro, Sparkles, Heart, MapPin } from 'lucide-react'
+import { Phone, CheckCircle, Shield, Clock, Zap, Star, ArrowRight, AlertCircle, Calendar, Euro, Sparkles, Heart, MapPin, Users, Ban, CreditCard, Train, MessageCircle } from 'lucide-react'
+
+// Customer Reviews
+const customerReviews = [
+  {
+    name: 'Maria S.',
+    rating: 5,
+    text: 'Beste Entscheidung! Nach 5 Behandlungen bin ich fast komplett haarfrei. Das Team ist super professionell und die Behandlung war viel angenehmer als erwartet.',
+    area: 'Beine & Achseln'
+  },
+  {
+    name: 'Thomas K.',
+    rating: 5,
+    text: 'Als Mann war ich erst skeptisch, aber die Rückenbehandlung hat mein Leben verändert. Endlich keine lästigen Haare mehr. Sehr zu empfehlen!',
+    area: 'Rücken'
+  },
+  {
+    name: 'Sandra M.',
+    rating: 5,
+    text: 'Ich habe schon viele Studios ausprobiert, aber hier stimmt einfach alles: moderne Technik, faire Preise und ein tolles Ergebnis. Danke!',
+    area: 'Bikinizone'
+  },
+]
+
+// Contraindications
+const contraindications = [
+  'Schwangerschaft und Stillzeit',
+  'Aktive Hautinfektionen oder Entzündungen',
+  'Frische Bräune oder Sonnenbrand',
+  'Einnahme von photosensibilisierenden Medikamenten',
+  'Aktive Akne im Behandlungsbereich',
+  'Frische Tattoos im Behandlungsbereich',
+  'Bestimmte Hauterkrankungen (z.B. Vitiligo)',
+  'Einnahme von Isotretinoin (Accutane) in den letzten 6 Monaten',
+]
 
 // Comprehensive FAQ Schema for SEO
 const faqSchema = {
@@ -21,6 +55,30 @@ const faqSchema = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen. Die genaue Anzahl hängt von Haartyp, Hautfarbe, Körperregion und individuellen Faktoren ab. Haare wachsen in Zyklen, daher müssen mehrere Sitzungen durchgeführt werden, um alle Haare in ihrer aktiven Wachstumsphase zu erreichen.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Kann ich nach der Behandlung Sport machen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Wir empfehlen, 24-48 Stunden nach der Behandlung auf intensiven Sport zu verzichten. Schwitzen kann die behandelte Haut reizen. Leichte Aktivitäten sind in der Regel kein Problem.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Wie lange muss ich die Sonne meiden?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Vor der Behandlung sollten Sie 2 Wochen direkte Sonneneinstrahlung und Solarium vermeiden. Nach der Behandlung empfehlen wir ebenfalls 2 Wochen Sonnenschutz mit hohem LSF.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Ist die Behandlung auch für Männer geeignet?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Absolut! Immer mehr Männer entscheiden sich für dauerhafte Haarentfernung. Besonders beliebt sind Rücken, Brust, Schultern und Nacken. Unser Laser ist für alle Geschlechter gleichermaßen effektiv.'
       }
     },
     {
@@ -989,6 +1047,207 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
               Alle FAQs ansehen
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Kundenbewertungen */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="gradient-text">Das sagen unsere Kunden</span>
+            </h2>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="flex">
+                {[1,2,3,4,5].map((i) => (
+                  <Star key={i} className="h-6 w-6 text-yellow-400 fill-yellow-400" />
+                ))}
+              </div>
+              <span className="text-white/80 font-semibold">5.0 auf Google</span>
+            </div>
+            <p className="text-white/60">Über 50 verifizierte Bewertungen</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {customerReviews.map((review, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+                <div className="flex items-center gap-1 mb-3">
+                  {[1,2,3,4,5].map((i) => (
+                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-white/80 mb-4 italic">"{review.text}"</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-white font-semibold">{review.name}</span>
+                  <span className="text-white/50 text-sm">{review.area}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link 
+              href="/bewertungen" 
+              className="text-purple-400 hover:text-purple-300 inline-flex items-center gap-2"
+            >
+              Alle Bewertungen ansehen
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Kontraindikationen */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Wer sollte keine Laserbehandlung durchführen?</span>
+          </h2>
+          
+          <div className="bg-red-500/10 rounded-2xl p-6 border border-red-500/30 mb-8">
+            <div className="flex items-start gap-4">
+              <Ban className="h-8 w-8 text-red-400 flex-shrink-0" />
+              <div>
+                <h3 className="text-lg font-bold text-white mb-4">Kontraindikationen</h3>
+                <p className="text-white/70 mb-4">
+                  Aus Sicherheitsgründen führen wir keine Behandlung durch bei:
+                </p>
+                <ul className="grid md:grid-cols-2 gap-2">
+                  {contraindications.map((item, index) => (
+                    <li key={index} className="flex items-start gap-2 text-white/70">
+                      <span className="text-red-400">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-green-500/10 rounded-2xl p-6 border border-green-500/30">
+            <div className="flex items-start gap-4">
+              <CheckCircle className="h-8 w-8 text-green-400 flex-shrink-0" />
+              <div>
+                <h3 className="text-lg font-bold text-white mb-2">Kostenlose Vorab-Beratung</h3>
+                <p className="text-white/70">
+                  Unsicher, ob die Behandlung für Sie geeignet ist? In unserer kostenlosen Erstberatung 
+                  klären wir alle Fragen und prüfen, ob eine Laserbehandlung für Sie in Frage kommt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Preise & Finanzierung */}
+      <section className="py-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Preise & Zahlungsoptionen</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-gradient-to-br from-demon-500/20 to-purple-500/20 rounded-2xl p-6 border border-demon-500/30">
+              <div className="flex items-center gap-3 mb-4">
+                <Euro className="h-8 w-8 text-demon-400" />
+                <h3 className="text-xl font-bold text-white">Faire Einzelpreise</h3>
+              </div>
+              <ul className="space-y-2 text-white/70 mb-4">
+                <li>• Ab 29€ pro Behandlung (Oberlippe)</li>
+                <li>• Ganzkörper ab 199€ (statt 350€)</li>
+                <li>• Transparente Preise ohne versteckte Kosten</li>
+              </ul>
+              <Link href="/preise" className="text-demon-400 hover:text-demon-300 inline-flex items-center gap-2">
+                Vollständige Preisliste
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="bg-gradient-to-br from-angel-500/20 to-purple-500/20 rounded-2xl p-6 border border-angel-500/30">
+              <div className="flex items-center gap-3 mb-4">
+                <CreditCard className="h-8 w-8 text-angel-400" />
+                <h3 className="text-xl font-bold text-white">Flexible Zahlung</h3>
+              </div>
+              <ul className="space-y-2 text-white/70 mb-4">
+                <li>• Barzahlung</li>
+                <li>• EC-Karte & Kreditkarte</li>
+                <li>• Paketpreise mit Rabatt möglich</li>
+                <li>• Kostenlose Erstberatung inklusive</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-purple-500/10 rounded-2xl p-6 border border-purple-500/30 text-center">
+            <Sparkles className="h-10 w-10 text-purple-400 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-white mb-2">Aktuelle Aktion</h3>
+            <p className="text-white/70 mb-4">
+              Ganzkörper-Behandlung jetzt nur <span className="text-white font-bold">199€</span> statt <span className="line-through text-white/50">350€</span>
+            </p>
+            <a 
+              href="https://wa.me/4915238228127" 
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              <MessageCircle className="h-5 w-5" />
+              Jetzt Termin sichern
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Anfahrt & Erreichbarkeit */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Anfahrt & Erreichbarkeit</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <div className="flex items-center gap-3 mb-4">
+                <MapPin className="h-8 w-8 text-purple-400" />
+                <h3 className="text-xl font-bold text-white">Standort</h3>
+              </div>
+              <p className="text-white/70 mb-4">
+                <strong className="text-white">Demon (And) Angel</strong><br />
+                Europa-Allee 43<br />
+                60327 Frankfurt am Main<br />
+                (Europaviertel)
+              </p>
+              <p className="text-white/60 text-sm">
+                Im modernen Europaviertel, direkt neben dem Skyline Plaza
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <div className="flex items-center gap-3 mb-4">
+                <Train className="h-8 w-8 text-purple-400" />
+                <h3 className="text-xl font-bold text-white">Öffentliche Verkehrsmittel</h3>
+              </div>
+              <ul className="space-y-2 text-white/70">
+                <li>• <strong>S-Bahn:</strong> Frankfurt Messe (5 Min. Fußweg)</li>
+                <li>• <strong>U-Bahn:</strong> Festhalle/Messe (3 Min. Fußweg)</li>
+                <li>• <strong>Hauptbahnhof:</strong> 10 Min. mit S-Bahn</li>
+                <li>• <strong>Parkplätze:</strong> Skyline Plaza Parkhaus</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-demon-500/20 to-angel-500/20 rounded-2xl p-6 border border-white/10">
+            <div className="flex items-center gap-3 mb-4">
+              <Users className="h-8 w-8 text-purple-400" />
+              <h3 className="text-xl font-bold text-white">Wir behandeln Kunden aus der gesamten Region</h3>
+            </div>
+            <p className="text-white/70 mb-4">
+              Neben Frankfurt am Main begrüßen wir regelmäßig Kunden aus:
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {['Offenbach', 'Mainz', 'Wiesbaden', 'Darmstadt', 'Bad Homburg', 'Hanau', 'Aschaffenburg', 'Gießen'].map((city) => (
+                <span key={city} className="bg-white/10 px-3 py-1 rounded-full text-white/70 text-sm">
+                  {city}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
