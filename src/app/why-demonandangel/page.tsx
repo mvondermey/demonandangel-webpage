@@ -168,67 +168,7 @@ export default function WhyDemonAngelPage() {
         </div>
       </section>
 
-      {/* Visual Representation */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/10 via-purple-900/5 to-angel-900/10" />
-        
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="section-heading">Sehen Sie die Balance in Aktion</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">
-              Unsere drei Kernprinzipien arbeiten in perfekter Harmonie zusammen
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="relative mb-6 group">
-                <div className="absolute inset-0 bg-gradient-to-br from-demon-600 to-red-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
-                <img 
-                  src="/images/demon-power-new.png" 
-                  alt="Demon - Die Kraft der Laser-Technologie"
-                  className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <p className="text-white/80 italic">
-                "Sanfte Pflege, die Ihre Haut nährt"
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="relative mb-6 group">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
-                <img 
-                  src="/images/demon-angel-balance-newest.png" 
-                  alt="Demon & Angel - Perfekte Balance"
-                  className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <p className="text-white/80 italic">
-                "Die perfekte Harmonie von Stärke und Sanftheit"
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="relative mb-6 group">
-                <div className="absolute inset-0 bg-gradient-to-br from-angel-600 to-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity" />
-                <img 
-                  src="/images/angel-gentleness-new.png" 
-                  alt="Angel - Die Sanftheit der Behandlung"
-                  className="relative w-full h-80 object-cover rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <p className="text-white/80 italic">
-                "Unerbittliche Kraft, die Haare an der Wurzel zielt"
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* The Formula */}
       <section className="py-24 bg-white/5">
         <div className="max-w-4xl mx-auto px-6 text-center">
