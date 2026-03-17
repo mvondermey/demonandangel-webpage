@@ -331,11 +331,14 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
                 <strong>Behandlungsdauer:</strong> 10-60 Minuten pro Sitzung je nach Körperregion
               </p>
               <p className="text-white/70 leading-relaxed mb-3">
-                <strong>Abstand:</strong> 4-8 Wochen zwischen den Sitzungen für optimale Ergebnisse
+                <strong>Abstände:</strong> Anfangs 4 Wochen (Gesicht), 6 Wochen (Körper). 
+                Mit fortschreitender Behandlungsdauer verlängern sich die Abstände um 1-2 Wochen.
+              </p>
+              <p className="text-white/70 leading-relaxed mb-3">
+                <strong>Schmerzempfinden:</strong> Leicht unangenehm wie kurzer Stich, keine Betäubung notwendig
               </p>
               <p className="text-white/70 leading-relaxed">
-                Während der Behandlung spüren Sie ein leichtes Wärmegefühl oder Kribbeln – vergleichbar 
-                mit einem kurzen Zwicken. Die integrierte Kontaktkühlung sorgt für maximalen Komfort.
+                Die integrierte Kontaktkühlung sorgt für maximalen Komfort während der Behandlung.
               </p>
             </div>
 
@@ -422,15 +425,23 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-white/10">
                   <span className="text-white/70">Kühlung</span>
-                  <span className="text-white font-semibold">Integrierte Kontaktkühlung</span>
+                  <span className="text-white font-semibold">Saphir-Applikator Kontaktkühlung</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-white/10">
-                  <span className="text-white/70">Spotgröße</span>
-                  <span className="text-white font-semibold">Variabel (klein bis groß)</span>
+                  <span className="text-white/70">Spotgrößen</span>
+                  <span className="text-white font-semibold">12mm x 12mm und 23mm x 38mm</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Maximale Frequenz</span>
+                  <span className="text-white font-semibold">3 Hz im gliding mode</span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-white/10">
+                  <span className="text-white/70">Impulsoptionen</span>
+                  <span className="text-white font-semibold">Sehr kurze bis sehr lange Impulse</span>
                 </div>
                 <div className="flex justify-between items-center py-3">
-                  <span className="text-white/70">Zertifizierung</span>
-                  <span className="text-white font-semibold">CE-zertifiziert, NiSV-konform</span>
+                  <span className="text-white/70">Leistungsabgabe</span>
+                  <span className="text-white font-semibold">Hohe Leistungsabgaben</span>
                 </div>
               </div>
             </div>
@@ -523,6 +534,142 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
               Epilieren ist erheblich. Addieren Sie die Zeitersparnis und den Komfort – die Laser-Haarentfernung 
               ist eine Investition in Ihre Lebensqualität.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Kostenvergleich & Zeitersparnis */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Laser vs. Traditionelle Methoden</span>
+          </h2>
+          
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 overflow-hidden">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-white/5">
+                  <th className="text-left py-4 px-6 text-white/80 font-semibold">Methode</th>
+                  <th className="text-center py-4 px-6 text-white/80 font-semibold">Dauerhaft</th>
+                  <th className="text-center py-4 px-6 text-white/80 font-semibold">Schmerz</th>
+                  <th className="text-right py-4 px-6 text-white/80 font-semibold">Langfristige Kosten</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-green-500/10">
+                  <td className="py-4 px-6 text-white font-semibold">Laser-Haarentfernung</td>
+                  <td className="py-4 px-6 text-center text-green-400">✅ Permanent</td>
+                  <td className="py-4 px-6 text-center text-green-400">✅ Minimal</td>
+                  <td className="py-4 px-6 text-right text-green-400">✅ Einmalige Investition</td>
+                </tr>
+                <tr className="bg-white/[0.02]">
+                  <td className="py-4 px-6 text-white">Wachsen</td>
+                  <td className="py-4 px-6 text-center text-red-400">❌ Temporär</td>
+                  <td className="py-4 px-6 text-center text-red-400">❌ Hoch</td>
+                  <td className="py-4 px-6 text-right text-red-400">❌ Kontinuierlich</td>
+                </tr>
+                <tr className="bg-white/[0.02]">
+                  <td className="py-4 px-6 text-white">Epilieren</td>
+                  <td className="py-4 px-6 text-center text-red-400">❌ Temporär</td>
+                  <td className="py-4 px-6 text-center text-red-400">❌ Sehr hoch</td>
+                  <td className="py-4 px-6 text-right text-red-400">❌ Kontinuierlich</td>
+                </tr>
+                <tr className="bg-white/[0.02]">
+                  <td className="py-4 px-6 text-white">Rasieren</td>
+                  <td className="py-4 px-6 text-center text-red-400">❌ Temporär</td>
+                  <td className="py-4 px-6 text-center text-green-400">✅ Minimal</td>
+                  <td className="py-4 px-6 text-right text-red-400">❌ Täglich</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div className="bg-gradient-to-br from-green-500/20 to-transparent rounded-xl p-6 border border-green-500/30">
+              <Euro className="h-10 w-10 text-green-400 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Kostenersparnis</h4>
+              <p className="text-white/70 text-sm">
+                Langfristig günstiger als jahrelanges Rasieren, Wachsen oder Epilieren. 
+                Eine einmalige Investition in jahrelange Freiheit.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-500/20 to-transparent rounded-xl p-6 border border-purple-500/30">
+              <Clock className="h-10 w-10 text-purple-400 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Zeitersparnis</h4>
+              <p className="text-white/70 text-sm">
+                Kein tägliches Rasieren mehr, keine wöchentlichen Waxing-Termine. 
+                Gewinnen Sie wertvolle Zeit für sich zurück.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-angel-500/20 to-transparent rounded-xl p-6 border border-angel-500/30">
+              <Star className="h-10 w-10 text-angel-400 mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Lebensqualität</h4>
+              <p className="text-white/70 text-sm">
+                Mehr Selbstbewusstsein, keine Hautirritationen, keine eingewachsenen Haare. 
+                Investition in Ihre Lebensqualität.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Behandlungsverlauf */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Ihr Behandlungsverlauf</span>
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-demon-500/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-demon-400 font-bold">1</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-1">Erste Behandlung</h3>
+                  <p className="text-white/70">Erste Reduktion des Haarwachstums sichtbar. Die Haare wachsen langsamer nach und werden dünner.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-purple-400 font-bold">3</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-1">Dritte Behandlung</h3>
+                  <p className="text-white/70">Deutliche Verbesserung der Ergebnisse. Bis zu 50% der Haare sind bereits dauerhaft entfernt.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-angel-500/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-angel-400 font-bold">6</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-1">Sechste Behandlung</h3>
+                  <p className="text-white/70">Bis zu 95% permanente Haarreduktion erreicht. Die wenigen verbleibenden Haare sind deutlich feiner und heller.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-500/20 to-angel-500/20 rounded-xl p-6 border border-green-500/30">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+                  <span className="text-green-400 font-bold">∞</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-white mb-1">Langfristige Ergebnisse</h3>
+                  <p className="text-white/70">Dauerhaft glatte Haut. Gelegentliche Nachbehandlungen bei hormonellen Veränderungen möglich.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -773,29 +920,36 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
             <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <AlertCircle className="h-6 w-6 text-yellow-400" />
-                Mögliche Nebenwirkungen
+                Sicherheit & mögliche Nebenwirkungen
               </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3 text-white/80">
-                  <span className="text-yellow-400 mt-0.5">•</span>
-                  <span><strong>Leichte Rötung:</strong> Normal, verschwindet innerhalb weniger Stunden</span>
-                </li>
-                <li className="flex items-start gap-3 text-white/80">
-                  <span className="text-yellow-400 mt-0.5">•</span>
-                  <span><strong>Wärmegefühl:</strong> Vorübergehend, ähnlich einem leichten Sonnenbrand</span>
-                </li>
-                <li className="flex items-start gap-3 text-white/80">
-                  <span className="text-yellow-400 mt-0.5">•</span>
-                  <span><strong>Leichte Schwellung:</strong> Selten, klingt schnell ab</span>
-                </li>
-                <li className="flex items-start gap-3 text-white/80">
-                  <span className="text-yellow-400 mt-0.5">•</span>
-                  <span><strong>Pigmentveränderungen:</strong> Sehr selten, meist temporär</span>
-                </li>
-              </ul>
-              <p className="text-white/60 text-sm mt-4">
-                Bei sachgemäßer Anwendung durch geschultes Fachpersonal sind ernsthafte Nebenwirkungen äußerst selten.
-              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold text-white mb-2">Normale Reaktionen</h4>
+                  <ul className="space-y-2 text-white/80">
+                    <li>• <strong>Leichte Rötung:</strong> Normal, verschwindet innerhalb weniger Stunden</li>
+                    <li>• <strong>Wärmegefühl:</strong> Vorübergehend, ähnlich einem leichten Sonnenbrand</li>
+                    <li>• <strong>Leichte Schwellung:</strong> Selten, klingt schnell ab</li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-white mb-2">Seltene Nebenwirkungen</h4>
+                  <ul className="space-y-2 text-white/80">
+                    <li>• <strong>Leichte allergische Reaktion:</strong> Meist schnell abklingend</li>
+                    <li>• <strong>Pigmentveränderungen:</strong> Sehr selten, meist temporär</li>
+                  </ul>
+                </div>
+
+                <div className="bg-yellow-500/10 rounded-xl p-4 border border-yellow-500/30">
+                  <h4 className="font-semibold text-yellow-400 mb-2">Risiken bei unsachgemäßer Anwendung</h4>
+                  <p className="text-white/70 text-sm">
+                    Bei unsachgemäßer Anwendung können ernsthafte Komplikationen auftreten: 
+                    Verbrennungen, Pigmentstörungen oder Entzündungen. 
+                    Deshalb behandeln wir ausschließlich mit geschultem Fachpersonal und 
+                    zertifizierten Geräten.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -850,13 +1004,14 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <Star className="h-6 w-6 text-yellow-400" />
-                Erfahrung & Expertise
+                Medizinische Expertise & Erfahrung
               </h3>
               <ul className="space-y-2 text-white/70">
-                <li>• Jahre Erfahrung in Laser-Haarentfernung</li>
-                <li>• Fachkundiges Personal mit kontinuierlicher Weiterbildung</li>
-                <li>• Hunderte zufriedene Kunden in Frankfurt</li>
-                <li>• Spezialisiert auf alle Haut- und Haartypen</li>
+                <li>• Jahrzehnte Erfahrung in ästhetischer Lasermedizin</li>
+                <li>• Fachärztlich begleitetes Behandlungsteam</li>
+                <li>• Spezialisten für Laser-Dermatologie</li>
+                <li>• Kontinuierliche Fortbildungen und Zertifizierungen</li>
+                <li>• Tausende erfolgreiche Behandlungen</li>
               </ul>
             </div>
 
