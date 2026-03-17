@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, CheckCircle, Shield, Clock, Zap, Star, ArrowRight, AlertCircle, Calendar, Euro, Sparkles } from 'lucide-react'
+import { Phone, CheckCircle, Shield, Clock, Zap, Star, ArrowRight, AlertCircle, Calendar, Euro, Sparkles, Heart, MapPin } from 'lucide-react'
 
 // Comprehensive FAQ Schema for SEO
 const faqSchema = {
@@ -293,12 +293,16 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <Calendar className="h-6 w-6 text-purple-400" />
-                1. Kostenlose Beratung
+                1. Kostenlose Erstberatung & Testbehandlung
               </h3>
+              <p className="text-white/70 leading-relaxed mb-3">
+                In Ihrer persönlichen Erstberatung führen wir eine detaillierte Hautanalyse durch und 
+                erstellen einen maßgeschneiderten Behandlungsplan. Wir klären alle Fragen zum Ablauf, 
+                Kosten und erwarteten Ergebnissen.
+              </p>
               <p className="text-white/70 leading-relaxed">
-                In Ihrem persönlichen Beratungsgespräch analysieren wir Ihren Haut- und Haartyp, besprechen Ihre 
-                Behandlungsziele und erstellen einen individuellen Behandlungsplan. Wir klären alle Fragen 
-                zum Ablauf, Kosten und möglichen Ergebnissen.
+                <strong>Optional:</strong> Kleine Testbehandlung zur Einschätzung der Verträglichkeit und 
+                Demonstration des Behandlungsgefühls.
               </p>
             </div>
 
@@ -321,31 +325,35 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <Zap className="h-6 w-6 text-purple-400" />
-                3. Die Behandlung
+                3. Behandlungsserie (6-8 Sitzungen)
               </h3>
-              <p className="text-white/70 leading-relaxed mb-4">
-                Die Behandlung dauert je nach Körperregion 15-90 Minuten. Zuerst reinigen wir die Haut und 
-                kalibrieren den Laser für Ihre Haut- und Haartyp-Eigenschaften.
+              <p className="text-white/70 leading-relaxed mb-3">
+                <strong>Behandlungsdauer:</strong> 10-60 Minuten pro Sitzung je nach Körperregion
+              </p>
+              <p className="text-white/70 leading-relaxed mb-3">
+                <strong>Abstand:</strong> 4-8 Wochen zwischen den Sitzungen für optimale Ergebnisse
               </p>
               <p className="text-white/70 leading-relaxed">
-                Während der Behandlung spüren Sie ein leichtes Wärmegefühl oder Kribbeln. Die integrierte 
-                Kontaktkühlung sorgt für maximalen Komfort. Der Laser behandelt jedes Haar einzeln mit 
-                präzisen Lichtimpulsen.
+                Während der Behandlung spüren Sie ein leichtes Wärmegefühl oder Kribbeln – vergleichbar 
+                mit einem kurzen Zwicken. Die integrierte Kontaktkühlung sorgt für maximalen Komfort.
               </p>
             </div>
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <Shield className="h-6 w-6 text-purple-400" />
-                4. Nach der Behandlung
+                4. Langfristige Ergebnisse & Auffrischung
               </h3>
-              <p className="text-white/70 leading-relaxed mb-4">
-                Direkt nach der Behandlung kann die Haut leicht gerötet sein – dies klingt normalerweise 
-                innerhalb weniger Stunden ab. Kühlen Sie die Haut bei Bedarf mit einem feuchten Tuch.
+              <p className="text-white/70 leading-relaxed mb-3">
+                Das Ergebnis ist dauerhaft. Einzelne Haare können hormonell bedingt nachwachsen, lassen sich 
+                aber mit wenigen Nachbehandlungen dauerhaft entfernen.
+              </p>
+              <p className="text-white/70 leading-relaxed mb-3">
+                <strong>Optionale Auffrischung:</strong> Nach 12-24 Monaten bei Bedarf für perfekte Ergebnisse
               </p>
               <p className="text-white/70 leading-relaxed">
-                Vermeiden Sie für 24-48 Stunden heiße Duschen, Sauna, intensive Sportaktivitäten und 
-                direkte Sonneneinstrahlung. Verwenden Sie leichte, parfümfreie Pflegeprodukte.
+                Direkt nach der Behandlung kann die Haut leicht gerötet sein – dies klingt normalerweise 
+                innerhalb weniger Stunden ab. Vermeiden Sie 24-48 Stunden heiße Duschen, Sauna und direkte Sonneneinstrahlung.
               </p>
             </div>
           </div>
@@ -366,22 +374,36 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-6">3-Wellenlängen-Diodenlaser</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Medizinisches 3-Wellenlängen-Diodenlaser System</h3>
+              
+              <div className="mb-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <Shield className="h-5 w-5 text-green-400" />
+                  <span className="text-green-400 font-semibold">Medizinproduktklasse IIa • CE-zertifiziert</span>
+                </div>
+                <p className="text-white/70">
+                  Unser fortschrittliches Laser-System kombiniert drei bewährte Wellenlängen in einem Gerät – 
+                  entwickelt von führenden Herstellern der medizinischen Lasertechnologie.
+                </p>
+              </div>
               
               <div className="space-y-6">
                 <div className="border-l-4 border-demon-500 pl-4">
                   <h4 className="font-bold text-demon-400">755nm Alexandrit-Wellenlänge</h4>
-                  <p className="text-white/70">Optimal für helle und feine Haare. Höchste Melanin-Absorption für effektive Behandlung.</p>
+                  <p className="text-white/70">Vergleichbar mit GentleLase Pro™ Technologie. Optimal für helle Haut und dunkle Haare. 
+                  Höchste Melanin-Absorption bei minimaler Hautbelastung.</p>
                 </div>
                 
                 <div className="border-l-4 border-purple-500 pl-4">
                   <h4 className="font-bold text-purple-400">808nm Dioden-Wellenlänge</h4>
-                  <p className="text-white/70">Der Goldstandard für alle Hauttypen. Tiefe Penetration für dauerhafte Ergebnisse.</p>
+                  <p className="text-white/70">Der Goldstandard für alle Hauttypen. Tiefe Penetration für dauerhafte Ergebnisse 
+                  bei maximaler Sicherheit.</p>
                 </div>
                 
                 <div className="border-l-4 border-angel-500 pl-4">
                   <h4 className="font-bold text-angel-400">1064nm Nd:YAG-Wellenlänge</h4>
-                  <p className="text-white/70">Sicher für dunkle und gebräunte Haut. Tiefste Eindringtiefe für hartnäckige Haare.</p>
+                  <p className="text-white/70">Perfekt für dunklere Hauttypen und tief sitzende Haarfollikel – 
+                  vergleichbar mit GentleMax Pro™ Effizienz.</p>
                 </div>
               </div>
             </div>
@@ -501,6 +523,83 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
               Epilieren ist erheblich. Addieren Sie die Zeitersparnis und den Komfort – die Laser-Haarentfernung 
               ist eine Investition in Ihre Lebensqualität.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Behandlungsbereiche */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Diese Bereiche lassen sich behandeln</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Sparkles className="h-6 w-6 text-purple-400" />
+                Gesicht & Hals
+              </h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• Oberlippe</li>
+                <li>• Kinn & Kiefer</li>
+                <li>• Wangen</li>
+                <li>• Augenbrauen (Formen)</li>
+                <li>• Hals</li>
+                <li>• Seitenbartbereich</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Sparkles className="h-6 w-6 text-purple-400" />
+                Körper & Extremitäten
+              </h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• Achseln</li>
+                <li>• Arme (Ober- & Unterarme)</li>
+                <li>• Beine (Ober- & Unterschenkel)</li>
+                <li>• Brust & Dekolleté</li>
+                <li>• Rücken & Nacken</li>
+                <li>• Bauch & Taille</li>
+                <li>• Schultern</li>
+                <li>• Hände & Füße</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-500/20 to-angel-500/20 rounded-2xl p-6 border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <Heart className="h-6 w-6 text-angel-400" />
+              Intimbereiche (Diskret & Professionell)
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div>
+                <h4 className="font-semibold text-white mb-2">Für Damen</h4>
+                <ul className="space-y-1 text-white/70 text-sm">
+                  <li>• Bikinizone (klassisch)</li>
+                  <li>• Brazilian (komplett)</li>
+                  <li>• Hollywood (komplett)</li>
+                  <li>• Schamlippen</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white mb-2">Für Herren</h4>
+                <ul className="space-y-1 text-white/70 text-sm">
+                  <li>• kompletter Intimbereich</li>
+                  <li>• Hodensack</li>
+                  <li>• Schamhaaransatz</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-white mb-2">Besonders beliebt</h4>
+                <ul className="space-y-1 text-white/70 text-sm">
+                  <li>• Brust (Männer)</li>
+                  <li>• Rücken (Männer)</li>
+                  <li>• Schulterbereich</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -736,6 +835,55 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
               Alle FAQs ansehen
               <ArrowRight className="h-4 w-4" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Warum Demon (And) Angel? */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Warum Demon (And) Angel in Frankfurt?</span>
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Star className="h-6 w-6 text-yellow-400" />
+                Erfahrung & Expertise
+              </h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• Jahre Erfahrung in Laser-Haarentfernung</li>
+                <li>• Fachkundiges Personal mit kontinuierlicher Weiterbildung</li>
+                <li>• Hunderte zufriedene Kunden in Frankfurt</li>
+                <li>• Spezialisiert auf alle Haut- und Haartypen</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Shield className="h-6 w-6 text-green-400" />
+                Sicherheit & Qualität
+              </h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• NiSV-zertifizierte Behandlungen</li>
+                <li>• Höchste Hygienestandards</li>
+                <li>• Medizinproduktklasse IIa Geräte</li>
+                <li>• Persönliche Betreuung & Diskretion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-demon-500/20 to-angel-500/20 rounded-2xl p-6 border border-white/10 mt-8">
+            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <MapPin className="h-6 w-6 text-purple-400" />
+              Zentral & Gut Erreichbar in Frankfurt
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Unser Studio befindet sich im Herzen von Frankfurt am Main – Europa-Allee 43 im 
+              modernen Europaviertel. Nur wenige Minuten vom Hauptbahnhof entfernt mit 
+              exzellenten ÖPNV-Verbindungen und Parkmöglichkeiten in der Nähe.
+            </p>
           </div>
         </div>
       </section>
