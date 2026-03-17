@@ -231,14 +231,27 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
           <div className="prose prose-lg prose-invert max-w-none">
             <p className="text-white/80 text-lg leading-relaxed mb-6">
               Die <strong>dauerhafte Haarentfernung mit Laser</strong> ist die effektivste und sicherste Methode, 
-              um unerwünschte Körperbehaarung langfristig zu beseitigen. Bei diesem Verfahren wird gebündeltes 
-              Licht (Laserstrahl) gezielt auf die Haarwurzel gerichtet.
+              um unerwünschte Körperbehaarung langfristig zu beseitigen. Bei diesem medizinischen Verfahren wird 
+              gebündeltes Licht (Laserstrahl) mit präziser Wellenlänge gezielt auf die Haarwurzel (Follikel) gerichtet.
             </p>
             
             <p className="text-white/80 text-lg leading-relaxed mb-6">
               Das <strong>Melanin</strong> (der natürliche Farbstoff im Haar) absorbiert die Lichtenergie und 
-              wandelt sie in Wärme um. Diese kontrollierte Wärmeentwicklung verödet die Haarwurzel, ohne das 
-              umliegende Gewebe zu beschädigen. Das Ergebnis: Das Haar kann nicht mehr nachwachsen.
+              wandelt sie in kontrollierte Wärme um. Diese thermische Energie verödet die Haarwurzel selektiv, 
+              ohne das umliegende Gewebe zu beschädigen. Das Ergebnis: Eine dauerhafte Reduktion des Haarwachstums 
+              von bis zu 95% nach Abschluss der Behandlungsserie.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Im Gegensatz zu temporären Methoden wie Rasieren, Wachsen oder Epilieren, bei denen nur die 
+              sichtbaren Haare entfernt werden, greift die Laserbehandlung direkt an der Wurzel an. Dies 
+              macht sie zur einzig wirklich <strong>permanenten Lösung</strong> gegen unerwünschte Behaarung.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Die Behandlung ist für <strong>alle Hauttypen (I-VI)</strong> geeignet und kann an fast jeder 
+              Körperregion durchgeführt werden. Moderne Lasergeräte wie unser 3-Wellenlängen-System ermöglichen 
+              eine sichere und effektive Behandlung selbst bei empfindlicher Haut oder gebräunter Hauttypen.
             </p>
 
             <div className="bg-gradient-to-r from-demon-500/20 to-angel-500/20 rounded-2xl p-6 border border-white/10 my-8">
@@ -264,6 +277,76 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
                   <span><strong>Kosteneffizient:</strong> Langfristig günstiger als jahrelanges Rasieren oder Wachsen</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Behandlungsprozess */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Der Behandlungsablauf</span>
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Calendar className="h-6 w-6 text-purple-400" />
+                1. Kostenlose Beratung
+              </h3>
+              <p className="text-white/70 leading-relaxed">
+                In Ihrem persönlichen Beratungsgespräch analysieren wir Ihren Haut- und Haartyp, besprechen Ihre 
+                Behandlungsziele und erstellen einen individuellen Behandlungsplan. Wir klären alle Fragen 
+                zum Ablauf, Kosten und möglichen Ergebnissen.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Clock className="h-6 w-6 text-purple-400" />
+                2. Vorbereitung
+              </h3>
+              <p className="text-white/70 leading-relaxed mb-4">
+                1-2 Tage vor der Behandlung rasieren Sie die betroffene Zone. Vermeiden Sie 2 Wochen vorher 
+                Sonnenbäder, Solarium und Selbstbräuner. Kein Wachsen, Epilieren oder Zupfen 4 Wochen vor 
+                der Behandlung.
+              </p>
+              <p className="text-white/70 leading-relaxed">
+                Am Behandlungstag kommen Sie ohne Make-up, Cremes oder Deodorants in den behandelten 
+                Bereichen. Die Haut sollte sauber und trocken sein.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Zap className="h-6 w-6 text-purple-400" />
+                3. Die Behandlung
+              </h3>
+              <p className="text-white/70 leading-relaxed mb-4">
+                Die Behandlung dauert je nach Körperregion 15-90 Minuten. Zuerst reinigen wir die Haut und 
+                kalibrieren den Laser für Ihre Haut- und Haartyp-Eigenschaften.
+              </p>
+              <p className="text-white/70 leading-relaxed">
+                Während der Behandlung spüren Sie ein leichtes Wärmegefühl oder Kribbeln. Die integrierte 
+                Kontaktkühlung sorgt für maximalen Komfort. Der Laser behandelt jedes Haar einzeln mit 
+                präzisen Lichtimpulsen.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
+              <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Shield className="h-6 w-6 text-purple-400" />
+                4. Nach der Behandlung
+              </h3>
+              <p className="text-white/70 leading-relaxed mb-4">
+                Direkt nach der Behandlung kann die Haut leicht gerötet sein – dies klingt normalerweise 
+                innerhalb weniger Stunden ab. Kühlen Sie die Haut bei Bedarf mit einem feuchten Tuch.
+              </p>
+              <p className="text-white/70 leading-relaxed">
+                Vermeiden Sie für 24-48 Stunden heiße Duschen, Sauna, intensive Sportaktivitäten und 
+                direkte Sonneneinstrahlung. Verwenden Sie leichte, parfümfreie Pflegeprodukte.
+              </p>
             </div>
           </div>
         </div>
@@ -350,6 +433,74 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
               <h4 className="text-lg font-bold text-white mb-2">Schnelle Behandlung</h4>
               <p className="text-white/70">Große Behandlungsflächen in kurzer Zeit durch effiziente Technologie.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ergebnisse & Erwartungen */}
+      <section className="py-20 bg-white/5">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+            <span className="gradient-text">Ergebnisse & realistische Erwartungen</span>
+          </h2>
+          
+          <div className="prose prose-lg prose-invert max-w-none mb-8">
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Die Ergebnisse der Laser-Haarentfernung sind <strong>permanent und dauerhaft</strong>. Nach Abschluss 
+              der empfohlenen 4-6 Behandlungen können Sie mit einer Haarreduktion von bis zu 95% in den 
+              behandelten Bereichen rechnen. Die wenigen verbleibenden Haare sind deutlich feiner und heller.
+            </p>
+
+            <p className="text-white/80 text-lg leading-relaxed mb-6">
+              Bereits nach der ersten Behandlung bemerken viele Kunden eine Reduktion des Haarwachstums. 
+              Die Haare wachsen langsamer nach und werden dünner. Nach jeder weiteren Behandlung verbessern 
+              sich die Ergebnisse weiter.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-gradient-to-br from-green-500/20 to-transparent rounded-xl p-6 border border-green-500/30">
+              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                <CheckCircle className="h-6 w-6 text-green-400" />
+                Was Sie erwarten können
+              </h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• Bis zu 95% permanente Haarreduktion</li>
+                <li>• Deutlich feinere und hellere Resthaare</li>
+                <li>• Keine eingewachsenen Haare mehr</li>
+                <li>• Keine Hautirritationen durch Rasieren</li>
+                <li>• Zeitersparnis im Alltag</li>
+                <li>• Mehr Selbstbewusstsein</li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-yellow-500/20 to-transparent rounded-xl p-6 border border-yellow-500/30">
+              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                <AlertCircle className="h-6 w-6 text-yellow-400" />
+                Wichtige Hinweise
+              </h3>
+              <ul className="space-y-2 text-white/70">
+                <li>• Ergebnisse variieren individuell</li>
+                <li>• Geduld ist entscheidend</li>
+                <li>• Regelmäßige Termine wichtig</li>
+                <li>• Hormonelle Veränderungen können Ergebnisse beeinflussen</li>
+                <li>• Gelegentliche Nachbehandlungen möglich</li>
+                <li>• Sonnenschutz ist unerlässlich</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="bg-purple-500/10 rounded-xl p-6 border border-purple-500/30">
+            <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
+              <Sparkles className="h-6 w-6 text-purple-400" />
+              Langfristige Vorteile
+            </h3>
+            <p className="text-white/70 leading-relaxed">
+              Investieren Sie einmal in Ihre dauerhafte Haarentfernung und genießen Sie jahrelang 
+              haarfreie Haut. Die Kostenersparnis im Vergleich zu lebenslangem Rasieren, Wachsen oder 
+              Epilieren ist erheblich. Addieren Sie die Zeitersparnis und den Komfort – die Laser-Haarentfernung 
+              ist eine Investition in Ihre Lebensqualität.
+            </p>
           </div>
         </div>
       </section>
