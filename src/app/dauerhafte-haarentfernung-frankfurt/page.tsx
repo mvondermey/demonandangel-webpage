@@ -44,7 +44,7 @@ const faqSchema = {
       name: 'Was kostet eine dauerhafte Haarentfernung in Frankfurt?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Die Kosten hängen von der zu behandelnden Körperregion ab. Bei Demon (And) Angel beginnen die Preise bei 29€ für kleine Zonen wie die Oberlippe. Ganzkörperbehandlungen sind ab 249€ im Aktionsangebot erhältlich. Alle Preise verstehen sich pro Behandlung.'
+        text: 'Die Kosten hängen von der zu behandelnden Körperregion ab. Bei Demon (And) Angel beginnen die Preise bei 29€ für kleine Zonen wie die Oberlippe. Ganzkörperbehandlungen sind ab 199€ im Aktionsangebot erhältlich (statt 350€). Alle Preise verstehen sich pro Behandlung.'
       }
     },
     {
@@ -125,7 +125,7 @@ const behandlungsZonen = [
   { zone: 'Achseln', preis: '59 €' },
   { zone: 'Bikinizone', preis: '69 €' },
   { zone: 'Beine komplett', preis: '178 €' },
-  { zone: 'Ganzkörper', preis: '249 €', aktion: true },
+  { zone: 'Ganzkörper', preis: '199 €', altPreis: '350 €', aktion: true },
 ]
 
 const haarzyklusPhasen = [
@@ -453,7 +453,12 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
                       )}
                     </td>
                     <td className="py-4 px-6 text-right">
-                      <span className="text-xl font-bold gradient-text">{item.preis}</span>
+                      <div className="flex items-center justify-end gap-2">
+                        {item.altPreis && (
+                          <span className="text-lg text-white/40 line-through">{item.altPreis}</span>
+                        )}
+                        <span className="text-xl font-bold gradient-text">{item.preis}</span>
+                      </div>
                     </td>
                   </tr>
                 ))}

@@ -18,7 +18,7 @@ const kategorien = [
     name: 'Ganzkörper',
     beschreibung: 'Aktionsangebot.',
     zonen: [
-      { zone: 'Ganzkörper AKTION', preis: '249 €' },
+      { zone: 'Ganzkörper AKTION', preis: '199 €', altPreis: '350 €' },
     ],
   },
   {
@@ -127,7 +127,12 @@ export default function PreisePage() {
                         <tr key={item.zone} className={index % 2 === 0 ? 'bg-white/[0.02]' : ''}>
                           <td className="py-4 px-6 text-white">{item.zone}</td>
                           <td className="py-4 px-6 text-right">
-                            <span className="text-xl font-bold gradient-text">{item.preis}</span>
+                            <div className="flex items-center justify-end gap-2">
+                              {'altPreis' in item && item.altPreis && (
+                                <span className="text-lg text-white/40 line-through">{item.altPreis}</span>
+                              )}
+                              <span className="text-xl font-bold gradient-text">{item.preis}</span>
+                            </div>
                           </td>
                         </tr>
                       ))}
