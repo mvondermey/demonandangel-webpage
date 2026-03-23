@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Phone, CheckCircle, Info, Download } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Preise - Laser Haarentfernung Kosten',
-  description: 'Faire Preise für dauerhafte Laser Haarentfernung in Frankfurt. Transparente Kosten für Gesicht, Körper und Intimbereich. Jetzt informieren!',
+  title: 'Laser Haarentfernung Frankfurt Preise ab 29€ | Ganzkörper 199€',
+  description: 'Laser Haarentfernung Preise Frankfurt ⭐ Oberlippe 29€ ⭐ Achseln 59€ ⭐ Bikini 69€ ⭐ Ganzkörper nur 199€ (statt 350€). Faire Preise, keine versteckten Kosten!',
   keywords: ['laser haarentfernung preise', 'haarentfernung kosten', 'dauerhafte haarentfernung preise frankfurt', 'diodenlaser kosten', 'intimbereich lasern preis'],
   openGraph: {
     title: 'Preise für Laser Haarentfernung | Demon (And) Angel Frankfurt',

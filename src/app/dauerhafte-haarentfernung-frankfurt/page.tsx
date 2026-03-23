@@ -152,8 +152,8 @@ const serviceSchema = {
 }
 
 export const metadata: Metadata = {
-  title: 'Dauerhafte Haarentfernung Frankfurt | Laser Haarentfernung | Demon (And) Angel',
-  description: 'Dauerhafte Haarentfernung in Frankfurt mit modernster 3-Wellenlängen-Diodenlaser Technologie. Schmerzfrei, sicher & für alle Hauttypen. NiSV-zertifiziert. Jetzt Termin buchen!',
+  title: 'Dauerhafte Haarentfernung Frankfurt ab 29€ | 95% Haarreduktion ✓',
+  description: 'Dauerhafte Haarentfernung Frankfurt ⭐ ab 29€ ⭐ 95% Haarreduktion garantiert. 3-Wellenlängen-Laser, schmerzfrei, alle Hauttypen. Ganzkörper 199€. ☎ 015238228127',
   keywords: [
     'dauerhafte haarentfernung frankfurt',
     'laser haarentfernung frankfurt',

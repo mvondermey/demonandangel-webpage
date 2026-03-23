@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { CheckCircle, Zap, Phone, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Laser Haarentfernung Gesicht Frankfurt | Schmerzfrei & Permanent',
-  description: 'Professionelle Laser Haarentfernung im Gesicht in Frankfurt. Oberlippe, Kinn, Augenbrauen - schmerzfrei mit 3-Wellenlängen-Technologie. Jetzt Termin buchen!',
+  title: 'Laser Haarentfernung Gesicht Frankfurt ab 29€ | Oberlippe, Kinn ✓',
+  description: 'Laser Haarentfernung Gesicht Frankfurt ⭐ Oberlippe 29€ ⭐ Kinn 30€ ⭐ Gesicht komplett 99€. Schmerzfrei, dauerhaft. ☎ 015238228127',
   keywords: ['laser haarentfernung gesicht frankfurt', 'oberlippe lasern frankfurt', 'kinn haarentfernung laser', 'gesicht haare lasern', 'dauerhafte haarentfernung gesicht'],
   openGraph: {
     title: 'Laser Haarentfernung Gesicht Frankfurt | Demon (And) Angel',

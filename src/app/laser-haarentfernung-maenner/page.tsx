@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { CheckCircle, Users, Phone, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Laser Haarentfernung für Männer Frankfurt | Rücken, Brust, Bart',
-  description: 'Professionelle Laser Haarentfernung für Männer in Frankfurt. Rücken, Brust, Bauch, Bart, Intimbereich - schmerzfrei & effektiv. Jetzt Termin buchen!',
+  title: 'Laser Haarentfernung Männer Frankfurt ab 89€ | Rücken, Brust ✓',
+  description: 'Laser Haarentfernung Männer Frankfurt ⭐ Rücken 89€ ⭐ Brust 89€ ⭐ Ganzkörper 199€. Schmerzfrei, diskret. ☎ 015238228127',
   keywords: ['laser haarentfernung männer frankfurt', 'rücken lasern männer frankfurt', 'brust haarentfernung laser männer', 'bart laser frankfurt', 'intimbereich männer laser'],
   openGraph: {
     title: 'Laser Haarentfernung für Männer Frankfurt | Demon (And) Angel',

@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { CheckCircle, Heart, Phone, Star, Sparkles } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Laser Haarentfernung für Frauen Frankfurt | Beine, Achseln, Bikini',
-  description: 'Professionelle Laser Haarentfernung für Frauen in Frankfurt. Beine, Achseln, Bikinizone, Gesicht - schmerzfrei & effektiv. Jetzt Termin buchen!',
+  title: 'Laser Haarentfernung Frauen Frankfurt ab 29€ | Beine, Bikini ✓',
+  description: 'Laser Haarentfernung Frauen Frankfurt ⭐ Beine ab 89€ ⭐ Achseln 59€ ⭐ Bikini 69€. Schmerzfrei, alle Hauttypen. ☎ 015238228127',
   keywords: ['laser haarentfernung frauen frankfurt', 'beine lasern frankfurt', 'achseln laser haarentfernung', 'bikinizone lasern frankfurt', 'dauerhafte haarentfernung frauen'],
   openGraph: {
     title: 'Laser Haarentfernung für Frauen Frankfurt | Demon (And) Angel',

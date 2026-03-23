@@ -4,8 +4,8 @@ import { ArrowRight, Star, Shield, Clock, Zap, CheckCircle, Phone, MapPin, Spark
 import HeroGallery from '@/components/HeroGallery'
 
 export const metadata: Metadata = {
-  title: 'Laser Haarentfernung Frankfurt | Demon (And) Angel',
-  description: 'Laser Haarentfernung Frankfurt für Frauen & Männer. Moderne 3-Wellenlängen-Diodenlaser – schmerzfrei, effektiv & für alle Hauttypen. Jetzt Termin buchen!',
+  title: 'Laser Haarentfernung Frankfurt ab 29€ | Schmerzfrei & Dauerhaft ✓',
+  description: 'Laser Haarentfernung Frankfurt ⭐ ab 29€ ⭐ Schmerzfrei mit 3-Wellenlängen-Diodenlaser. NiSV-zertifiziert, für alle Hauttypen. Ganzkörper nur 199€. ☎ Jetzt Termin: 015238228127',
 }
 
 const vorteile = [

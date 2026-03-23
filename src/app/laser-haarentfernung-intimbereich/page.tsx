@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { CheckCircle, Shield, Phone, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Laser Haarentfernung Intimbereich Frankfurt | Bikinizone',
-  description: 'Professionelle Laser Haarentfernung im Intimbereich in Frankfurt. Bikinizone & Intimbereich - schmerzfrei & diskret. Jetzt Termin buchen!',
+  title: 'Laser Haarentfernung Intimbereich Frankfurt ab 69€ | Diskret ✓',
+  description: 'Laser Haarentfernung Intimbereich Frankfurt ⭐ Bikini 69€ ⭐ Brazilian 79€ ⭐ Hollywood 89€. 100% diskret, schmerzfrei. ☎ 015238228127',
   keywords: ['laser haarentfernung intimbereich frankfurt', 'bikinizone lasern frankfurt', 'intimbereich laser frankfurt', 'intim lasern frankfurt'],
   openGraph: {
     title: 'Laser Haarentfernung Intimbereich Frankfurt | Demon (And) Angel',
