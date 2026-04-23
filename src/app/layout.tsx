@@ -59,9 +59,6 @@ export const metadata: Metadata = {
   verification: {
     google: 'f_B_bNmB37S8DTcRWf7c1HbPsAEBqFFR8t6y5opYe3w',
   },
-  alternates: {
-    canonical: 'https://demonandangel.eu',
-  },
 }
 
 export default function RootLayout({
@@ -95,13 +92,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.facebook.com/profile.php?id=61580188569455',
                 'https://www.instagram.com/demonandangellaser/'
               ],
-              'aggregateRating': {
-                '@type': 'AggregateRating',
-                'ratingValue': '5',
-                'reviewCount': '47',
-                'bestRating': '5',
-                'worstRating': '1'
-              },
               image: 'https://demonandangel.eu/images/logo.jpg',
               url: 'https://demonandangel.eu',
               telephone: '+49 152 38228127',
@@ -178,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <Header />
-        <main className="pt-32 lg:pt-56">{children}</main>
+        <main className="site-light pt-32 lg:pt-56">{children}</main>
         <Footer />
         <StickyWhatsApp />
       </body>

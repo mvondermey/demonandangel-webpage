@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Phone, Euro, ArrowRight } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/laser-haarentfernung-frankfurt-preise',
   title: 'Laser Haarentfernung Frankfurt Preise | Demon (And) Angel',
   description: 'Transparente Preise für Laser Haarentfernung in Frankfurt. Alle Körperzonen für Frauen & Männer. Keine versteckten Kosten. Jetzt informieren!',
   keywords: ['laser haarentfernung frankfurt preise', 'haarentfernung kosten frankfurt', 'laser preise frankfurt', 'dauerhafte haarentfernung kosten'],
-}
+})
 
 export default function PreiseSeite() {
   return (

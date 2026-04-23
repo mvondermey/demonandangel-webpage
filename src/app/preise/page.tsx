@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, CheckCircle, Info, Download } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/preise',
   title: 'Laser Haarentfernung Frankfurt Preise ab 29€ | Ganzkörper 199€',
   description: 'Laser Haarentfernung Preise Frankfurt ⭐ Oberlippe 29€ ⭐ Achseln 59€ ⭐ Bikini 69€ ⭐ Ganzkörper nur 199€ (statt 350€). Faire Preise, keine versteckten Kosten!',
   keywords: ['laser haarentfernung preise', 'haarentfernung kosten', 'dauerhafte haarentfernung preise frankfurt', 'diodenlaser kosten', 'intimbereich lasern preis'],
   openGraph: {
     title: 'Preise für Laser Haarentfernung | Demon (And) Angel Frankfurt',
     description: 'Transparente Preise für professionelle dauerhafte Haarentfernung. Alle Körperzonen, faire Konditionen.',
-    url: 'https://demonandangel.eu/preise',
   },
-}
+})
 
 const kategorien = [
   {

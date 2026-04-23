@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Phone, Clock, TrendingDown } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/wie-viele-sitzungen-laser-haarentfernung',
   title: 'Wie viele Sitzungen braucht man für Laser Haarentfernung?',
   description: 'Erfahren Sie, wie viele Laser-Sitzungen für dauerhafte Haarentfernung nötig sind. Faktoren, Zeitplan und was Sie erwarten können.',
   keywords: ['wie viele sitzungen laser haarentfernung', 'anzahl behandlungen haarentfernung', 'laser haarentfernung dauer'],
-}
+})
 
 export default function SitzungenSeite() {
   return (

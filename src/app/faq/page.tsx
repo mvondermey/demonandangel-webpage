@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ChevronDown, Search, MessageCircle } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
 // FAQ Schema for SEO
 const faqSchema = {
@@ -58,16 +59,16 @@ const faqSchema = {
   ]
 }
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/faq',
   title: 'FAQ - Häufig gestellte Fragen zur Laser Haarentfernung Frankfurt',
   description: 'Antworten auf häufig gestellte Fragen zur Laser Haarentfernung bei Demon (And) Angel in Frankfurt. Alles über Behandlung, Kosten, Ablauf und NiSV-Zertifizierung.',
   keywords: ['FAQ laser haarentfernung', 'fragen haarentfernung frankfurt', 'diodenlaser fragen', 'haarentfernung ablauf', 'laser behandlung fragen', 'NiSV zertifizierung', 'schmerzfreie haarentfernung fragen'],
   openGraph: {
     title: 'FAQ - Häufig gestellte Fragen | Demon (And) Angel Frankfurt',
     description: 'Antworten auf alle Fragen zur dauerhaften Laser Haarentfernung in Frankfurt.',
-    url: 'https://demonandangel.eu/faq',
   },
-}
+})
 
 const faqCategories = [
   {

@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Phone, Sparkles, Zap, Heart } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/why-demonandangel',
   title: 'Warum Demon (And) Angel? | Unsere Philosophie der perfekten Balance',
   description: 'Entdecken Sie die Bedeutung hinter Demon (And) Angel - unsere Philosophie, die leistungsstarke Lasertechnologie mit sanfter Behandlung für perfekte Haarentfernungsergebnisse verbindet.',
   keywords: ['demon angel philosophie', 'laser haarentfernung philosophie', 'balance behandlung', 'kraft sanftheit', 'demon and angel bedeutung'],
   openGraph: {
     title: 'Warum Demon (And) Angel? | Unsere Philosophie',
     description: 'Die perfekte Balance zwischen Kraft und Sanftheit in der Laser-Haarentfernung.',
-    url: 'https://demonandangel.eu/why-demonandangel',
   },
-}
+})
 
 export default function WhyDemonAngelPage() {
   return (

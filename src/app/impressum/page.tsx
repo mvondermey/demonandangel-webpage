@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/impressum',
   title: 'Impressum',
   description: 'Impressum von Demon (And) Angel - Laser Haarentfernung Frankfurt. Angaben gemäß § 5 TMG.',
-}
+})
 
 export default function ImpressumPage() {
   return (

@@ -41,7 +41,7 @@ export default function HeroGallery() {
             loading="eager"
           />
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/35 via-slate-950/25 to-purple-950/35" />
         </div>
       ))}
     </div>

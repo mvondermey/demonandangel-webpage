@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/agb',
   title: 'Allgemeine Geschäftsbedingungen',
   description: 'AGB von Demon (And) Angel - Laser Haarentfernung Frankfurt. Allgemeine Geschäftsbedingungen für unsere Dienstleistungen.',
-}
+})
 
 export default function AGBPage() {
   return (

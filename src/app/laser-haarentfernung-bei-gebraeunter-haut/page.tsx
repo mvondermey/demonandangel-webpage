@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Phone, Sun, Shield, AlertTriangle } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/laser-haarentfernung-bei-gebraeunter-haut',
   title: 'Laser Haarentfernung bei gebräunter Haut | Demon (And) Angel',
   description: 'Ist Laser Haarentfernung bei gebräunter Haut möglich? Erfahren Sie alles über Sicherheit, Wartezeiten und unsere 3-Wellenlängen-Technologie.',
   keywords: ['laser haarentfernung gebräunte haut', 'haarentfernung nach urlaub', 'laser nach sonnenbad', 'gebräunt lasern'],
-}
+})
 
 export default function GebraeunteHautSeite() {
   return (

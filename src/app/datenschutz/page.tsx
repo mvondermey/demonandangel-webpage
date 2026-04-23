@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/datenschutz',
   title: 'Datenschutzerklärung',
   description: 'Datenschutzerklärung von Demon (And) Angel - Laser Haarentfernung Frankfurt. Informationen zum Datenschutz gemäß DSGVO.',
-}
+})
 
 export default function DatenschutzPage() {
   return (

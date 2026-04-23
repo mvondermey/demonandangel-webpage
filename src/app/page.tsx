@@ -2,21 +2,23 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Star, Shield, Clock, Zap, CheckCircle, Phone, MapPin, Sparkles, MessageCircle } from 'lucide-react'
 import HeroGallery from '@/components/HeroGallery'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/',
   title: 'Laser Haarentfernung Frankfurt ab 29€ | Schmerzfrei & Dauerhaft ✓',
   description: 'Laser Haarentfernung Frankfurt ⭐ ab 29€ ⭐ Schmerzfrei mit 3-Wellenlängen-Diodenlaser. NiSV-zertifiziert, für alle Hauttypen. Ganzkörper nur 199€. ☎ Jetzt Termin: 015238228127',
-}
+})
 
 const vorteile = [
   {
     icon: Zap,
-    title: 'Völlig SCHMERZFREI',
+    title: 'Besonders angenehme Behandlung',
     description: 'Modernste Technologie für eine angenehme Behandlung ohne Schmerzen.',
   },
   {
     icon: Shield,
-    title: 'Keine Verbrennungsgefahr',
+    title: 'Sicher auch bei gebräunter Haut',
     description: 'Sicher auch bei gebräunter Haut durch unsere 3-Wellenlängen-Technologie.',
   },
   {
@@ -58,7 +60,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="keep-dark relative min-h-[70vh] md:min-h-screen flex items-center justify-center overflow-hidden">
         {/* Rotating Photo Gallery Background */}
         <HeroGallery />
         
@@ -91,7 +93,7 @@ export default function Home() {
               <Phone className="h-5 w-5" />
               Jetzt Termin buchen
             </a>
-            <a href="https://wa.me/4915238228127" className="btn-secondary inline-flex items-center gap-2 bg-green-600 hover:bg-green-700">
+            <a href="https://wa.me/4915238228127" className="inline-flex items-center gap-2 rounded-full bg-green-600 px-8 py-4 font-semibold text-white shadow-lg shadow-green-900/20 transition-all duration-300 hover:-translate-y-1 hover:bg-green-700 hover:shadow-xl">
               <MessageCircle className="h-5 w-5" />
               WhatsApp schreiben
             </a>
@@ -104,7 +106,7 @@ export default function Home() {
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { value: '4', label: 'Behandlungen' },
-              { value: '100%', label: 'Schmerzfrei' },
+              { value: 'Schonend', label: 'Mit Kühlung' },
               { value: '3', label: 'Wellenlängen' },
               { value: '5★', label: 'Bewertungen' },
             ].map((stat) => (
@@ -116,6 +118,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="homepage-light">
 
       {/* Professionelle Laser-Haarentfernung Einführung */}
       <section className="py-24 bg-white/5">
@@ -647,7 +651,7 @@ export default function Home() {
             <div className="card">
               <Star className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
               <h3 className="font-semibold text-white mb-2">5,0 ★ Google</h3>
-              <p className="text-white/60 text-sm">100% zufriedene Kunden auf Google</p>
+              <p className="text-white/60 text-sm">Top bewertet auf Google</p>
             </div>
             <div className="card">
               <Zap className="h-12 w-12 text-purple-400 mx-auto mb-4" />
@@ -696,7 +700,7 @@ export default function Home() {
             <div className="card">
               <h3 className="text-lg font-semibold text-white mb-3">Funktioniert die Behandlung auch bei dunkler Haut?</h3>
               <p className="text-white/70 leading-relaxed">
-                Absolut! Unser 3-Wellenlängen-Diodenlaser mit 755nm, 808nm und 1064nm Wellenlängen ist für alle 
+                Absolut! Unser 3-Wellenlängen-Diodenlaser mit 755nm, 810nm und 1064nm Wellenlängen ist für alle 
                 Hauttypen (I-VI) geeignet. Die 1064nm Nd:YAG-Wellenlänge wurde speziell für dunklere Hauttypen 
                 entwickelt und arbeitet besonders sicher und effektiv.
               </p>
@@ -979,8 +983,10 @@ export default function Home() {
         </div>
       </section>
 
+      </div>
+
       {/* CTA */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="keep-dark pb-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/images/hero-bg.jpg" 

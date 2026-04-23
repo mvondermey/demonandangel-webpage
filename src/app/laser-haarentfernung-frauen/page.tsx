@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Heart, Phone, Star, Sparkles } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/laser-haarentfernung-frauen',
   title: 'Laser Haarentfernung Frauen Frankfurt ab 29€ | Beine, Bikini ✓',
   description: 'Laser Haarentfernung Frauen Frankfurt ⭐ Beine ab 89€ ⭐ Achseln 59€ ⭐ Bikini 69€. Schmerzfrei, alle Hauttypen. ☎ 015238228127',
   keywords: ['laser haarentfernung frauen frankfurt', 'beine lasern frankfurt', 'achseln laser haarentfernung', 'bikinizone lasern frankfurt', 'dauerhafte haarentfernung frauen'],
   openGraph: {
     title: 'Laser Haarentfernung für Frauen Frankfurt | Demon (And) Angel',
     description: 'Spezialisierte dauerhafte Haarentfernung für Frauen. Beine, Achseln, Bikinizone, Gesicht - moderne 3-Wellenlängen-Technologie.',
-    url: 'https://demonandangel.eu/laser-haarentfernung-frauen',
   },
-}
+})
 
 const vorteile = [
   'Seidig glatte Haut - dauerhaft',

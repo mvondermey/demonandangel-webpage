@@ -1,23 +1,25 @@
+import type { Metadata } from 'next'
 import { ArrowRight, Phone, MapPin, Sparkles } from 'lucide-react'
 import Link from 'next/link'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/wohlfuehlen',
   title: 'Dauerhafte Haarentfernung - Fühle dich wohl | Demon (And) Angel',
   description: 'Lust auf ein unbeschwertes Körpergefühl, ohne Haare und ohne viel Zeitaufwand? Wir bieten diskrete Ganzkörper-Behandlungen für Mann und Frau.',
   keywords: ['Haarentfernung', 'Körpergefühl', 'Ganzkörper', 'diskret', 'wohlfühlen'],
   openGraph: {
     title: 'Dauerhafte Haarentfernung - Fühle dich wohl | Demon (And) Angel',
     description: 'Lust auf ein unbeschwertes Körpergefühl? Diskrete Ganzkörper-Behandlungen für Mann und Frau in Frankfurt.',
-    url: 'https://demonandangel.eu/wohlfuehlen',
     images: ['/images/logo-removebg-preview.png'],
   },
-}
+})
 
 export default function WohlfuehlenPage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="keep-dark py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/images/hero-bg.jpg" 
@@ -214,7 +216,7 @@ export default function WohlfuehlenPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-16 relative overflow-hidden">
+      <section className="keep-dark pb-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/images/hero-bg.jpg" 

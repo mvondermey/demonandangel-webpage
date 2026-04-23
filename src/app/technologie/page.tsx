@@ -1,26 +1,28 @@
+import type { Metadata } from 'next'
 import { Shield, Clock, CheckCircle, Star, Sparkles } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/technologie',
   title: 'Diodenlaser 3-Wellenlängen-Technologie | Demon (And) Angel',
-  description: 'Entdecken Sie die Vorteile der dauerhaften Haarentfernung durch den Diodenlaser 3 in 1 – die modernste, effizienteste und sicherste Methode auf dem Markt.',
+  description: 'Entdecken Sie die Vorteile der dauerhaften Haarentfernung durch den Diodenlaser 3 in 1 – eine moderne, effiziente und hautschonende Methode.',
   keywords: ['Diodenlaser', '3-Wellenlängen', 'Alexandrit-Laser', 'Yag-Laser', 'Haarentfernungstechnologie'],
   openGraph: {
     title: 'Diodenlaser 3-Wellenlängen-Technologie | Demon (And) Angel',
-    description: 'Modernste 3-Wellenlängen-Diodenlaser Technologie für schmerzfreie und permanente Haarentfernung in Frankfurt.',
-    url: 'https://demonandangel.eu/technologie',
+    description: 'Moderne 3-Wellenlängen-Diodenlaser Technologie für eine angenehme und dauerhafte Haarentfernung in Frankfurt.',
     images: ['/images/logo-removebg-preview.png'],
   },
-}
+})
 
 const technologieVorteile = [
   {
     icon: Shield,
-    title: 'völlig SCHMERZFREI',
+    title: 'Besonders angenehme Behandlung',
     description: 'Moderste Technologie für eine angenehme Behandlung ohne Schmerzen.',
   },
   {
     icon: Shield,
-    title: 'keine Verbrennungsgefahr bei gebräunter Haut',
+    title: 'Sicher auch bei gebräunter Haut',
     description: 'Sicher auch bei gebräunter Haut durch unsere 3-Wellenlängen-Technologie.',
   },
   {
@@ -49,7 +51,7 @@ export default function TechnologiePage() {
   return (
     <>
       {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="keep-dark py-16 relative overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src="/images/hero-bg.jpg" 

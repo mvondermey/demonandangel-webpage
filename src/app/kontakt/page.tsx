@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
 import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/kontakt',
   title: 'Kontakt - Termin buchen',
   description: 'Kontaktieren Sie Demon (And) Angel für Ihre Laser Haarentfernung in Frankfurt. Termin buchen per WhatsApp oder Telefon. Europa-Allee 43, Frankfurt.',
   keywords: ['kontakt laser haarentfernung', 'termin buchen frankfurt', 'haarentfernung beratung', 'demon and angel kontakt'],
   openGraph: {
     title: 'Kontakt | Demon (And) Angel Frankfurt',
     description: 'Buchen Sie Ihren Termin für dauerhafte Laser Haarentfernung in Frankfurt.',
-    url: 'https://demonandangel.eu/kontakt',
   },
-}
+})
 
 export default function KontaktPage() {
   return (

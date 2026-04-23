@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Zap, Phone, Star } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/laser-haarentfernung-gesicht',
   title: 'Laser Haarentfernung Gesicht Frankfurt ab 29€ | Oberlippe, Kinn ✓',
   description: 'Laser Haarentfernung Gesicht Frankfurt ⭐ Oberlippe 29€ ⭐ Kinn 30€ ⭐ Gesicht komplett 99€. Schmerzfrei, dauerhaft. ☎ 015238228127',
   keywords: ['laser haarentfernung gesicht frankfurt', 'oberlippe lasern frankfurt', 'kinn haarentfernung laser', 'gesicht haare lasern', 'dauerhafte haarentfernung gesicht'],
   openGraph: {
     title: 'Laser Haarentfernung Gesicht Frankfurt | Demon (And) Angel',
     description: 'Schmerzfreie dauerhafte Haarentfernung im Gesicht. Oberlippe, Kinn, Koteletten - moderne 3-Wellenlängen-Technologie.',
-    url: 'https://demonandangel.eu/laser-haarentfernung-gesicht',
   },
-}
+})
 
 
 const vorteile = [

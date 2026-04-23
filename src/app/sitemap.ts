@@ -5,13 +5,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   
   const routes = [
     '',
+    '/dauerhafte-haarentfernung-frankfurt',
     '/preise',
+    '/laser-haarentfernung-frankfurt-preise',
     '/kontakt',
     '/faq',
     '/technologie',
     '/wohlfuehlen',
     '/galerie',
     '/bewertungen',
+    '/why-demonandangel',
+    '/wie-viele-sitzungen-laser-haarentfernung',
+    '/laser-haarentfernung-bei-gebraeunter-haut',
     '/laser-haarentfernung-gesicht',
     '/laser-haarentfernung-intimbereich',
     '/laser-haarentfernung-maenner',

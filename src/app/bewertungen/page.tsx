@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Star, Phone, ExternalLink } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/bewertungen',
   title: 'Kundenbewertungen - Laser Haarentfernung Frankfurt',
   description: 'Lesen Sie echte Kundenbewertungen zur Laser Haarentfernung bei Demon (And) Angel in Frankfurt. 5-Sterne Bewertungen von zufriedenen Kunden.',
   keywords: ['bewertungen laser haarentfernung', 'erfahrungen haarentfernung frankfurt', 'kundenmeinungen laser', 'rezensionen demon angel'],
   openGraph: {
     title: 'Kundenbewertungen | Demon (And) Angel Frankfurt',
     description: 'Echte Kundenbewertungen zur dauerhaften Laser Haarentfernung.',
-    url: 'https://demonandangel.eu/bewertungen',
   },
-}
+})
 
 const reviews = [
   {

@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, ArrowRight, Sparkles } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/galerie',
   title: 'Fotogalerie - Laser Haarentfernung Frankfurt',
   description: 'Einblicke in unser Studio für dauerhafte Laser Haarentfernung in Frankfurt. Moderne Ausstattung, professionelle Behandlungen.',
   keywords: ['galerie laser haarentfernung', 'studio frankfurt', 'laser behandlung bilder', 'haarentfernung frankfurt fotos'],
   openGraph: {
     title: 'Fotogalerie | Demon (And) Angel Frankfurt',
     description: 'Einblicke in unser Studio für dauerhafte Laser Haarentfernung.',
-    url: 'https://demonandangel.eu/galerie',
   },
-}
+})
 
 const galerieImages = [
   { src: '/images/young-beautiful-woman.jpg', alt: 'Gesichtsbehandlung', title: 'Gesichtsbehandlung' },

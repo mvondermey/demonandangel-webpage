@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, CheckCircle, Shield, Clock, Zap, Star, ArrowRight, AlertCircle, Calendar, Euro, Sparkles, Heart, MapPin, Users, Ban, CreditCard, Train, MessageCircle } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
 // Customer Reviews
 const customerReviews = [
@@ -110,7 +111,7 @@ const faqSchema = {
       name: 'Kann ich mich auch mit gebräunter Haut behandeln lassen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Ja! Unser 3-Wellenlängen-Diodenlaser mit 755nm, 808nm und 1064nm Wellenlängen ist auch für gebräunte Haut geeignet. Bei sehr frischer oder intensiver Bräune empfehlen wir jedoch, 1-2 Wochen zu warten, um optimale Ergebnisse zu erzielen.'
+        text: 'Ja! Unser 3-Wellenlängen-Diodenlaser mit 755nm, 810nm und 1064nm Wellenlängen ist auch für gebräunte Haut geeignet. Bei sehr frischer oder intensiver Bräune empfehlen wir jedoch, 1-2 Wochen zu warten, um optimale Ergebnisse zu erzielen.'
       }
     }
   ]
@@ -151,9 +152,10 @@ const serviceSchema = {
   }
 }
 
-export const metadata: Metadata = {
-  title: 'Dauerhafte Haarentfernung Frankfurt ab 29€ | 95% Haarreduktion ✓',
-  description: 'Dauerhafte Haarentfernung Frankfurt ⭐ ab 29€ ⭐ 95% Haarreduktion garantiert. 3-Wellenlängen-Laser, schmerzfrei, alle Hauttypen. Ganzkörper 199€. ☎ 015238228127',
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/dauerhafte-haarentfernung-frankfurt',
+  title: 'Dauerhafte Haarentfernung Frankfurt ab 29€ | Bis zu 95% Haarreduktion ✓',
+  description: 'Dauerhafte Haarentfernung Frankfurt ⭐ ab 29€ ⭐ bis zu 95% Haarreduktion möglich. 3-Wellenlängen-Laser, schonend, alle Hauttypen. Ganzkörper 199€. ☎ 015238228127',
   keywords: [
     'dauerhafte haarentfernung frankfurt',
     'laser haarentfernung frankfurt',
@@ -168,14 +170,10 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Dauerhafte Haarentfernung Frankfurt | Demon (And) Angel',
-    description: 'Professionelle dauerhafte Laser-Haarentfernung in Frankfurt. Modernste 3-Wellenlängen-Technologie, schmerzfrei und für alle Hauttypen geeignet.',
-    url: 'https://demonandangel.eu/dauerhafte-haarentfernung-frankfurt',
+    description: 'Professionelle dauerhafte Laser-Haarentfernung in Frankfurt. Moderne 3-Wellenlängen-Technologie, schonend und für alle Hauttypen geeignet.',
     type: 'website',
   },
-  alternates: {
-    canonical: 'https://demonandangel.eu/dauerhafte-haarentfernung-frankfurt',
-  },
-}
+})
 
 const behandlungsZonen = [
   { zone: 'Gesicht komplett', preis: '99 €', aktion: true },
@@ -273,7 +271,7 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
             </div>
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
               <div className="text-2xl font-bold text-white">100%</div>
-              <div className="text-white/60 text-sm">Schmerzfrei</div>
+              <div className="text-white/60 text-sm">Schonende Kühlung</div>
             </div>
           </div>
         </div>
@@ -504,7 +502,7 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
                 </div>
                 
                 <div className="border-l-4 border-purple-500 pl-4">
-                  <h4 className="font-bold text-purple-400">808nm Dioden-Wellenlänge</h4>
+                  <h4 className="font-bold text-purple-400">810nm Dioden-Wellenlänge</h4>
                   <p className="text-white/70">Der Goldstandard für alle Hauttypen. Tiefe Penetration für dauerhafte Ergebnisse 
                   bei maximaler Sicherheit.</p>
                 </div>
@@ -523,7 +521,7 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-white/10">
                   <span className="text-white/70">Wellenlängen</span>
-                  <span className="text-white font-semibold">755nm, 808nm, 1064nm</span>
+                  <span className="text-white font-semibold">755nm, 810nm, 1064nm</span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-white/10">
                   <span className="text-white/70">Hauttypen</span>
@@ -557,13 +555,13 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-demon-500/20 to-transparent rounded-xl p-6 border border-demon-500/30">
               <Zap className="h-10 w-10 text-demon-400 mb-4" />
-              <h4 className="text-lg font-bold text-white mb-2">Völlig Schmerzfrei</h4>
+              <h4 className="text-lg font-bold text-white mb-2">Besonders angenehme Behandlung</h4>
               <p className="text-white/70">Integrierte Kühlung für maximalen Komfort während der gesamten Behandlung.</p>
             </div>
             
             <div className="bg-gradient-to-br from-purple-500/20 to-transparent rounded-xl p-6 border border-purple-500/30">
               <Shield className="h-10 w-10 text-purple-400 mb-4" />
-              <h4 className="text-lg font-bold text-white mb-2">Keine Verbrennungsgefahr</h4>
+              <h4 className="text-lg font-bold text-white mb-2">Sicher auch bei gebräunter Haut</h4>
               <p className="text-white/70">Sicher auch bei gebräunter Haut durch intelligente Wellenlängen-Kombination.</p>
             </div>
             

@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed w-full z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
+      <header className="fixed w-full z-50 bg-[rgba(221,236,255,0.78)] backdrop-blur-xl border-b border-sky-200/80 shadow-sm shadow-sky-200/70">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-1 lg:px-8 lg:py-2">
           {/* Logo */}
           <div className="flex lg:flex-1 flex-shrink-0">
@@ -53,7 +53,7 @@ export default function Header() {
           <button
             type="button"
             onClick={toggleMenu}
-            className="lg:hidden relative z-[10001] p-2 text-white flex-shrink-0"
+            className="lg:hidden relative z-[10001] p-2 text-slate-800 flex-shrink-0"
             aria-label="Toggle menu"
           >
             <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -71,7 +71,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base font-medium text-white/80 hover:text-white transition-colors"
+                className="text-base font-medium text-slate-700 hover:text-slate-950 transition-colors"
               >
                 {item.name}
               </Link>
@@ -96,13 +96,13 @@ export default function Header() {
       >
         {/* Backdrop */}
         <div
-          className="absolute inset-0 bg-black/95"
+          className="absolute inset-0 bg-slate-900/30 backdrop-blur-sm"
           onClick={closeMenu}
         />
 
         {/* Menu panel */}
         <div
-          className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-gradient-to-br from-black via-demon-900/50 to-black border-l border-white/10 shadow-2xl transform transition-transform duration-300 ease-out ${
+          className={`absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50 border-l border-sky-200 shadow-2xl transform transition-transform duration-300 ease-out ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -113,13 +113,13 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={closeMenu}
-                  className="block py-4 px-5 text-xl font-medium text-white hover:bg-white/10 rounded-xl transition-all hover:translate-x-1"
+                  className="block py-4 px-5 text-xl font-medium text-slate-800 hover:bg-white rounded-xl transition-all hover:translate-x-1"
                 >
                   {item.name}
                 </Link>
               ))}
             </nav>
-            <div className="pt-6 border-t border-white/10 space-y-4">
+            <div className="pt-6 border-t border-sky-200 space-y-4">
               <a
                 href="tel:+4915238228127"
                 onClick={closeMenu}

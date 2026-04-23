@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Users, Phone, Star } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/laser-haarentfernung-maenner',
   title: 'Laser Haarentfernung Männer Frankfurt ab 89€ | Rücken, Brust ✓',
   description: 'Laser Haarentfernung Männer Frankfurt ⭐ Rücken 89€ ⭐ Brust 89€ ⭐ Ganzkörper 199€. Schmerzfrei, diskret. ☎ 015238228127',
   keywords: ['laser haarentfernung männer frankfurt', 'rücken lasern männer frankfurt', 'brust haarentfernung laser männer', 'bart laser frankfurt', 'intimbereich männer laser'],
   openGraph: {
     title: 'Laser Haarentfernung für Männer Frankfurt | Demon (And) Angel',
     description: 'Spezialisierte dauerhafte Haarentfernung für Männer. Rücken, Brust, Bart, Intimbereich - moderne 3-Wellenlängen-Technologie.',
-    url: 'https://demonandangel.eu/laser-haarentfernung-maenner',
   },
-}
+})
 
 
 const vorteile = [

@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Zap, Phone, Heart, Star } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/schmerzfreie-laser-haarentfernung',
   title: 'Schmerzfreie Laser Haarentfernung Frankfurt | Ohne Schmerzen',
-  description: 'Völlig schmerzfreie Laser Haarentfernung in Frankfurt mit 3-Wellenlängen-Technologie und Kühlung. Für alle Körperzonen. Jetzt Termin buchen!',
+  description: 'Schonende Laser Haarentfernung in Frankfurt mit 3-Wellenlängen-Technologie und Kühlung. Für alle Körperzonen. Jetzt Termin buchen!',
   keywords: ['schmerzfreie laser haarentfernung frankfurt', 'schmerzlos haare lasern frankfurt', 'laser haarentfernung ohne schmerzen', 'painless laser hair removal frankfurt'],
   openGraph: {
     title: 'Schmerzfreie Laser Haarentfernung Frankfurt | Demon (And) Angel',
-    description: 'Völlig schmerzlose dauerhafte Haarentfernung. Moderne 3-Wellenlängen-Technologie mit integrierter Kühlung.',
-    url: 'https://demonandangel.eu/schmerzfreie-laser-haarentfernung',
+    description: 'Schonende dauerhafte Haarentfernung. Moderne 3-Wellenlängen-Technologie mit integrierter Kühlung.',
   },
-}
+})
 
 const technologieVorteile = [
   {
@@ -89,13 +90,13 @@ export default function SchmerzfreiPage() {
               <span className="gradient-text">Schmerzfreie Laser Haarentfernung</span>
             </h1>
             <p className="text-xl text-white/70 mb-8">
-              Völlig schmerzfrei und ohne Betäubung. Unsere moderne 3-Wellenlängen-Technologie 
+              Besonders angenehm und ohne Betäubung. Unsere moderne 3-Wellenlängen-Technologie 
               mit integrierter Kühlung macht dauerhafte Haarentfernung zum angenehmen Erlebnis.
             </p>
             <div className="flex items-center gap-6 text-white/60 mb-8">
               <div className="flex items-center gap-2">
                 <Heart className="h-5 w-5 text-purple-400" />
-                <span>100% schmerzfrei</span>
+                <span>Besonders angenehm</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="h-5 w-5 text-purple-400" />
@@ -290,8 +291,8 @@ export default function SchmerzfreiPage() {
           <div className="space-y-4">
             {[
               {
-                q: 'Ist die Behandlung wirklich 100% schmerzfrei?',
-                a: 'Ja! Unsere 3-Wellenlängen-Technologie mit integrierter Saphir-Kühlung macht die Behandlung vollständig schmerzfrei. Sie fühlen nur eine angenehme Wärme.'
+                q: 'Wie angenehm ist die Behandlung?',
+                a: 'Unsere 3-Wellenlängen-Technologie mit integrierter Saphir-Kühlung macht die Behandlung für die meisten Kundinnen und Kunden sehr angenehm. Oft wird nur ein leichtes Wärmegefühl wahrgenommen.'
               },
               {
                 q: 'Brauche ich eine Betäubungscreme?',
@@ -303,7 +304,7 @@ export default function SchmerzfreiPage() {
               },
               {
                 q: 'Kann ich alle Körperzonen schmerzfrei behandeln lassen?',
-                a: 'Ja! Alle Körperzonen von Gesicht bis Intimbereich können vollständig schmerzfrei behandelt werden.'
+                a: 'Ja, grundsätzlich können alle Körperzonen von Gesicht bis Intimbereich besonders schonend behandelt werden. Wie angenehm die Behandlung empfunden wird, hängt aber auch von der Körperzone und der individuellen Empfindlichkeit ab.'
               },
             ].map((faq, index) => (
               <details key={index} className="card group">

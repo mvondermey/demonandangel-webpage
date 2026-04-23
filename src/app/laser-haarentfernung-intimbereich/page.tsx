@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Shield, Phone, Star } from 'lucide-react'
+import { createPageMetadata } from '@/lib/seo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  pathname: '/laser-haarentfernung-intimbereich',
   title: 'Laser Haarentfernung Intimbereich Frankfurt ab 69€ | Diskret ✓',
-  description: 'Laser Haarentfernung Intimbereich Frankfurt ⭐ Bikini 69€ ⭐ Brazilian 79€ ⭐ Hollywood 89€. 100% diskret, schmerzfrei. ☎ 015238228127',
+  description: 'Laser Haarentfernung Intimbereich Frankfurt ⭐ Bikini 69€ ⭐ Brazilian 79€ ⭐ Hollywood 89€. Besonders diskret und schonend. ☎ 015238228127',
   keywords: ['laser haarentfernung intimbereich frankfurt', 'bikinizone lasern frankfurt', 'intimbereich laser frankfurt', 'intim lasern frankfurt'],
   openGraph: {
     title: 'Laser Haarentfernung Intimbereich Frankfurt | Demon (And) Angel',
     description: 'Diskrete dauerhafte Haarentfernung im Intimbereich. Bikinizone & Intimbereich - moderne 3-Wellenlängen-Technologie.',
-    url: 'https://demonandangel.eu/laser-haarentfernung-intimbereich',
   },
-}
+})
 
 
 const vorteile = [
@@ -70,7 +71,7 @@ export default function IntimbereichPage() {
             <div className="flex items-center gap-6 text-white/60 mb-8">
               <div className="flex items-center gap-2">
                 <Shield className="h-5 w-5 text-purple-400" />
-                <span>100% diskret</span>
+                <span>Besonders diskret</span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="h-5 w-5 text-purple-400" />
@@ -103,7 +104,7 @@ export default function IntimbereichPage() {
                 Ob Bikinizone oder Intimbereich – nach 4-6 Behandlungen genießen Sie glatte Haut ohne täglichen Aufwand.
               </p>
               <p>
-                <strong className="text-white">100% diskret.</strong> Privater Behandlungsraum, keine Wartezeiten, 
+                <strong className="text-white">Besonders diskret.</strong> Privater Behandlungsraum, keine Wartezeiten, 
                 und Sie können zwischen weiblicher oder männlicher Behandlungsperson wählen.
               </p>
               <p>
