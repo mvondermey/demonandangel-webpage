@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, Phone, Clock, TrendingDown } from 'lucide-react'
+import { CheckCircle, Clock, TrendingDown } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -13,22 +15,14 @@ export const metadata: Metadata = createPageMetadata({
 export default function SitzungenSeite() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Wie viele Sitzungen braucht man?</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Die häufigste Frage zur Laser Haarentfernung: Wie oft muss ich kommen, 
-              bis ich dauerhaft haarfrei bin?
-            </p>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Eine der haeufigsten Fragen"
+        title="Wie viele Sitzungen braucht man?"
+        description="Die meisten Zonen benoetigen mehrere Sitzungen, weil Haare in unterschiedlichen Wachstumsphasen aktiv sind. Hier sehen Sie, womit Sie realistisch planen koennen."
+        highlights={['Meist 4-6 Sitzungen', 'Abstand 4-8 Wochen', 'Individueller Plan']}
+        primaryAction={{ label: 'Beratung buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+      />
 
       {/* Antwort */}
       <section className="py-16">
@@ -294,24 +288,12 @@ export default function SitzungenSeite() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="card text-center bg-gradient-to-br from-demon-600/20 to-angel-600/20">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Individuelle Beratung für Ihren Behandlungsplan
-            </h2>
-            <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              In einem kostenlosen Beratungsgespräch analysieren wir Ihre Haut und 
-              erstellen einen maßgeschneiderten Behandlungsplan.
-            </p>
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Jetzt Beratung buchen
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Individuelle Beratung fuer Ihren Behandlungsplan"
+        description="In einem kostenlosen Beratungsgespraech analysieren wir Haut, Haare und Zielzonen und planen realistische Abstaende und Sitzungszahlen."
+        primaryAction={{ label: 'Jetzt Beratung buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+      />
     </>
   )
 }

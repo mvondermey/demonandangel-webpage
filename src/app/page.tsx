@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Star, Shield, Clock, Zap, CheckCircle, Phone, MapPin, Sparkles, MessageCircle } from 'lucide-react'
 import HeroGallery from '@/components/HeroGallery'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -85,7 +86,7 @@ export default function Home() {
 
           <div className="flex items-center justify-center gap-2 text-white/60 mb-12">
             <MapPin className="h-5 w-5" />
-            <span>Europa-Allee 43, 60327 Frankfurt am Main</span>
+            <span>Europa-Allee 41-43, 60327 Frankfurt am Main</span>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
@@ -100,6 +101,12 @@ export default function Home() {
             <Link href="/preise" className="btn-secondary">
               Preise ansehen
             </Link>
+          </div>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm text-white/70">
+            <Link href="/bewertungen" className="page-support-link">Bewertungen</Link>
+            <Link href="/faq" className="page-support-link">FAQ</Link>
+            <Link href="/kontakt" className="page-support-link">Kontakt</Link>
           </div>
           
           {/* Stats */}
@@ -852,7 +859,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-white mb-4">Standort Frankfurt</h3>
               <p className="text-white/70 mb-4">
                 <strong className="text-white">Demon (And) Angel</strong><br />
-                Europa-Allee 43<br />
+                Europa-Allee 41-43<br />
                 60327 Frankfurt am Main<br />
                 Europaviertel
               </p>
@@ -985,38 +992,12 @@ export default function Home() {
 
       </div>
 
-      {/* CTA */}
-      <section className="keep-dark pb-16 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src="/images/hero-bg.jpg" 
-            alt="Laser Haarentfernung Studio Frankfurt - Moderne Behandlungsräume"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-demon-900/80 via-purple-900/60 to-angel-900/80" />
-        </div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-500/20 rounded-full blur-3xl" />
-        
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Bereit für dauerhafte Haarentfernung?</span>
-          </h2>
-          <p className="text-xl text-white/70 mb-8">
-            Schmerzfrei, effektiv und für alle Hauttypen geeignet.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Jetzt anrufen: 015238228127
-            </a>
-            <Link href="/preise" className="btn-secondary inline-flex items-center gap-2">
-              <ArrowRight className="h-5 w-5" />
-              Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Bereit fuer dauerhafte Haarentfernung?"
+        description="Schmerzfrei, effektiv und fuer alle Hauttypen geeignet. Starten Sie mit einer kostenlosen Beratung und klaeren Sie Preise, Zonen und realistische Sitzungszahlen direkt am Anfang."
+        primaryAction={{ label: 'Jetzt anrufen: 015238228127', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+      />
     </>
   )
 }

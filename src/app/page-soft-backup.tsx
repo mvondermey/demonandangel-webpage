@@ -81,7 +81,7 @@ export default function HomeAlternative() {
 
           <div className="flex items-center justify-center gap-2 text-gray-500 mb-12">
             <MapPin className="h-5 w-5 text-rose-500" />
-            <span>Europa-Allee 43, 60327 Frankfurt am Main</span>
+            <span>Europa-Allee 41-43, 60327 Frankfurt am Main</span>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">

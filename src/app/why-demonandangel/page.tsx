@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowRight, Phone, Sparkles, Zap, Heart } from 'lucide-react'
+import { Sparkles, Zap, Heart } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -17,49 +18,30 @@ export const metadata: Metadata = createPageMetadata({
 export default function WhyDemonAngelPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/40 via-purple-900/30 to-angel-900/40" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-demon-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-angel-500/10 rounded-full blur-3xl" />
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-demon-500/20 to-angel-500/20 backdrop-blur-lg rounded-full px-6 py-2 mb-6 border border-white/10">
-            <div className="w-2 h-2 rounded-full bg-demon-400" />
-            <span className="text-white/80 text-sm font-medium">Unsere Geschichte</span>
-            <div className="w-2 h-2 rounded-full bg-angel-400" />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="gradient-text">Warum Demon (And) Angel?</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto">
-            Unser Name steht für die perfekte Balance zwischen leistungsstarker Technologie und sanfter Pflege - 
-            das Wesen außergewöhnlicher Laser-Haarentfernung
-          </p>
-          
-          {/* Additional Text Content */}
-          <div className="max-w-3xl mx-auto text-left space-y-6">
-            <p className="text-lg text-white/70 leading-relaxed">
-              In der Welt der Schönheitsbehandlungen suchen wir immer nach dem perfekten Gleichgewicht. 
-              Zu viel Kraft kann verletzen, zu viel Sanftheit kann unwirksam sein. Bei Demon (And) Angel 
-              haben wir diesen Sweet Spot gefunden – die harmonische Verbindung von zwei gegensätzlichen, 
-              doch perfekt ergänzenden Prinzipien.
-            </p>
-            
-            <p className="text-lg text-white/70 leading-relaxed">
-              Unsere Philosophie entstand aus der Erkenntnis, dass wahre Exzellenz in der Laser-Haarentfernung 
-              nicht nur von starker Technologie abhängt, sondern ebenso von der Art, wie wir diese Technologie 
-              einsetzen. Es geht um mehr als nur das Entfernen von Haaren – es geht um das Wohlbefinden unserer 
-              Kunden, die Gesundheit ihrer Haut und das Vertrauen, das sie in uns setzen.
-            </p>
-            
-            <p className="text-lg text-white/70 leading-relaxed">
-              Der Name "Demon (And) Angel)" spiegelt genau diese Dualität wider: Die unerbittliche Präzision 
-              und Kraft modernster Lasertechnologie trifft auf die fürsorgliche, schonende Behandlung, 
-              die Ihre Haut schützt und pflegt. Das Ergebnis ist eine Behandlungserfahrung, die sowohl 
-              effektiv als auch angenehm ist – die perfekte Balance für Ihre Schönheit.
-            </p>
+      <MarketingHero
+        eyebrow="Unsere Geschichte und Haltung"
+        title="Warum Demon (And) Angel?"
+        description="Unser Name steht fuer die Balance zwischen wirksamer Lasertechnologie und sanfter, diskreter Behandlung. Genau diese Kombination praegt jede Beratung und jede Sitzung."
+        highlights={['Wirksamkeit', 'Sanftheit', 'Vertrauen']}
+        primaryAction={{ label: 'Termin buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+        align="center"
+      />
+
+      <section className="pb-6">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="card">
+            <div className="space-y-5 text-lg text-white/80 leading-relaxed">
+              <p>
+                In der Welt der Schoenheitsbehandlungen suchen wir nach dem richtigen Gleichgewicht. Zu viel Kraft kann verletzen, zu viel Sanftheit kann unwirksam sein. Bei Demon (And) Angel verbinden wir beides bewusst.
+              </p>
+              <p>
+                Unsere Philosophie entstand aus der Erkenntnis, dass moderne Lasertechnologie nur dann ueberzeugt, wenn sie wirksam, hautschonend und vertrauensvoll eingesetzt wird. Es geht um mehr als Haarentfernung: Es geht um Wohlbefinden, Sicherheit und gute Entscheidungen.
+              </p>
+              <p>
+                Der Name &quot;Demon (And) Angel&quot; spiegelt genau diese Dualitaet wider: praezise Kraft trifft auf fuersorgliche Behandlung. Das Ergebnis ist eine Erfahrung, die effektiv ist und sich gleichzeitig gut anfuehlt.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -211,29 +193,12 @@ export default function WhyDemonAngelPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/40 via-purple-900/30 to-angel-900/40" />
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Erleben Sie die perfekte Balance</span>
-          </h2>
-          <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Bereit, herauszufinden, warum unser Ansatz die besten Ergebnisse in der Laser-Haarentfernung liefert?
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Jetzt anrufen: 015238228127
-            </a>
-            <Link href="/preise" className="btn-secondary inline-flex items-center gap-2">
-              <ArrowRight className="h-5 w-5" />
-              Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Erleben Sie die Balance in der Praxis"
+        description="Wenn Sie wissen moechten, wie wir Technologie, Diskretion und persoenliche Betreuung kombinieren, beraten wir Sie gern direkt zu Ihrer passenden Behandlung."
+        primaryAction={{ label: 'Jetzt anrufen: 015238228127', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+      />
     </>
   )
 }

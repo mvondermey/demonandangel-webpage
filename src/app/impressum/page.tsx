@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { createPageMetadata } from '@/lib/seo'
+import LegalPageIntro from '@/components/LegalPageIntro'
 
 export const metadata: Metadata = createPageMetadata({
   pathname: '/impressum',
@@ -9,18 +10,20 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function ImpressumPage() {
   return (
-    <section className="py-16">
-      <div className="max-w-4xl mx-auto px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8">
-          <span className="gradient-text">Impressum</span>
-        </h1>
+    <>
+      <LegalPageIntro
+        title="Impressum"
+        description="Hier finden Sie alle gesetzlich erforderlichen Anbieterinformationen und Kontaktangaben von Demon (And) Angel in Frankfurt."
+      />
 
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-6">
         <div className="prose prose-invert max-w-none space-y-8">
           <div className="card">
             <h2 className="text-2xl font-semibold text-white mb-4">Angaben gemäß § 5 TMG</h2>
             <p className="text-white/70">
               Demon (And) Angel<br />
-              Europa-Allee 43<br />
+              Europa-Allee 41-43<br />
               60327 Frankfurt am Main<br />
               Deutschland
             </p>
@@ -38,7 +41,7 @@ export default function ImpressumPage() {
             <h2 className="text-2xl font-semibold text-white mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
             <p className="text-white/70">
               Demon (And) Angel<br />
-              Europa-Allee 43<br />
+              Europa-Allee 41-43<br />
               60327 Frankfurt am Main
             </p>
           </div>
@@ -117,7 +120,8 @@ export default function ImpressumPage() {
             </p>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   )
 }

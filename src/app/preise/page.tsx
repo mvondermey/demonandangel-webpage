@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { Phone, CheckCircle, Info } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 import { createBreadcrumbSchema, createOfferCatalogSchema } from '@/lib/schema'
 
@@ -122,27 +123,15 @@ export default function PreisePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }}
       />
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <div className="max-w-3xl mx-auto">
-                        
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Unsere Preise</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Transparente und faire Preise für Ihre dauerhafte Laser Haarentfernung in einer angenehmen und diskreten Atmosphäre. 
-              Alle Preise verstehen sich pro Behandlung.
-            </p>
-            <div className="flex items-center justify-center gap-4 text-white/60">
-              <Info className="h-5 w-5 text-purple-400" />
-              <span>Für optimale Ergebnisse empfehlen wir 4-6 Behandlungen im Abstand von 4-8 Wochen.</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Transparente Preise ohne versteckte Kosten"
+        title="Preise fuer Laser Haarentfernung in Frankfurt"
+        description="Alle Preise verstehen sich pro Behandlung. Sie sehen direkt, welche Zonen moeglich sind und mit welchen Investitionen Sie realistisch rechnen koennen."
+        highlights={['Oberlippe ab 29 EUR', 'Ganzkoerper 199 EUR', 'Kostenlose Erstberatung']}
+        primaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+        secondaryAction={{ label: 'Termin buchen', href: '/kontakt' }}
+        align="center"
+      />
 
       {/* Preise nach Kategorien */}
       <section className="py-16">
@@ -214,27 +203,12 @@ export default function PreisePage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="cta-heading">
-            Bereit für Ihre erste Behandlung?
-          </h2>
-          <p className="text-white/70 mb-8">
-            Vereinbaren Sie jetzt Ihren kostenlosen Beratungstermin und erfahren Sie mehr 
-            über die optimale Behandlung für Ihre Bedürfnisse.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Jetzt Termin buchen
-            </a>
-            <Link href="/kontakt" className="btn-secondary inline-flex items-center gap-2">
-              Kontakt aufnehmen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Bereit fuer Ihre erste Behandlung?"
+        description="Vereinbaren Sie jetzt Ihren kostenlosen Beratungstermin und erfahren Sie, welche Zonen fuer Sie sinnvoll sind und wie viele Sitzungen realistisch benoetigt werden."
+        primaryAction={{ label: 'Jetzt Termin buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+      />
     </>
   )
 }

@@ -97,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.facebook.com/profile.php?id=61580188569455',
                 'https://www.instagram.com/demonandangellaser/'
               ],
-              image: 'https://demonandangel.eu/images/logo.jpg',
+              image: 'https://demonandangel.eu/images/logo-removebg-preview.png',
               url: 'https://demonandangel.eu',
               telephone: '+49 152 38228127',
               email: 'info@demonandangel.com',
@@ -122,7 +122,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               ],
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Europa-Allee 43',
+                streetAddress: 'Europa-Allee 41-43',
                 addressLocality: 'Frankfurt am Main',
                 postalCode: '60327',
                 addressCountry: 'DE',
@@ -173,7 +173,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <Header />
-        <main className="site-light pt-32 lg:pt-56">{children}</main>
+        <main className="site-light pt-24 lg:pt-28 2xl:pt-32">{children}</main>
         <Footer />
         <StickyWhatsApp />
       </body>

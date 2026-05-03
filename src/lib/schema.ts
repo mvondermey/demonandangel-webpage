@@ -63,7 +63,7 @@ export function createAggregateRatingSchema({
     priceRange: 'EUR',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Europa-Allee 43',
+      streetAddress: 'Europa-Allee 41-43',
       addressLocality: 'Frankfurt am Main',
       postalCode: '60327',
       addressCountry: 'DE',
@@ -99,7 +99,7 @@ export function createOfferCatalogSchema({
       telephone: '+49 152 38228127',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Europa-Allee 43',
+        streetAddress: 'Europa-Allee 41-43',
         addressLocality: 'Frankfurt am Main',
         postalCode: '60327',
         addressCountry: 'DE',

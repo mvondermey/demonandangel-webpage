@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { CheckCircle, Phone, Sun, Shield, AlertTriangle } from 'lucide-react'
+import { CheckCircle, Sun, Shield, AlertTriangle } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -13,22 +14,14 @@ export const metadata: Metadata = createPageMetadata({
 export default function GebraeunteHautSeite() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Laser Haarentfernung bei gebräunter Haut</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Kann ich mit Bräune zur Laser-Behandlung? Was Sie vor und nach dem Urlaub 
-              beachten sollten.
-            </p>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Wichtige Sicherheitsfrage"
+        title="Laser Haarentfernung bei gebraeunter Haut"
+        description="Frische Braeune erhoeht das Risiko fuer Hautreaktionen. Hier sehen Sie, welche Wartezeiten sinnvoll sind und worauf Sie vor und nach dem Urlaub achten sollten."
+        highlights={['Keine Behandlung bei frischer Braeune', 'Klare Wartezeiten', 'Ehrliche Einschaetzung']}
+        primaryAction={{ label: 'Haut jetzt einschaetzen lassen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+      />
 
       {/* Hauptantwort */}
       <section className="py-16">
@@ -406,24 +399,12 @@ export default function GebraeunteHautSeite() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="card text-center bg-gradient-to-br from-demon-600/20 to-angel-600/20">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Fragen zu Ihrer Haut?
-            </h2>
-            <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              Unsicher, ob Ihre Haut aktuell für die Behandlung geeignet ist? 
-              Rufen Sie uns an – wir beraten Sie ehrlich und kompetent.
-            </p>
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Jetzt anrufen
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Fragen zu Ihrer Haut?"
+        description="Wenn Sie unsicher sind, ob Ihre Haut aktuell fuer die Behandlung geeignet ist, beraten wir Sie ehrlich und sagen Ihnen lieber einmal zu frueh ab als zu spaet."
+        primaryAction={{ label: 'Jetzt anrufen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+      />
     </>
   )
 }

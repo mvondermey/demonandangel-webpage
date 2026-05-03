@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { ArrowRight, Phone, MapPin, Sparkles } from 'lucide-react'
 import Link from 'next/link'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -18,42 +20,14 @@ export const metadata: Metadata = createPageMetadata({
 export default function WohlfuehlenPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="keep-dark py-16 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src="/images/hero-bg.jpg" 
-            alt="Laser Haarentfernung Hintergrund"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-demon-900/80 via-purple-900/60 to-angel-900/80" />
-        </div>
-        
-        <div className="relative z-10 max-w-3xl mx-auto px-6">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Kennst Du dieses tolle Gefühl</span>
-          </h1>
-          <p className="text-2xl md:text-3xl font-bold text-purple-400 mb-6">
-            vollkommen haarfrei zu sein?
-          </p>
-          <p className="text-xl text-white/70 mb-6">
-            Die Kleidung direkt an deine Haut zu spüren? Kein lästiges Schwitzen mehr durch lästige Haare. Denke auch an deinem Partner. Er wird es Dir danken.
-          </p>
-          <p className="text-2xl md:text-3xl font-bold text-purple-400 mb-8">
-            Versuche mal eine dauerhafte Haarentfernung mit Laser! Total schmerzfrei!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Jetzt anrufen: 015238228127
-            </a>
-            <Link href="/preise" className="btn-secondary inline-flex items-center gap-2">
-              <ArrowRight className="h-5 w-5" />
-              Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Fokus auf Wohlbefinden"
+        title="Fuehle dich wohl in deiner Haut"
+        description="Dauerhafte Haarentfernung kann den Alltag leichter machen: weniger Rasur, weniger Hautirritationen und mehr Freiheit in Kleidung, Sport und Sommermomenten."
+        highlights={['Diskrete Ganzkoerper-Behandlungen', 'Weibliche oder maennliche Behandler', 'Zentral in Frankfurt']}
+        primaryAction={{ label: 'Jetzt anrufen: 015238228127', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+      />
 
       {/* Ultra glatte beine Section */}
       <section className="py-24">
@@ -109,7 +83,7 @@ export default function WohlfuehlenPage() {
               </p>
               <div className="flex items-center gap-2 text-white/60 mb-8">
                 <MapPin className="h-5 w-5" />
-                <span>Europa-Allee 43, 60327 Frankfurt am Main</span>
+                <span>Europa-Allee 41-43, 60327 Frankfurt am Main</span>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
@@ -215,37 +189,12 @@ export default function WohlfuehlenPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="keep-dark pb-16 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src="/images/hero-bg.jpg" 
-            alt="Laser Haarentfernung Hintergrund"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-demon-900/80 via-purple-900/60 to-angel-900/80" />
-        </div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-500/20 rounded-full blur-3xl" />
-        
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">Bereit für ein unbeschwertes Körpergefühl?</span>
-          </h2>
-          <p className="text-xl text-white/70 mb-8">
-            Wähle Deine Behandlungsperson und genieße die Freiheit von unerwünschten Haaren.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Kostenlos beraten lassen
-            </a>
-            <Link href="/preise" className="btn-secondary inline-flex items-center gap-2">
-              <ArrowRight className="h-5 w-5" />
-              Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Bereit fuer ein unbeschwertes Koerpergefuehl?"
+        description="Waehlen Sie Ihre bevorzugte Behandlungsperson und lassen Sie sich beraten, welche Zonen Ihnen im Alltag wirklich Entlastung bringen."
+        primaryAction={{ label: 'Kostenlos beraten lassen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+      />
     </>
   )
 }

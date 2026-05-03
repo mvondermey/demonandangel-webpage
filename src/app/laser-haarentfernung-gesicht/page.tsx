@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, Zap, Phone, Star } from 'lucide-react'
+import { CheckCircle, Phone } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -55,36 +57,14 @@ const tipps = [
 export default function GesichtPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Laser Haarentfernung Gesicht</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Schmerzfreie und dauerhafte Haarentfernung im Gesicht mit modernster 3-Wellenlängen-Technologie. 
-              Für Frauen und Männer in Frankfurt.
-            </p>
-            <div className="flex items-center gap-6 text-white/60 mb-8">
-              <div className="flex items-center gap-2">
-                <Zap className="h-5 w-5 text-purple-400" />
-                <span>3-Wellenlängen-Laser</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 text-purple-400" />
-                <span>95% Erfolgsrate</span>
-              </div>
-            </div>
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Gesicht behandeln lassen
-            </a>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Praezise fuer sichtbare Zonen"
+        title="Laser Haarentfernung im Gesicht"
+        description="Oberlippe, Kinn, Wangen oder Koteletten behandeln wir besonders praezise, hautschonend und alltagstauglich in Frankfurt."
+        highlights={['Oberlippe ab 29 EUR', 'Kurze Behandlungszeiten', 'Fuer Frauen und Maenner']}
+        primaryAction={{ label: 'Gesicht behandeln lassen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+      />
 
       {/* Warum Gesichtslaser */}
       <section className="py-16">
@@ -318,27 +298,12 @@ export default function GesichtPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="cta-heading">
-            Bereit für ein haarfreies Gesicht?
-          </h2>
-          <p className="text-white/70 mb-8">
-            Vereinbaren Sie jetzt Ihren kostenlosen Beratungstermin und erfahren Sie mehr 
-            über die dauerhafte Laser Haarentfernung im Gesicht.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Kostenlos beraten lassen
-            </a>
-            <Link href="/preise" className="btn-secondary">
-              Alle Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Bereit fuer ein haarfreies Gesicht?"
+        description="Vereinbaren Sie jetzt Ihren kostenlosen Beratungstermin und erfahren Sie, welche Gesichtszone fuer Sie sinnvoll und hautschonend behandelbar ist."
+        primaryAction={{ label: 'Kostenlos beraten lassen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Alle Preise ansehen', href: '/preise' }}
+      />
     </>
   )
 }

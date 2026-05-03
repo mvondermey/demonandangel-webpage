@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { Shield, Clock, CheckCircle, Star, Sparkles } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -50,26 +52,15 @@ const technologieVorteile = [
 export default function TechnologiePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="keep-dark py-16 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src="/images/hero-bg.jpg" 
-            alt="Laser Haarentfernung Hintergrund"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-demon-900/80 via-purple-900/60 to-angel-900/80" />
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Diodenlaser 3-Wellenlängen-Technologie</span>
-          </h1>
-          <p className="text-xl text-white/70 mb-8">
-            Entdecken Sie die Vorteile der dauerhaften Haarentfernung durch den Diodenlaser 3 in 1 – die modernste, effizienteste und sicherste Methode auf dem Markt.
-          </p>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="So arbeitet unsere Technik"
+        title="Diodenlaser 3-Wellenlaengen-Technologie"
+        description="Unsere Technologie kombiniert 755nm, 810nm und 1064nm, um unterschiedliche Haar- und Hauttypen gezielt, schonend und effizient zu behandeln."
+        highlights={['755nm + 810nm + 1064nm', 'Fuer verschiedene Hauttypen', 'Mit Kuehlung']}
+        primaryAction={{ label: 'Beratung buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+        align="center"
+      />
 
       {/* Technologie Erklärung */}
       <section className="py-24">
@@ -186,6 +177,13 @@ export default function TechnologiePage() {
           </div>
         </div>
       </section>
+
+      <PageCTA
+        title="Technologie verstehen und passend beraten lassen"
+        description="Wenn Sie wissen moechten, welche Wellenlaengen und Einstellungen fuer Ihren Haut- und Haartyp sinnvoll sind, beraten wir Sie persoenlich in Frankfurt."
+        primaryAction={{ label: 'Beratung buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+      />
     </>
   )
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, Phone, Euro, ArrowRight } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -13,26 +15,14 @@ export const metadata: Metadata = createPageMetadata({
 export default function PreiseSeite() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Laser Haarentfernung Frankfurt Preise</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Transparente und faire Preise für dauerhafte Haarentfernung in Frankfurt. 
-              Keine versteckten Kosten, keine Überraschungen.
-            </p>
-            <Link href="/preise" className="btn-primary inline-flex items-center gap-2">
-              <Euro className="h-5 w-5" />
-              Zur vollständigen Preisliste
-            </Link>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Preisueberblick fuer Frankfurt"
+        title="Laser Haarentfernung Frankfurt Preise"
+        description="Hier erhalten Sie eine schnelle Orientierung zu typischen Preisbereichen fuer kleine, mittlere und grosse Zonen sowie zu den Faktoren hinter fairen Behandlungen."
+        highlights={['Kleine Zonen ab 30 EUR', 'Keine versteckten Kosten', 'Kostenlose Erstberatung']}
+        primaryAction={{ label: 'Zur vollstaendigen Preisliste', href: '/preise' }}
+        secondaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+      />
 
       {/* Preis-Übersicht */}
       <section className="py-16">
@@ -268,30 +258,12 @@ export default function PreiseSeite() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="card text-center bg-gradient-to-br from-demon-600/20 to-angel-600/20">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Persönliche Beratung zu Preisen & Behandlung
-            </h2>
-            <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-              Jede Haut ist unterschiedlich. Vereinbaren Sie einen kostenlosen Beratungstermin 
-              und erhalten Sie ein individuelles Angebot für Ihre Wunschzonen.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-                <Phone className="h-5 w-5" />
-                Jetzt Beratung buchen
-              </a>
-              <Link href="/preise" className="btn-secondary inline-flex items-center gap-2">
-                Vollständige Preisliste
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Persoenliche Beratung zu Preisen und Behandlung"
+        description="Jede Haut und jede Zone ist unterschiedlich. Vereinbaren Sie einen kostenlosen Beratungstermin und erhalten Sie eine ehrliche Empfehlung fuer Ihren Aufwand."
+        primaryAction={{ label: 'Jetzt Beratung buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Vollstaendige Preisliste', href: '/preise' }}
+      />
     </>
   )
 }

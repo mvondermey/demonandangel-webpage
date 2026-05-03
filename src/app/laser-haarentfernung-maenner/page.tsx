@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { CheckCircle, Users, Phone, Star } from 'lucide-react'
+import { CheckCircle, Phone } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -27,39 +28,18 @@ const vorteile = [
 export default function MaennerPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Laser Haarentfernung für Männer</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Professionelle dauerhafte Haarentfernung für Männer. Rücken, Brust, Bauch, 
-              Bart und mehr - schmerzfrei in Frankfurt.
-            </p>
-            <div className="flex items-center gap-6 text-white/60 mb-8">
-              <div className="flex items-center gap-2">
-                <Users className="h-5 w-5 text-purple-400" />
-                <span>Männliche Behandler verfügbar</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 text-purple-400" />
-                <span>Spezialisiert auf Männerhaut</span>
-              </div>
-            </div>
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Männer-Termin buchen
-            </a>
-            <div className="mt-6 text-sm text-white/60">
-              Siehe auch: <Link href="/laser-haarentfernung-frauen" className="underline hover:text-white transition-colors">Frauen</Link> · <Link href="/preise" className="underline hover:text-white transition-colors">Preise</Link> · <Link href="/kontakt" className="underline hover:text-white transition-colors">Kontakt</Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Speziell fuer Maenner"
+        title="Laser Haarentfernung fuer Maenner"
+        description="Ruecken, Brust, Bauch, Bart und weitere Zonen behandeln wir diskret, effizient und auf dickes Maennerhaar abgestimmt."
+        highlights={['Maennliche Behandler verfuegbar', 'Spezialisiert auf Maennerhaut', 'Ruecken, Brust, Bauch']}
+        primaryAction={{ label: 'Maenner-Termin buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+        supportingLinks={[
+          { label: 'Frauen', href: '/laser-haarentfernung-frauen' },
+          { label: 'Kontakt', href: '/kontakt' },
+        ]}
+      />
 
       {/* Warum Männer zu uns kommen */}
       <section className="py-16">
@@ -216,27 +196,12 @@ export default function MaennerPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="cta-heading">
-            Bereit für den perfekten Körper?
-          </h2>
-          <p className="text-white/70 mb-8">
-            Vereinbaren Sie jetzt Ihren Termin und genießen Sie die Vorteile 
-            dauerhafter Haarentfernung für Männer.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Männer-Termin buchen
-            </a>
-            <Link href="/preise" className="btn-secondary">
-              Alle Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Bereit fuer Ihre erste Behandlung?"
+        description="Vereinbaren Sie jetzt Ihren Termin und lassen Sie sich beraten, welche Kombinationen fuer Ruecken, Brust, Bauch oder Intimbereich sinnvoll sind."
+        primaryAction={{ label: 'Maenner-Termin buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Alle Preise ansehen', href: '/preise' }}
+      />
     </>
   )
 }

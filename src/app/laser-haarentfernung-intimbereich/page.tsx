@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CheckCircle, Shield, Phone, Star } from 'lucide-react'
+import { CheckCircle, Phone } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -55,36 +57,14 @@ const nachsorgeTipps = [
 export default function IntimbereichPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Laser Haarentfernung Intimbereich</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Diskrete und schmerzfreie dauerhafte Haarentfernung im Intimbereich. 
-              Bikinizone & Intimbereich in Frankfurt.
-            </p>
-            <div className="flex items-center gap-6 text-white/60 mb-8">
-              <div className="flex items-center gap-2">
-                <Shield className="h-5 w-5 text-purple-400" />
-                <span>Besonders diskret</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 text-purple-400" />
-                <span>Weibliche/männliche Behandler</span>
-              </div>
-            </div>
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Diskreten Termin buchen
-            </a>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Diskret und persoenlich"
+        title="Laser Haarentfernung im Intimbereich"
+        description="Bikinizone und Intimbereich behandeln wir besonders diskret, schonend und mit waehlbarer Behandlungsperson in Frankfurt."
+        highlights={['Diskrete Atmosphaere', 'Weibliche oder maennliche Behandler', 'Sanfte Behandlung']}
+        primaryAction={{ label: 'Diskreten Termin buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+      />
 
       {/* Warum Intimbereich lasern */}
       <section className="py-16">
@@ -365,27 +345,12 @@ export default function IntimbereichPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="cta-heading">
-            Bereit für dauerhafte Freiheit?
-          </h2>
-          <p className="text-white/70 mb-8">
-            Vereinbaren Sie jetzt Ihren diskreten Beratungstermin und genießen Sie 
-            wochenlang die Freiheit von unerwünschter Behaarung.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Diskret beraten lassen
-            </a>
-            <Link href="/preise" className="btn-secondary">
-              Alle Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Bereit fuer dauerhafte Freiheit?"
+        description="Vereinbaren Sie jetzt Ihren diskreten Beratungstermin und klaeren Sie in Ruhe, welche Intimzone fuer Sie sinnvoll behandelt werden kann."
+        primaryAction={{ label: 'Diskret beraten lassen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Alle Preise ansehen', href: '/preise' }}
+      />
     </>
   )
 }

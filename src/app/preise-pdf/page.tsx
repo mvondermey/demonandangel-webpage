@@ -77,7 +77,7 @@ export default function PreisePdfPage() {
           <img src="/images/logo-removebg-preview.png" alt="Demon (And) Angel Logo" className="h-16 mx-auto mb-4" />
           <h1 className="text-3xl font-bold mb-2">Demon (And) Angel</h1>
           <p className="text-gray-600">Dauerhafte Laser Haarentfernung Frankfurt</p>
-          <p className="text-sm text-gray-500">Europa-Allee 43, 60327 Frankfurt am Main</p>
+          <p className="text-sm text-gray-500">Europa-Allee 41-43, 60327 Frankfurt am Main</p>
           <p className="text-sm text-gray-500">Tel: 015238228127</p>
         </div>
       </div>

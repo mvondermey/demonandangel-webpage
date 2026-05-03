@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
   pathname: '/kontakt',
   title: 'Kontakt - Termin buchen',
-  description: 'Kontaktieren Sie Demon (And) Angel für Ihre Laser Haarentfernung in Frankfurt. Termin buchen per WhatsApp oder Telefon. Europa-Allee 43, Frankfurt.',
+  description: 'Kontaktieren Sie Demon (And) Angel für Ihre Laser Haarentfernung in Frankfurt. Termin buchen per WhatsApp oder Telefon. Europa-Allee 41-43, Frankfurt.',
   keywords: ['kontakt laser haarentfernung', 'termin buchen frankfurt', 'haarentfernung beratung', 'demon and angel kontakt'],
   openGraph: {
     title: 'Kontakt | Demon (And) Angel Frankfurt',
@@ -16,22 +17,19 @@ export const metadata: Metadata = createPageMetadata({
 export default function KontaktPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Kontaktiere uns</span>
-            </h1>
-            <p className="text-xl text-white/70">
-              Wir schätzen unsere Kunden sehr und freuen uns, dass Sie unsere Website besuchen. 
-              Buchen Sie jetzt Ihren Termin für eine Laser Haarentfernung bei Demon (And) Angel!
-            </p>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Direkter Kontakt ohne Umwege"
+        title="Termin buchen oder Beratung anfragen"
+        description="Am schnellsten erreichen Sie uns per WhatsApp oder Telefon. Wir beraten Sie zu Zonen, Preisen, Behandlungsabstaenden und passenden Terminen."
+        highlights={['WhatsApp', 'Telefon', 'Zentral in Frankfurt']}
+        primaryAction={{ label: 'WhatsApp schreiben', href: 'https://wa.me/4915238228127', kind: 'whatsapp' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+        supportingLinks={[
+          { label: 'FAQ', href: '/faq' },
+          { label: 'Bewertungen', href: '/bewertungen' },
+          { label: 'Anfahrt', href: '/kontakt' },
+        ]}
+      />
 
       {/* Contact Methods */}
       <section className="py-16">
@@ -86,7 +84,7 @@ export default function KontaktPage() {
               <h3 className="text-lg font-semibold text-white mb-1">Adresse</h3>
               <p className="text-white/60 text-sm mb-2">Besuchen Sie uns</p>
               <p className="text-white/70">
-                Europa-Allee 43<br />
+                Europa-Allee 41-43<br />
                 60327 Frankfurt am Main
               </p>
             </div>

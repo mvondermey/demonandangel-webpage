@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, ArrowRight, Sparkles } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -26,24 +28,15 @@ const galerieImages = [
 export default function GaleriePage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Fotogalerie</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-4">
-              sei du selbst. So wunderschön drinnen wie draussen.
-            </p>
-            <p className="text-purple-400 text-lg">
-              sanfte dauerhafte professionelle Haarentfernung
-            </p>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Einblick in Studio und Atmosphaere"
+        title="Fotogalerie"
+        description="Sehen Sie unser Studio, die moderne Ausstattung und die ruhige Atmosphaere fuer diskrete, professionelle Laser Haarentfernung in Frankfurt."
+        highlights={['Moderne Ausstattung', 'Diskrete Raeume', 'Angenehme Atmosphaere']}
+        primaryAction={{ label: 'Termin vereinbaren', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Kontakt', href: '/kontakt' }}
+        align="center"
+      />
 
       {/* Galerie Grid */}
       <section className="py-16">
@@ -104,26 +97,12 @@ export default function GaleriePage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="cta-heading">
-            Überzeugen Sie sich selbst
-          </h2>
-          <p className="text-white/70 mb-8">
-            Besuchen Sie uns in unserem Studio in Frankfurt und erleben Sie professionelle Laser Haarentfernung.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Jetzt Termin buchen
-            </a>
-            <Link href="/preise" className="btn-secondary">
-              Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Ueberzeugen Sie sich selbst vor Ort"
+        description="Besuchen Sie unser Studio in Frankfurt und erleben Sie, wie angenehm professionelle Laser Haarentfernung geplant und durchgefuehrt werden kann."
+        primaryAction={{ label: 'Jetzt Termin buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+      />
     </>
   )
 }

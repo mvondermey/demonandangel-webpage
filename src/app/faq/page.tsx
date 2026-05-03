@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ChevronDown, Search, MessageCircle } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 // FAQ Schema for SEO
@@ -162,32 +164,19 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">FAQ</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Hier finden Sie Antworten auf häufig gestellte Fragen zur Laser Haarentfernung, 
-              Behandlungsablauf, Preisen und mehr.
-            </p>
-            
-            {/* Search */}
-            <div className="relative max-w-md">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-white/40" />
-              <input
-                type="text"
-                placeholder="Frage suchen..."
-                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-full text-white placeholder-white/40 focus:outline-none focus:border-purple-500 transition-colors"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Antworten vor dem ersten Termin"
+        title="FAQ zur Laser Haarentfernung"
+        description="Hier finden Sie die wichtigsten Antworten zu Behandlung, Vorbereitung, Preisen, Hauttypen und Nachsorge bei Demon (And) Angel in Frankfurt."
+        highlights={['Kostenlose Erstberatung', 'Fragen zu Preisen', 'Antworten zur Nachsorge']}
+        primaryAction={{ label: 'WhatsApp schreiben', href: 'https://wa.me/4915238228127', kind: 'whatsapp' }}
+        secondaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+        supportingLinks={[
+          { label: 'Preise', href: '/preise' },
+          { label: 'Bewertungen', href: '/bewertungen' },
+          { label: 'Technologie', href: '/technologie' },
+        ]}
+      />
 
       {/* FAQ Categories */}
       <section className="py-16">
@@ -211,26 +200,12 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* Still Have Questions */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <MessageCircle className="h-16 w-16 mx-auto mb-6 text-purple-400" />
-          <h2 className="cta-heading">
-            Noch Fragen?
-          </h2>
-          <p className="text-white/70 mb-8 max-w-2xl mx-auto">
-            Sie haben Ihre Frage nicht gefunden? Kontaktieren Sie uns - wir helfen Ihnen gerne weiter!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://wa.me/4915238228127" className="btn-primary">
-              WhatsApp schreiben
-            </a>
-            <Link href="/kontakt" className="btn-secondary">
-              Kontakt aufnehmen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Noch Fragen offen?"
+        description="Wenn Ihre Frage hier noch nicht beantwortet wurde, klaeren wir sie gern persoenlich per WhatsApp, Telefon oder vor Ort in Frankfurt."
+        primaryAction={{ label: 'WhatsApp schreiben', href: 'https://wa.me/4915238228127', kind: 'whatsapp' }}
+        secondaryAction={{ label: 'Kontakt aufnehmen', href: '/kontakt' }}
+      />
     </>
   )
 }

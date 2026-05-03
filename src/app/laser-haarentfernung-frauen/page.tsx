@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { CheckCircle, Heart, Phone, Star, Sparkles } from 'lucide-react'
+import { CheckCircle, Heart, Phone, Sparkles } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = createPageMetadata({
@@ -26,39 +27,18 @@ const vorteile = [
 export default function FrauenPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="gradient-text">Laser Haarentfernung für Frauen</span>
-            </h1>
-            <p className="text-xl text-white/70 mb-8">
-              Seidig glatte Haut ohne tägliches Rasieren. Beine, Achseln, Bikinizone 
-              und mehr - schmerzfrei in Frankfurt.
-            </p>
-            <div className="flex items-center gap-6 text-white/60 mb-8">
-              <div className="flex items-center gap-2">
-                <Heart className="h-5 w-5 text-purple-400" />
-                <span>Weibliche Behandlerinnen</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Star className="h-5 w-5 text-purple-400" />
-                <span>Sanfte Behandlung</span>
-              </div>
-            </div>
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Frauen-Termin buchen
-            </a>
-            <div className="mt-6 text-sm text-white/60">
-              Siehe auch: <Link href="/laser-haarentfernung-maenner" className="underline hover:text-white transition-colors">Männer</Link> · <Link href="/preise" className="underline hover:text-white transition-colors">Preise</Link> · <Link href="/kontakt" className="underline hover:text-white transition-colors">Kontakt</Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MarketingHero
+        eyebrow="Speziell fuer Frauen"
+        title="Laser Haarentfernung fuer Frauen"
+        description="Seidig glatte Haut ohne taegliches Rasieren. Beine, Achseln, Bikinizone und weitere Zonen behandeln wir schonend und diskret in Frankfurt."
+        highlights={['Weibliche Behandlerinnen', 'Sanfte Behandlung', 'Beine, Bikini, Achseln']}
+        primaryAction={{ label: 'Frauen-Termin buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+        supportingLinks={[
+          { label: 'Maenner', href: '/laser-haarentfernung-maenner' },
+          { label: 'Kontakt', href: '/kontakt' },
+        ]}
+      />
 
       {/* Warum Frauen zu uns kommen */}
       <section className="py-16">
@@ -222,27 +202,12 @@ export default function FrauenPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="cta-heading">
-            Bereit für seidig glatte Haut?
-          </h2>
-          <p className="text-white/70 mb-8">
-            Vereinbaren Sie jetzt Ihren Termin und genießen Sie die Freiheit 
-            dauerhaft glatter Haut.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+4915238228127" className="btn-primary inline-flex items-center gap-2">
-              <Phone className="h-5 w-5" />
-              Frauen-Termin buchen
-            </a>
-            <Link href="/preise" className="btn-secondary">
-              Alle Preise ansehen
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Bereit fuer seidig glatte Haut?"
+        description="Vereinbaren Sie jetzt Ihren Termin und erleben Sie, wie viel Alltag Sie mit dauerhaft glatter Haut sparen koennen."
+        primaryAction={{ label: 'Frauen-Termin buchen', href: 'tel:+4915238228127', kind: 'phone' }}
+        secondaryAction={{ label: 'Alle Preise ansehen', href: '/preise' }}
+      />
     </>
   )
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, CheckCircle, Shield, Clock, Zap, Star, ArrowRight, AlertCircle, Calendar, Euro, Sparkles, Heart, MapPin, Users, Ban, CreditCard, Train, MessageCircle } from 'lucide-react'
+import MarketingHero from '@/components/MarketingHero'
+import PageCTA from '@/components/PageCTA'
 import { createPageMetadata } from '@/lib/seo'
 
 // Customer Reviews
@@ -127,7 +129,7 @@ const serviceSchema = {
     name: 'Demon (And) Angel - Laser Haarentfernung Frankfurt',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Europa-Allee 43',
+      streetAddress: 'Europa-Allee 41-43',
       addressLocality: 'Frankfurt am Main',
       postalCode: '60327',
       addressCountry: 'DE'
@@ -218,45 +220,19 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
-      {/* Hero Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-demon-900/40 via-purple-900/30 to-angel-900/40" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-purple-500/20 rounded-full blur-3xl" />
-        
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg rounded-full px-4 py-2 mb-6">
-            <Shield className="h-4 w-4 text-green-400" />
-            <span className="text-white/80 text-sm">NiSV-zertifiziert • Medizinisch geprüft</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="gradient-text">Dauerhafte Haarentfernung in Frankfurt</span>
-          </h1>
-          
-          <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
-            Professionelle Laser-Haarentfernung mit modernster 3-Wellenlängen-Diodenlaser Technologie. 
-            Schmerzfrei, sicher und effektiv – für Damen und Herren, alle Hauttypen.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <a 
-              href="https://wa.me/4915238228127" 
-              className="btn-primary inline-flex items-center justify-center gap-2"
-            >
-              <Phone className="h-5 w-5" />
-              Kostenlose Beratung
-            </a>
-            <Link 
-              href="/preise" 
-              className="btn-secondary inline-flex items-center justify-center gap-2"
-            >
-              <Euro className="h-5 w-5" />
-              Preise ansehen
-            </Link>
-          </div>
+      <MarketingHero
+        eyebrow="Hauptseite fuer lokale Suche"
+        title="Dauerhafte Haarentfernung in Frankfurt"
+        description="Professionelle Laser-Haarentfernung mit moderner 3-Wellenlaengen-Diodenlaser-Technologie. Schonend, diskret und fuer Frauen und Maenner geeignet."
+        highlights={['NiSV-zertifiziert', 'Ab 29 EUR', 'Fuer alle Hauttypen']}
+        primaryAction={{ label: 'Kostenlose Beratung', href: 'https://wa.me/4915238228127', kind: 'whatsapp' }}
+        secondaryAction={{ label: 'Preise ansehen', href: '/preise' }}
+        align="center"
+      />
 
-          {/* Trust Badges */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <section className="pb-10">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
               <div className="text-2xl font-bold text-white">5.0 ★</div>
               <div className="text-white/60 text-sm">Google Bewertung</div>
@@ -1346,7 +1322,7 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
               </div>
               <p className="text-white/70 mb-4">
                 <strong className="text-white">Demon (And) Angel</strong><br />
-                Europa-Allee 43<br />
+                Europa-Allee 41-43<br />
                 60327 Frankfurt am Main<br />
                 (Europaviertel)
               </p>
@@ -1430,7 +1406,7 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
               Zentral & Gut Erreichbar in Frankfurt
             </h3>
             <p className="text-white/70 leading-relaxed">
-              Unser Studio befindet sich im Herzen von Frankfurt am Main – Europa-Allee 43 im 
+              Unser Studio befindet sich im Herzen von Frankfurt am Main – Europa-Allee 41-43 im 
               modernen Europaviertel. Nur wenige Minuten vom Hauptbahnhof entfernt mit 
               exzellenten ÖPNV-Verbindungen und Parkmöglichkeiten in der Nähe.
             </p>
@@ -1438,53 +1414,19 @@ export default function DauerhafteHaarentfernungFrankfurtPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-demon-900/40 via-purple-900/30 to-angel-900/40">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="gradient-text">Bereit für dauerhaft glatte Haut?</span>
-          </h2>
-          <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            Vereinbaren Sie jetzt Ihre kostenlose Beratung und erfahren Sie, wie wir Ihnen zu 
-            dauerhaft haarfreier Haut verhelfen können.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a 
-              href="https://wa.me/4915238228127" 
-              className="btn-primary inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
-            >
-              <Phone className="h-6 w-6" />
-              WhatsApp: 0152 38228127
-            </a>
-            <Link 
-              href="/kontakt" 
-              className="btn-secondary inline-flex items-center justify-center gap-2 text-lg px-8 py-4"
-            >
-              Kontaktformular
-              <ArrowRight className="h-5 w-5" />
-            </Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-6 text-white/60">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-400" />
-              <span>Kostenlose Beratung</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-5 w-5 text-green-400" />
-              <span>Keine versteckten Kosten</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        title="Bereit fuer dauerhaft glatte Haut?"
+        description="Vereinbaren Sie jetzt Ihre kostenlose Beratung und erfahren Sie, welche Zonen sinnvoll sind, mit welchen Abstaenden Sie rechnen sollten und welche Preise realistisch sind."
+        primaryAction={{ label: 'WhatsApp: 0152 38228127', href: 'https://wa.me/4915238228127', kind: 'whatsapp' }}
+        secondaryAction={{ label: 'Kontaktformular', href: '/kontakt' }}
+      />
 
       {/* Location Info */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Besuchen Sie uns in Frankfurt</h3>
           <p className="text-white/70 mb-6">
-            Demon (And) Angel • Europa-Allee 43 • 60327 Frankfurt am Main
+            Demon (And) Angel • Europa-Allee 41-43 • 60327 Frankfurt am Main
           </p>
           <p className="text-white/60">
             Zentral gelegen im Europaviertel, nur wenige Minuten vom Hauptbahnhof entfernt. 

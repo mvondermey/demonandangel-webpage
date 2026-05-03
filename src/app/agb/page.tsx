@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { createPageMetadata } from '@/lib/seo'
+import LegalPageIntro from '@/components/LegalPageIntro'
 
 export const metadata: Metadata = createPageMetadata({
   pathname: '/agb',
@@ -9,18 +10,20 @@ export const metadata: Metadata = createPageMetadata({
 
 export default function AGBPage() {
   return (
-    <section className="py-16">
-      <div className="max-w-4xl mx-auto px-6">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8">
-          <span className="gradient-text">Allgemeine Geschäftsbedingungen</span>
-        </h1>
+    <>
+      <LegalPageIntro
+        title="Allgemeine Geschäftsbedingungen"
+        description="Hier finden Sie die Rahmenbedingungen fuer Terminvereinbarung, Zahlung, Ausfallregelungen und Behandlungsablaeufe bei Demon (And) Angel."
+      />
 
+      <section className="pb-16">
+        <div className="max-w-4xl mx-auto px-6">
         <div className="prose prose-invert max-w-none space-y-8">
           <div className="card">
             <h2 className="text-2xl font-semibold text-white mb-4">§ 1 Geltungsbereich</h2>
             <p className="text-white/70">
               (1) Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen Demon (And) Angel, 
-              Europa-Allee 43, 60327 Frankfurt am Main (nachfolgend „Anbieter") und dem Kunden über Dienstleistungen 
+              Europa-Allee 41-43, 60327 Frankfurt am Main (nachfolgend „Anbieter") und dem Kunden über Dienstleistungen 
               im Bereich der Laser-Haarentfernung.
             </p>
             <p className="text-white/70 mt-4">
@@ -164,7 +167,8 @@ export default function AGBPage() {
             </p>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   )
 }
