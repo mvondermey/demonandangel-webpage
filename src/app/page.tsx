@@ -214,7 +214,7 @@ export default function Home() {
               <div className="w-3 h-3 rounded-full bg-angel-400" />
             </div>
             <h3 className="text-2xl font-bold text-white mb-4">
-              Warum Demon (And) Angel)?
+              Warum Demon (And) Angel?
             </h3>
             <p className="text-white/70 mb-6 max-w-2xl mx-auto">
               Entdecken Sie die Geschichte hinter unserem Namen und die Philosophie, 

@@ -10,7 +10,7 @@ const footerLinks = {
   ],
   information: [
     { name: 'Dauerhafte Haarentfernung', href: '/dauerhafte-haarentfernung-frankfurt' },
-    { name: 'Warum Demon (And) Angel)', href: '/why-demonandangel' },
+    { name: 'Warum Demon (And) Angel?', href: '/why-demonandangel' },
     { name: 'Preise', href: '/preise' },
     { name: 'Frankfurt Preise', href: '/laser-haarentfernung-frankfurt-preise' },
     { name: 'Sitzungen', href: '/wie-viele-sitzungen-laser-haarentfernung' },

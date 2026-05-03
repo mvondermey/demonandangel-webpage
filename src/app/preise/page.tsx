@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, CheckCircle, Info, Download } from 'lucide-react'
+import { Phone, CheckCircle, Info } from 'lucide-react'
 import { createPageMetadata } from '@/lib/seo'
+import { createBreadcrumbSchema, createOfferCatalogSchema } from '@/lib/schema'
 
 export const metadata: Metadata = createPageMetadata({
   pathname: '/preise',
@@ -73,9 +74,54 @@ const kategorien = [
   },
 ]
 
+const breadcrumbSchema = createBreadcrumbSchema([
+  { name: 'Startseite', path: '/' },
+  { name: 'Preise', path: '/preise' },
+])
+const offerCatalogSchema = createOfferCatalogSchema({
+  path: '/preise',
+  name: 'Preise Laser Haarentfernung Frankfurt',
+  description: 'Transparente Preise fuer professionelle Laser Haarentfernung in Frankfurt am Main.',
+  items: [
+    {
+      name: 'Ganzkoerper Behandlung',
+      description: 'Ganzkoerper Aktionsangebot pro Behandlung.',
+      price: '199',
+    },
+    {
+      name: 'Oberlippe',
+      description: 'Laser Haarentfernung Oberlippe pro Behandlung.',
+      price: '29',
+    },
+    {
+      name: 'Achseln',
+      description: 'Laser Haarentfernung Achseln pro Behandlung.',
+      price: '59',
+    },
+    {
+      name: 'Unterschenkel',
+      description: 'Laser Haarentfernung Unterschenkel pro Behandlung.',
+      price: '89',
+    },
+    {
+      name: 'Bikini',
+      description: 'Laser Haarentfernung Bikini pro Behandlung.',
+      price: '54',
+    },
+  ],
+})
+
 export default function PreisePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(offerCatalogSchema) }}
+      />
       {/* Hero */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />

@@ -2,6 +2,5 @@ User-Agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
-Disallow: /_next/
 
 Sitemap: https://demonandangel.eu/sitemap.xml

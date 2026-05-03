@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 const BASE_URL = 'https://demonandangel.eu'
+const DEFAULT_SHARE_IMAGE = '/images/logo-removebg-preview.png'
 
 type PageMetadataInput = {
   pathname: string
@@ -30,10 +31,27 @@ export function createPageMetadata({
       canonical,
     },
     openGraph: {
+      type: 'website',
+      locale: 'de_DE',
+      siteName: 'Demon (And) Angel',
       title,
       description,
       url: canonical,
+      images: [
+        {
+          url: DEFAULT_SHARE_IMAGE,
+          width: 1200,
+          height: 1200,
+          alt: 'Demon (And) Angel - Laser Haarentfernung Frankfurt',
+        },
+      ],
       ...openGraph,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [DEFAULT_SHARE_IMAGE],
     },
   }
 }

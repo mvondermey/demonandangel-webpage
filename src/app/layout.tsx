@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: '/images/logo-removebg-preview.png',
+    shortcut: '/images/logo-removebg-preview.png',
+    apple: '/images/logo-removebg-preview.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'de_DE',
@@ -32,9 +37,9 @@ export const metadata: Metadata = {
     description: 'Professionelle dauerhafte Haarentfernung mit modernster 3-Wellenlängen-Diodenlaser Technologie in Frankfurt. Schmerzfrei & für alle Hauttypen.',
     images: [
       {
-        url: '/images/logo.jpg',
-        width: 512,
-        height: 512,
+        url: '/images/logo-removebg-preview.png',
+        width: 1200,
+        height: 1200,
         alt: 'Demon (And) Angel - Dauerhafte Laser Haarentfernung Frankfurt',
       },
     ],
@@ -43,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dauerhafte Laser Haarentfernung Frankfurt | Demon (And) Angel',
     description: 'Professionelle dauerhafte Haarentfernung mit 3-Wellenlängen-Diodenlaser in Frankfurt. Schmerzfrei & effektiv.',
-    images: ['/images/logo.jpg'],
+    images: ['/images/logo-removebg-preview.png'],
   },
   robots: {
     index: true,

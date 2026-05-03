@@ -42,7 +42,7 @@ export default function WhyDemonAngelPage() {
           <div className="max-w-3xl mx-auto text-left space-y-6">
             <p className="text-lg text-white/70 leading-relaxed">
               In der Welt der Schönheitsbehandlungen suchen wir immer nach dem perfekten Gleichgewicht. 
-              Zu viel Kraft kann verletzen, zu wenig Sanftheit kann unwirksam sein. Bei Demon (And) Angel 
+              Zu viel Kraft kann verletzen, zu viel Sanftheit kann unwirksam sein. Bei Demon (And) Angel 
               haben wir diesen Sweet Spot gefunden – die harmonische Verbindung von zwei gegensätzlichen, 
               doch perfekt ergänzenden Prinzipien.
             </p>
@@ -71,7 +71,7 @@ export default function WhyDemonAngelPage() {
             <h2 className="section-heading">Die Philosophie der Balance</h2>
             <p className="text-white/60 max-w-3xl mx-auto text-lg">
               Bei der Laser-Haarentfernung kommt es auf Harmonie an. Zu viel Kraft verursacht Unbehagen, 
-              zu wenig Sanftheit mangelt es an Wirksamkeit. Wir haben den Sweet Spot gefunden.
+              zu viel Sanftheit mangelt es an Wirksamkeit. Wir haben den Sweet Spot gefunden.
             </p>
           </div>
           

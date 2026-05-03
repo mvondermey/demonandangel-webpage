@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Star, Phone, ExternalLink } from 'lucide-react'
 import { createPageMetadata } from '@/lib/seo'
+import { createAggregateRatingSchema, createBreadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = createPageMetadata({
   pathname: '/bewertungen',
@@ -73,12 +74,30 @@ const reviews = [
   },
 ]
 
-export default function BewertungenPage() {
-  const averageRating = 5.0
-  const totalReviews = 47
+const averageRating = 5.0
+const totalReviews = 47
+const breadcrumbSchema = createBreadcrumbSchema([
+  { name: 'Startseite', path: '/' },
+  { name: 'Bewertungen', path: '/bewertungen' },
+])
+const aggregateRatingSchema = createAggregateRatingSchema({
+  path: '/bewertungen',
+  description: 'Echte Kundenbewertungen zur Laser Haarentfernung bei Demon (And) Angel in Frankfurt.',
+  ratingValue: averageRating,
+  reviewCount: totalReviews,
+})
 
+export default function BewertungenPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
       {/* Hero */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-demon-900/20 via-purple-900/20 to-angel-900/20" />
