@@ -8,7 +8,7 @@ export default function ReviewRequest({
 }: {
   params: { businessId: string };
 }) {
-  const business = getBusiness();
+  const business = getBusiness(params.businessId);
 
   return (
     <main className="grid min-h-screen place-items-center bg-slate-50 px-5">

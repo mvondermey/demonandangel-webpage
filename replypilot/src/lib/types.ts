@@ -16,7 +16,9 @@ export interface BusinessProfile {
   name: string;
   category: string;
   tone: "warm" | "professional" | "playful";
+  language: "en" | "de";
   signature: string;
+  initials: string;
 }
 
 export const PLANS = {

@@ -116,8 +116,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Verticals */}
+      <section className="py-20">
+        <div className="container-page">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Built for your business
+            </h2>
+            <p className="mt-4 text-slate-600">
+              ReplyPilot speaks your brand voice — in English or German — and
+              adapts to your industry out of the box.
+            </p>
+          </div>
+          <div className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-3">
+            {[
+              "💅 Kosmetikstudios",
+              "💇 Hair & beauty salons",
+              "🦷 Dentists & clinics",
+              "🍝 Restaurants & cafés",
+              "🔧 Trades & contractors",
+              "🧘 Spas & wellness",
+              "🐾 Vets & pet care",
+              "🏋️ Gyms & studios",
+            ].map((v) => (
+              <span
+                key={v}
+                className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm"
+              >
+                {v}
+              </span>
+            ))}
+          </div>
+          <p className="mx-auto mt-8 max-w-xl text-center text-sm text-slate-500">
+            Beauty &amp; cosmetics studios especially: your reviews are your
+            shop window. ReplyPilot antwortet auf jede Bewertung auf Deutsch —
+            professionell, herzlich und in deiner Markenstimme.
+          </p>
+        </div>
+      </section>
+
       {/* How it works */}
-      <section id="how" className="py-20">
+      <section id="how" className="border-t border-slate-100 py-20">
         <div className="container-page">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">

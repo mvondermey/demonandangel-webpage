@@ -1,8 +1,13 @@
 import { NextResponse } from "next/server";
-import { listReviews } from "@/lib/store";
+import { getBusiness, listReviews } from "@/lib/store";
 
 export const dynamic = "force-dynamic";
 
-export async function GET() {
-  return NextResponse.json({ reviews: listReviews() });
+export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const businessId = searchParams.get("businessId") ?? "demo";
+  return NextResponse.json({
+    business: getBusiness(businessId),
+    reviews: listReviews(businessId),
+  });
 }

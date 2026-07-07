@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Logo } from "@/components/SiteChrome";
-import type { Review } from "@/lib/types";
+import type { BusinessProfile, Review } from "@/lib/types";
 
 function Stars({ rating }: { rating: number }) {
   return (
@@ -22,37 +22,44 @@ function timeAgo(iso: string): string {
 }
 
 export default function Dashboard() {
+  const [businesses, setBusinesses] = useState<BusinessProfile[]>([]);
+  const [businessId, setBusinessId] = useState<string>("demo");
   const [reviews, setReviews] = useState<Review[]>([]);
   const [loading, setLoading] = useState(true);
   const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [busy, setBusy] = useState<Record<string, "gen" | "save" | undefined>>({});
   const [aiTag, setAiTag] = useState<Record<string, "ai" | "template">>({});
 
-  async function load() {
+  const activeBusiness = businesses.find((b) => b.id === businessId);
+
+  const load = useCallback(async (id: string) => {
     setLoading(true);
-    const res = await fetch("/api/reviews");
+    const res = await fetch(`/api/reviews?businessId=${id}`);
     const data = await res.json();
     setReviews(data.reviews);
+    setDrafts({});
     setLoading(false);
-  }
+  }, []);
 
   useEffect(() => {
-    load();
+    fetch("/api/businesses")
+      .then((r) => r.json())
+      .then((d) => setBusinesses(d.businesses));
   }, []);
+
+  useEffect(() => {
+    load(businessId);
+  }, [businessId, load]);
 
   const stats = useMemo(() => {
     const total = reviews.length;
     const avg =
-      total === 0
-        ? 0
-        : reviews.reduce((s, r) => s + r.rating, 0) / total;
+      total === 0 ? 0 : reviews.reduce((s, r) => s + r.rating, 0) / total;
     const replied = reviews.filter((r) => r.replied).length;
-    const pending = total - replied;
     return {
       avg: avg.toFixed(1),
       total,
-      replied,
-      pending,
+      pending: total - replied,
       rate: total === 0 ? 0 : Math.round((replied / total) * 100),
     };
   }, [reviews]);
@@ -63,7 +70,7 @@ export default function Dashboard() {
       const res = await fetch("/api/generate-reply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ reviewId: id }),
+        body: JSON.stringify({ businessId, reviewId: id }),
       });
       const data = await res.json();
       if (data.reply) {
@@ -83,14 +90,9 @@ export default function Dashboard() {
       await fetch("/api/generate-reply", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ reviewId: id, reply }),
+        body: JSON.stringify({ businessId, reviewId: id, reply }),
       });
-      await load();
-      setDrafts((d) => {
-        const next = { ...d };
-        delete next[id];
-        return next;
-      });
+      await load(businessId);
     } finally {
       setBusy((b) => ({ ...b, [id]: undefined }));
     }
@@ -102,21 +104,39 @@ export default function Dashboard() {
         <div className="container-page flex h-16 items-center justify-between">
           <Logo />
           <div className="flex items-center gap-3 text-sm">
-            <span className="hidden text-slate-500 sm:inline">Bella Vista Trattoria</span>
+            <select
+              value={businessId}
+              onChange={(e) => setBusinessId(e.target.value)}
+              className="rounded-lg border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 focus:border-brand-500 focus:outline-none"
+              aria-label="Switch business"
+            >
+              {businesses.map((b) => (
+                <option key={b.id} value={b.id}>
+                  {b.name}
+                </option>
+              ))}
+            </select>
             <span className="grid h-8 w-8 place-items-center rounded-full bg-brand-100 font-semibold text-brand-700">
-              BV
+              {activeBusiness?.initials ?? "··"}
             </span>
           </div>
         </div>
       </header>
 
       <main className="container-page py-8">
-        <h1 className="text-2xl font-bold text-slate-900">Review inbox</h1>
+        <div className="flex flex-wrap items-center gap-2">
+          <h1 className="text-2xl font-bold text-slate-900">Review inbox</h1>
+          {activeBusiness && (
+            <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500">
+              {activeBusiness.category}
+              {activeBusiness.language === "de" && " · Antworten auf Deutsch"}
+            </span>
+          )}
+        </div>
         <p className="mt-1 text-sm text-slate-500">
           Draft a reply with AI, edit if you like, then post — all in one place.
         </p>
 
-        {/* Stats */}
         <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {[
             ["Avg. rating", `${stats.avg}★`],
@@ -131,7 +151,6 @@ export default function Dashboard() {
           ))}
         </div>
 
-        {/* Reviews */}
         <div className="mt-8 space-y-4">
           {loading && <p className="text-sm text-slate-500">Loading reviews…</p>}
           {!loading &&
@@ -163,7 +182,6 @@ export default function Dashboard() {
 
                 <p className="mt-3 text-sm text-slate-700">{r.text}</p>
 
-                {/* Existing / posted reply */}
                 {r.replied && r.reply && (
                   <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50 p-4">
                     <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-slate-400">
@@ -173,7 +191,6 @@ export default function Dashboard() {
                   </div>
                 )}
 
-                {/* Draft workflow */}
                 {!r.replied && (
                   <div className="mt-4">
                     {drafts[r.id] === undefined ? (
